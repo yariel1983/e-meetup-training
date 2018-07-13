@@ -9,7 +9,7 @@ export default class Events extends React.Component{
         return (
             <React.Fragment>
                 <NavBar />
-                <footer />
+                <Footer />
                 
             </React.Fragment>
         );

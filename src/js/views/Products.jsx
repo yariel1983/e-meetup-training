@@ -13,7 +13,7 @@ export default class Products extends React.Component{
             <React.Fragment>
                 <NavBar />
                 <Article />
-                <footer />
+                <Footer />
             </React.Fragment>
         );
     }
