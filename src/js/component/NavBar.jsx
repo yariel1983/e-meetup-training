@@ -15,17 +15,19 @@ function NavBar(props) {
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav">
                     <Link to={"/"} className="nav-item nav-link active" >Home <span className="sr-only">(current)</span></Link>
-                    <Link to={"/about"} className="nav-item nav-link" >About</Link>
+                    <Link to={"/About"} className="nav-item nav-link" >About</Link>
                     <Link to={"/Products"} className="nav-item nav-link" >Products</Link>
-                    <Link to={"/training"} className="nav-item nav-link" >Trainings</Link>
-                    <Link to={"/events"} className="nav-item nav-link" >Events</Link>
-                    <Link to={"/contact"} className="nav-item nav-link" >Contacts</Link>
+                    <Link to={"/Training"} className="nav-item nav-link" >Trainings</Link>
+                    <Link to={"/Events"} className="nav-item nav-link" >Events</Link>
+                    <Link to={"/Contact"} className="nav-item nav-link" >Contacts</Link>
                 </div>
-                <form className="form-inline my-2 my-lg-0">
-                    <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-                    <button className="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-                    <button className="btn btn-outline-success my-2 my-sm-0 ml-2" type="submit">Log in</button>
-                </form>
+                <div className="container text-right">
+                    <form className="form-inline my-2 my-lg-0">
+                        <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+                        <button className="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+                        <button className="btn btn-outline-success my-2 my-sm-0 ml-2" type="submit">Log in</button>
+                    </form>
+                </div>
             </div>
         </nav>
             
