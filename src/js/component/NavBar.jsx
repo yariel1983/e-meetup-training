@@ -21,13 +21,16 @@ function NavBar(props) {
                         <a className="nav-link" href="#">About <span className="sr-only">(current)</span></a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link disabled" href="#">Products <span className="sr-only">(current)</span></a>
+                        <a className="nav-link" href="#">Products <span className="sr-only">(current)</span></a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link disabled" href="#">Trainings <span className="sr-only">(current)</span></a>
+                        <a className="nav-link" href="#">Trainings <span className="sr-only">(current)</span></a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link disabled" href="#">Contacts <span className="sr-only">(current)</span></a>
+                        <a className="nav-link" href="#">Events <span className="sr-only">(current)</span></a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#">Contacts <span className="sr-only">(current)</span></a>
                     </li>
                 </ul>
                 <form className="form-inline my-2 my-lg-0">

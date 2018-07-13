@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import NavBar from '../component/navbar.jsx';
+import NavBar from '../component/NavBar.jsx';
 
 
-export class Home extends React.Component{
+export default class Home extends React.Component{
     
     render(){
         return (
