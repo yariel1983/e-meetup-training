@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import NavBar from '../component/NavBar.jsx';
-
+import Footer from '../component/Footer.jsx';
 
 export default class Training extends React.Component{
     
@@ -10,7 +10,7 @@ export default class Training extends React.Component{
         return (
             <React.Fragment>
                 <NavBar />
-                
+                <footer />
             </React.Fragment>
         );
     }

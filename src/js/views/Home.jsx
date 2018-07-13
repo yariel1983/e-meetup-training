@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import NavBar from '../component/NavBar.jsx';
 import HomeSlide from '../component/HomeSlide.jsx';
-
+import Footer from '../component/Footer.jsx';
 
 export default class Home extends React.Component{
     
@@ -12,6 +12,7 @@ export default class Home extends React.Component{
             <React.Fragment>
                 <NavBar />
                 <HomeSlide />
+                <Footer />
                 
             </React.Fragment>
         );

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 
 
-//NavBar
+
 function HomeSlide(props) {
     return (
         <div className="container text-center">
