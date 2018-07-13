@@ -1,4 +1,12 @@
 @import '~bootstrap/scss/bootstrap.scss';
+.slick-track{
+    opacity: 1; 
+    width: 1650px;
+}
+.item-slick1{
+    background-image: url(&quot;images/master-slide-02.jpg&quot;); width: 550px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;
+    tabindex: 0;
+}
 
 
 /* 
