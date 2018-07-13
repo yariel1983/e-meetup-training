@@ -5,14 +5,37 @@ import { Link } from "react-router-dom";
 //NavBar
 function HomeSlide(props) {
     return (
-        <div className="carousel-item">
-            <img src="https://thumbs.dreamstime.com/b/strong-sexy-woman-training-barbells-blonde-girl-smoke-background-39948648.jpg"/>
-            <div className="carousel-caption d-none d-md-block">
-                <h5>Trainer</h5>
-                <p>hjhkjbjhbjhbjbkjbkj</p>
+        <div className="container text-center">
+            <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+                <ol className="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div className="carousel-inner">
+                    <div className="carousel-item active">
+                        <img className="d-block w-100" src="https://i.ytimg.com/vi/rFUz864JIOQ/maxresdefault.jpg" alt="First slide"/>
+                    </div>
+                    <div className="carousel-item">
+                        <img className="d-block w-100" src="https://ak9.picdn.net/shutterstock/videos/23114809/thumb/1.jpg" alt="Second slide"/>
+                    </div>
+                    <div className="carousel-item">
+                        <img className="d-block w-100" src="https://cdn.muscleandstrength.com/sites/default/files/field/feature-image/workout/4-week-beginner-workout-women-featured.jpg" alt="Third slide"/>
+                    </div>
+                    <div className="carousel-item">
+                        <img className="d-block w-100" src="https://gdsit.cdn-immedia.net/2015/10/Fitness.jpeg" alt="Third slide"/>
+                    </div>
+                </div>
+                <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="sr-only">Previous</span>
+                </a>
+                <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="sr-only">Next</span>
+                </a>
             </div>
-        </div>
-            
+        </div>        
 
     
     );
