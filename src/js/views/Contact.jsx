@@ -78,8 +78,10 @@ export default class Contact extends React.Component{
                                     <br/>
                                     Miami, FL 33130
                                     <abbr title="Phone">
-                                    P:</abbr>
+                                        <br/>
+                                    Phone# </abbr>
                                     (786) 808-5655
+                                    <br/>
                                 </address>
                                 <address>
                                     <strong>Full Name</strong><br/>
