@@ -13,9 +13,9 @@ export default class Products extends React.Component{
             <React.Fragment>
                 <NavBar />
                 <ProductCard />
-                <Article />
                 <Footer />
             </React.Fragment>
         );
     }
 }
+                
