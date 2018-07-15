@@ -12,14 +12,9 @@ export default class Products extends React.Component{
         return (
             <React.Fragment>
                 <NavBar />
-<<<<<<< HEAD
+                <ProductCard />
                 <Article />
                 <Footer />
-=======
-                <ProductCard />
-                <footer />
-                
->>>>>>> 3c0b44aed79b07101baded8e75688eb5bf69d939
             </React.Fragment>
         );
     }

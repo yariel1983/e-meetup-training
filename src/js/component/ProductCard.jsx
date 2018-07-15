@@ -4,116 +4,116 @@ import { Link } from "react-router-dom";
 
 function ProductCard(props){
 return (
-    <div class="container">
-        <div class="product-slider owl-carousel owl-theme" style="display: block; opacity: 1;">
-            <div class="owl-wrapper-outer">
-                <div class="owl-wrapper" style="display: block; width: 3648px; left: 0px; transition: all 0ms ease; transform: translate3d(0px, 0px, 0px);">
-                    <div class="owl-item" style="width: 228px;">
-                        <div class="item" style="visibility: visible;">
-                            <div class="product">
-                                <div class="flip-container">
-                                    <div class="flipper">
-                                        <div class="front">
+    <div className="container">
+        <div className="product-slider owl-carousel owl-theme" style="display: block; opacity: 1;">
+            <div className="owl-wrapper-outer">
+                <div className="owl-wrapper" style="display: block; width: 3648px; left: 0px; transition: all 0ms ease; transform: translate3d(0px, 0px, 0px);">
+                    <div className="owl-item" style="width: 228px;">
+                        <div className="item" style="visibility: visible;">
+                            <div className="product">
+                                <div className="flip-container">
+                                    <div className="flipper">
+                                        <div className="front">
                                             <a href="detail.html" />
-                                            <img src="img/product1.jpg" alt="" class="img-responsive" />
+                                            <img src="img/product1.jpg" alt="" className="img-responsive" />
                                         </div>
-                                        <div class="back">
+                                        <div className="back">
                                             <a href="detail.html">
-                                                <img src="img/product1_2.jpg" alt="" class="img-responsive" />
+                                                <img src="img/product1_2.jpg" alt="" className="img-responsive" />
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                                <a href="detail.html" class="invisible">
-                                    <img src="img/product1.jpg" alt="" class="img-responsive" />
+                                <a href="detail.html" className="invisible">
+                                    <img src="img/product1.jpg" alt="" className="img-responsive" />
                                 </a>
-                                <div class="text">
+                                <div className="text">
                                     <h3><a href="detail.html">Fur coat with very but very very long name</a></h3>
-                                    <p class="price">$143.00</p>
+                                    <p className="price">$143.00</p>
                                 </div>
                                 {/*<!-- /.text -->*/}
                             </div>
                             {/*<!-- /.product -->*/}
                         </div>
                     </div>
-                    <div class="owl-item" style="width: 228px;">
-                        <div class="item" style="visibility: visible;">
-                            <div class="product">
-                                <div class="flip-container">
-                                    <div class="flipper">
-                                        <div class="front">
+                    <div className="owl-item" style="width: 228px;">
+                        <div className="item" style="visibility: visible;">
+                            <div className="product">
+                                <div className="flip-container">
+                                    <div className="flipper">
+                                        <div className="front">
                                             <a href="detail.html">
-                                            <img src="img/product2.jpg" alt="" class="img-responsive" />
+                                                <img src="img/product2.jpg" alt="" className="img-responsive" />
                                             </a>
                                         </div>
-                                        <div class="back">
+                                        <div className="back">
                                             <a href="detail.html">
-                                            <img src="img/product2_2.jpg" alt="" class="img-responsive" />
+                                                <img src="img/product2_2.jpg" alt="" className="img-responsive" />
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                                <a href="detail.html" class="invisible">
-                                <img src="img/product2.jpg" alt="" class="img-responsive" />
+                                <a href="detail.html" className="invisible">
+                                    <img src="img/product2.jpg" alt="" className="img-responsive" />
                                 </a>
-                                <div class="text">
+                                <div className="text">
                                     <h3><a href="detail.html">White Blouse Armani</a></h3>
-                                    <p class="price"><del>$280</del> $143.00</p>
+                                    <p className="price"><del>$280</del> $143.00</p>
                                 </div>
                                 {/*<!-- /.text -->*/}
-                                <div class="owl-item" style="width: 228px;"><div class="item" style="visibility: visible;">
-                                    <div class="product">
-                                        <div class="flip-container">
-                                            <div class="flipper">
-                                                <div class="front">
+                                <div className="owl-item" style="width: 228px;"><div className="item" style="visibility: visible;">
+                                    <div className="product">
+                                        <div className="flip-container">
+                                            <div className="flipper">
+                                                <div className="front">
                                                     <a href="detail.html">
-                                                    <img src="img/product2.jpg" alt="" class="img-responsive" />
+                                                        <img src="img/product2.jpg" alt="" className="img-responsive" />
                                                     </a>
                                                 </div>
-                                                <div class="back">
+                                                <div className="back">
                                                     <a href="detail.html">
-                                                    <img src="img/product2_2.jpg" alt="" class="img-responsive" />
+                                                        <img src="img/product2_2.jpg" alt="" className="img-responsive" />
                                                     </a>
                                                 </div>
                                             </div>
                                         </div>
-                                        <a href="detail.html" class="invisible">
-                                        <img src="img/product2.jpg" alt="" class="img-responsive" />
+                                        <a href="detail.html" className="invisible">
+                                            <img src="img/product2.jpg" alt="" className="img-responsive" />
                                         </a>
-                                        <div class="text">
+                                        <div className="text">
                                             <h3><a href="detail.html">White Blouse Armani</a></h3>
-                                            <p class="price"><del>$280</del> $143.00</p>
+                                            <p className="price"><del>$280</del> $143.00</p>
                                         </div>
                                         {/*<!-- /.text -->*/}
 
-                                        <div class="ribbon sale">
-                                            <div class="theribbon">SALE</div>
-                                                <div class="ribbon-background">
-                                                </div>
+                                        <div className="ribbon sale">
+                                            <div className="theribbon">SALE</div>
+                                            <div className="ribbon-background">
                                             </div>
+                                        </div>
                                         {/*<!-- /.ribbon -->*/}
                                         
-                                        <div class="ribbon new">
-                                            <div class="theribbon">NEW</div>
-                                                <div class="ribbon-background">
-                                                </div>
+                                        <div className="ribbon new">
+                                            <div className="theribbon">NEW</div>
+                                            <div className="ribbon-background">
                                             </div>
+                                        </div>
                                         {/*<!-- /.ribbon -->*/}
                                         
-                                        <div class="ribbon gift">
-                                            <div class="theribbon">GIFT</div>
-                                            <div class="ribbon-background">
+                                        <div className="ribbon gift">
+                                            <div className="theribbon">GIFT</div>
+                                            <div className="ribbon-background">
                                             </div>
                                         </div>
                                         {/*<!-- /.ribbon -->*/}
                                     </div>
-                                        {/*<!-- /.product -->*/}
+                                    {/*<!-- /.product -->*/}
                                 </div>
+                                </div>
+                                {/*<!-- /.product -->*/}
                             </div>
-                                        {/*<!-- /.product -->*/}
                         </div>
                     </div>
-                </div>
 
 
 
@@ -130,19 +130,19 @@ return (
  
                 </div>
             </div>
-            <div class="owl-controls clickable">
-                <div class="owl-pagination">
-                    <div class="owl-page active">
-                        <span class=""></span>
+            <div className="owl-controls clickable">
+                <div className="owl-pagination">
+                    <div className="owl-page active">
+                        <span className=""></span>
                     </div>
-                    <div class="owl-page">
-                        <span class=""></span>
+                    <div className="owl-page">
+                        <span className=""></span>
                     </div>
                 </div>
             </div>    
-            <div class="owl-buttons">
-                <div class="owl-prev">prev</div>
-                <div class="owl-next">next</div>
+            <div className="owl-buttons">
+                <div className="owl-prev">prev</div>
+                <div className="owl-next">next</div>
             </div>
         </div>
     </div>);
