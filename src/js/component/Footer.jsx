@@ -7,14 +7,13 @@ function Footer(props){
         <footer className="container-fluid py-5 text-center border-top">
             <div className="row">
                 <div className="col-12 col-md">
-                    <small className="d-block mb-3 text-muted">&copy; 2018-2019</small>
+                    <small className="d-block mb-3 text-muted">&reg; 2018-2019</small>
                 </div>
                 <div className="col-6 col-md">
-                    <h5>Buy</h5>
+                    <h5> Buy</h5>
                     <ul className="list-unstyled text-small">
                         <li><a className="text-muted" href="#">Registration</a></li>
-                        <li><a className="text-muted" href="#">Stores </a></li>
-                        <li><a className="text-muted" href="#">Warranty</a></li>
+                        <li><a className="text-muted" href="#">Warranty </a></li>
                     </ul>
                 </div>
                 <div className="col-6 col-md">
@@ -32,11 +31,11 @@ function Footer(props){
                     </ul>
                 </div>
                 <div className="col-6 col-md">
-                    <h5>About</h5>
+                    <h5> About</h5>
                     <ul className="list-unstyled text-small">
-                        <li><a className="text-muted" href="#">Team</a></li>
-                        <li><a className="text-muted" href="#">Privacy</a></li>
                         <li><a className="text-muted" href="#">Terms</a></li>
+                        <li><a className="text-muted" href="#">Privacy</a></li>
+                        
                     </ul>
                 </div>
             </div>
@@ -47,6 +46,7 @@ function Footer(props){
 
 export default Footer;
                     
+                        
                         
                         
                         
