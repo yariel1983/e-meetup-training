@@ -9,7 +9,7 @@ export default class Contact extends React.Component{
         return (
             <React.Fragment>
                 <NavBar />
-                <footer />
+               
                 
                 <div className="jumbotron jumbotron-sm">
                     <div className="container">
@@ -61,7 +61,7 @@ export default class Contact extends React.Component{
                                             </div>
                                         </div>
                                         <div className="col-md-12">
-                                            <button type="submit" className="btn btn-primary pull-right" id="btnContactUs">
+                                            <button type="submit" className="btn btn-primary pull-right mb-5" id="btnContactUs">
                             Send Message</button>
                                         </div>
                                     </div>
@@ -91,7 +91,7 @@ export default class Contact extends React.Component{
                         </div>
                     </div>
                 </div>
-
+                <Footer />
             </React.Fragment>
         );
     }
