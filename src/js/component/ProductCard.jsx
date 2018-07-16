@@ -4,135 +4,33 @@ import { Link } from "react-router-dom";
 
 function ProductCard(props){
 return (
-    <div className="container">
-        <div className="product-slider owl-carousel owl-theme">
-            <div className="owl-wrapper-outer">
-                <div className="owl-wrapper">
-                    <div className="owl-item">
-                        <div className="item">
-                            <div className="product">
-                                <div className="flip-container">
-                                    <div className="flipper">
-                                        <div className="front">
-                                            <a href="detail.html" />
-                                            <img src="https://promolover.com/media/7_EAnLfm2.jpg" alt="" className="img-responsive" />
-                                        </div>
-                                        <div className="back">
-                                            <a href="detail.html">
-                                                <img src="https://promolover.com/media/7_EAnLfm2.jpg" alt="" className="img-responsive" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="detail.html" className="invisible">
-                                    <img src="https://promolover.com/media/7_EAnLfm2.jpg" alt="" className="img-responsive" />
-                                </a>
-                                <div className="text">
-                                    <h3><a href="detail.html">Fur coat with very but very very long name</a></h3>
-                                    <p className="price">$143.00</p>
-                                </div>
-                                {/*<!-- /.text -->*/}
+    <div className="album py-5 bg-light">
+        <div className="container">
+            <div className="row">
+                <div className="col-md-4">
+                    <div className="card mb-4 box-shadow">
+                        <img className="_7ye img" src="https://assets.academy.com/mgen/81/10213981.jpg?is=500,500" />
+                        <div className="card-body">
+                            <div className="_f3l _3fcx _4x3g text-bottom mb-2">$75</div>
+                            <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <div className="buy button text-right">
+                                <button className="btn btn-outline-danger my-2 sm-0" type="submit">Buy</button>
                             </div>
-                            {/*<!-- /.product -->*/}
-                        </div>
-                    </div>
-                    <div className="owl-item">
-                        <div className="item">
-                            <div className="product">
-                                <div className="flip-container">
-                                    <div className="flipper">
-                                        <div className="front">
-                                            <a href="detail.html">
-                                                <img src="https://promolover.com/media/7_EAnLfm2.jpg" alt="" className="img-responsive" />
-                                            </a>
-                                        </div>
-                                        <div className="back">
-                                            <a href="detail.html">
-                                                <img src="https://promolover.com/media/7_EAnLfm2.jpg" alt="" className="img-responsive" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="detail.html" className="invisible">
-                                    <img src="https://promolover.com/media/7_EAnLfm2.jpg" alt="" className="img-responsive" />
-                                </a>
-                                <div className="text">
-                                    <h3><a href="detail.html">White Blouse Armani</a></h3>
-                                    <p className="price"><del>$280</del> $143.00</p>
-                                </div>
-                                {/*<!-- /.text -->*/}
-                                <div className="owl-item"><div className="item">
-                                    <div className="product">
-                                        <div className="flip-container">
-                                            <div className="flipper">
-                                                <div className="front">
-                                                    <a href="detail.html">
-                                                        <img src="https://promolover.com/media/7_EAnLfm2.jpgjpg" alt="" className="img-responsive" />
-                                                    </a>
-                                                </div>
-                                                <div className="back">
-                                                    <a href="detail.html">
-                                                        <img src="https://promolover.com/media/7_EAnLfm2.jpgg" alt="" className="img-responsive" />
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <a href="detail.html" className="invisible">
-                                            <img src="https://promolover.com/media/7_EAnLfm2.jpg" alt="" className="img-responsive" />
-                                        </a>
-                                        <div className="text">
-                                            <h3><a href="detail.html">White Blouse Armani</a></h3>
-                                            <p className="price"><del>$280</del> $143.00</p>
-                                        </div>
-                                        {/*<!-- /.text -->*/}
-
-                                        <div className="ribbon sale">
-                                            <div className="theribbon">SALE</div>
-                                            <div className="ribbon-background">
-                                            </div>
-                                        </div>
-                                        {/*<!-- /.ribbon -->*/}
-                                        
-                                        <div className="ribbon new">
-                                            <div className="theribbon">NEW</div>
-                                            <div className="ribbon-background">
-                                            </div>
-                                        </div>
-                                        {/*<!-- /.ribbon -->*/}
-                                        
-                                        <div className="ribbon gift">
-                                            <div className="theribbon">GIFT</div>
-                                            <div className="ribbon-background">
-                                            </div>
-                                        </div>
-                                        {/*<!-- /.ribbon -->*/}
-                                    </div>
-                                    {/*<!-- /.product -->*/}
-                                </div>
-                                </div>
-                                {/*<!-- /.product -->*/}
+                            <div className="d-flex justify-content-between align-items-center">
+                                <small className="text-muted"></small>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div className="owl-controls clickable">
-                <div className="owl-pagination">
-                    <div className="owl-page active">
-                        <span className="prueba"></span>
-                    </div>
-                    <div className="owl-page">
-                        <span className="prueba"></span>
                     </div>
                 </div>
             </div>    
-            <div className="owl-buttons">
-                <div className="owl-prev">prev</div>
-                <div className="owl-next">next</div>
-            </div>
         </div>
-    </div>);
+    </div>
+    
+    );
 }
 
 export default ProductCard;
                     
+                                
+                        
+                        

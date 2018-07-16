@@ -83,16 +83,16 @@ render(){
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <div className="modal-body">
+                            <div className="modal-body" id="mymodal">
                                 <form role="form" onSubmit={(e) => {
                                                                     e.preventDefault();
                                                                     actions.loadSession(this.state.username, this.state.password);
                                 }}>
                                     <div className="form-group">
                                         <input type="text" name="user" value={this.state.user} placeholder="Username" onChange={(e) => this.setState({username: e.target.value})} />
-                                        <input type="password" name="password" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})} />
+                                        <input type="password" name="password" id="passinput"value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})} />
                                     </div>
-                                    <input type="submit" value="Login" />
+                                    <input type="submit" value="Login" id="loginb"/>
                                 </form>
                             </div>
                         </div>
