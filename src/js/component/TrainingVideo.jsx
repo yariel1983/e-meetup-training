@@ -42,11 +42,11 @@ function TrainingVideo(props){
             <div className="container text-center">
                 <div className="slick">
                     <div className="item youtube">
-                        <iframe id="youtube" width="920" height="518" src="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4?rel=0&amp;enablejsapi=1" frameBorder="0" allowFullScreen></iframe> 
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Tx3W6XAO7Yo" frameBorder="0" allow="autoplay; encrypted-media" allowFullscreen></iframe>
                         <p className="caption">YouTube</p>
                     </div>
                     <div className="item vimeo">
-                        <iframe id="vimeo" src="https://player.vimeo.com/video/100902001?byline=0&amp;portrait=0&amp;api=1" width="920" height="517" frameBorder="0" webkitallowfullscreen mozallowfullscreen allowFullScreen></iframe> 
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ralZmBh4lk0" frameBorder="0" allow="autoplay; encrypted-media" allowFullscreen></iframe>
                         <p className="caption">Vimeo</p>
                     </div>
                 </div>
