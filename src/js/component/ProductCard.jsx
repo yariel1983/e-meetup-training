@@ -4,28 +4,33 @@ import { Link } from "react-router-dom";
 
 function ProductCard(props){
 return (
-    <div className="album py-5 bg-light">
-        <div className="container">
-            <div className="row">
-                <div className="col-md-4">
-                    <div className="card mb-4 box-shadow">
-                        <img className="_7ye img" src="https://assets.academy.com/mgen/81/10213981.jpg?is=500,500" />
-                        <div className="card-body">
-                            <div className="_f3l _3fcx _4x3g text-bottom mb-2">$75</div>
-                            <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            <div className="buy button text-right">
-                                <button className="btn btn-outline-danger my-2 sm-0" type="submit">Buy</button>
-                            </div>
-                            <div className="d-flex justify-content-between align-items-center">
-                                <small className="text-muted"></small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>    
+    <div className="card-group">
+        <div className="card">
+            <img className="card-img-top" src="https://assets.academy.com/mgen/81/10213981.jpg?is=500,500" alt="Card image cap"/>
+            <div className="card-body">
+                <h5 className="card-title">Card title</h5>
+                <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+        <div className="card">
+            <img className="card-img-top" src="https://freepngimg.com/download/exercise_bike/1-2-exercise-bike-free-download-png.png" alt="Card image cap"/>
+            <div className="card-body">
+                <h5 className="card-title">Card title</h5>
+                <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+        <div className="card">
+            <img className="card-img-top" src="https://assets.academy.com/mgen/24/10711924.jpg" alt="Card image cap"/>
+            <div className="card-body">
+                <h5 className="card-title">Weight & Strength</h5>
+                <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+            </div>
         </div>
     </div>
-    
+
     );
 }
 
