@@ -16,6 +16,7 @@ export default class Layout extends React.Component {
         super(props);
     
     this.state = {
+<<<<<<< HEAD
             "article": [
                 {
                     id: 1,
@@ -24,6 +25,16 @@ export default class Layout extends React.Component {
                     price: 0.00
                 }
             ]
+=======
+            "meetups": [],
+            "session":{
+                ID: 2,
+                username: "theUser",
+                password: "1234",
+                token: "qwerty12345asdfgzxcv"
+            },
+            "isLoading": true
+>>>>>>> 37a7a2dd3022013b5905608bb444dcd2775beaae
         };
             {/*"session":
                 

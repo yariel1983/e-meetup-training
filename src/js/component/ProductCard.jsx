@@ -4,135 +4,87 @@ import { Link } from "react-router-dom";
 
 function ProductCard(props){
 return (
-    <div className="container">
-        <div className="product-slider owl-carousel owl-theme">
-            <div className="owl-wrapper-outer">
-                <div className="owl-wrapper">
-                    <div className="owl-item">
-                        <div className="item">
-                            <div className="product">
-                                <div className="flip-container">
-                                    <div className="flipper">
-                                        <div className="front">
-                                            <a href="detail.html" />
-                                            <img src="https://promolover.com/media/7_EAnLfm2.jpg" alt="" className="img-responsive" />
-                                        </div>
-                                        <div className="back">
-                                            <a href="detail.html">
-                                                <img src="https://promolover.com/media/7_EAnLfm2.jpg" alt="" className="img-responsive" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="detail.html" className="invisible">
-                                    <img src="https://promolover.com/media/7_EAnLfm2.jpg" alt="" className="img-responsive" />
-                                </a>
-                                <div className="text">
-                                    <h3><a href="detail.html">Fur coat with very but very very long name</a></h3>
-                                    <p className="price">$143.00</p>
-                                </div>
-                                {/*<!-- /.text -->*/}
-                            </div>
-                            {/*<!-- /.product -->*/}
-                        </div>
+    <div>
+        <div className="card-group mt-5 mb-5">
+            <div className="card">
+                <img className="card-img-top" src="https://assets.academy.com/mgen/81/10213981.jpg?is=500,500" alt="Card image cap"/>
+                <div className="card-body">
+                    <h5 className="card-title">Weight & Strength</h5>
+                    <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <div className="buy button text-right">
+                        <button className="btn btn-outline-danger my-2 sm-0" type="submit">Buy</button>
                     </div>
-                    <div className="owl-item">
-                        <div className="item">
-                            <div className="product">
-                                <div className="flip-container">
-                                    <div className="flipper">
-                                        <div className="front">
-                                            <a href="detail.html">
-                                                <img src="https://promolover.com/media/7_EAnLfm2.jpg" alt="" className="img-responsive" />
-                                            </a>
-                                        </div>
-                                        <div className="back">
-                                            <a href="detail.html">
-                                                <img src="https://promolover.com/media/7_EAnLfm2.jpg" alt="" className="img-responsive" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="detail.html" className="invisible">
-                                    <img src="https://promolover.com/media/7_EAnLfm2.jpg" alt="" className="img-responsive" />
-                                </a>
-                                <div className="text">
-                                    <h3><a href="detail.html">White Blouse Armani</a></h3>
-                                    <p className="price"><del>$280</del> $143.00</p>
-                                </div>
-                                {/*<!-- /.text -->*/}
-                                <div className="owl-item"><div className="item">
-                                    <div className="product">
-                                        <div className="flip-container">
-                                            <div className="flipper">
-                                                <div className="front">
-                                                    <a href="detail.html">
-                                                        <img src="https://promolover.com/media/7_EAnLfm2.jpgjpg" alt="" className="img-responsive" />
-                                                    </a>
-                                                </div>
-                                                <div className="back">
-                                                    <a href="detail.html">
-                                                        <img src="https://promolover.com/media/7_EAnLfm2.jpgg" alt="" className="img-responsive" />
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <a href="detail.html" className="invisible">
-                                            <img src="https://promolover.com/media/7_EAnLfm2.jpg" alt="" className="img-responsive" />
-                                        </a>
-                                        <div className="text">
-                                            <h3><a href="detail.html">White Blouse Armani</a></h3>
-                                            <p className="price"><del>$280</del> $143.00</p>
-                                        </div>
-                                        {/*<!-- /.text -->*/}
-
-                                        <div className="ribbon sale">
-                                            <div className="theribbon">SALE</div>
-                                            <div className="ribbon-background">
-                                            </div>
-                                        </div>
-                                        {/*<!-- /.ribbon -->*/}
-                                        
-                                        <div className="ribbon new">
-                                            <div className="theribbon">NEW</div>
-                                            <div className="ribbon-background">
-                                            </div>
-                                        </div>
-                                        {/*<!-- /.ribbon -->*/}
-                                        
-                                        <div className="ribbon gift">
-                                            <div className="theribbon">GIFT</div>
-                                            <div className="ribbon-background">
-                                            </div>
-                                        </div>
-                                        {/*<!-- /.ribbon -->*/}
-                                    </div>
-                                    {/*<!-- /.product -->*/}
-                                </div>
-                                </div>
-                                {/*<!-- /.product -->*/}
-                            </div>
-                        </div>
-                    </div>
+                    <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
                 </div>
             </div>
-            <div className="owl-controls clickable">
-                <div className="owl-pagination">
-                    <div className="owl-page active">
-                        <span className="prueba"></span>
+            <div className="card">
+                <img className="card-img-top" src="https://freepngimg.com/download/exercise_bike/1-2-exercise-bike-free-download-png.png" alt="Card image cap"/>
+                <div className="card-body">
+                    <h5 className="card-title">Weight & Strength</h5>
+                    <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <div className="buy button text-right">
+                        <button className="btn btn-outline-danger my-2 sm-0" type="submit">Buy</button>
                     </div>
-                    <div className="owl-page">
-                        <span className="prueba"></span>
-                    </div>
+                    <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
                 </div>
-            </div>    
-            <div className="owl-buttons">
-                <div className="owl-prev">prev</div>
-                <div className="owl-next">next</div>
+            </div>
+            <div className="card">
+                <img className="card-img-top" src="https://assets.academy.com/mgen/24/10711924.jpg" alt="Card image cap"/>
+                <div className="card-body">
+                    <h5 className="card-title">Weight & Strength</h5>
+                    <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <div className="buy button text-right">
+                        <button className="btn btn-outline-danger my-2 sm-0" type="submit">Buy</button>
+                    </div>
+                    <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                </div>
             </div>
         </div>
-    </div>);
+        
+        <div className="card-group mt-5 mb-5">
+            <div className="card">
+                <img className="card-img-top" src="https://media.lifespanfitness.com/media/catalog/product/cache/1/small_image/500x/9df78eab33525d08d6e5fb8d27136e95/t/r/tr2000e-electric-folding-treadmill-female-running.jpg" alt="Card image cap"/>
+                <div className="card-body">
+                    <h5 className="card-title">Weight & Strength</h5>
+                    <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <div className="buy button text-right">
+                        <button className="btn btn-outline-danger my-2 sm-0" type="submit">Buy</button>
+                    </div>
+                    <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div className="card">
+                <img className="card-img-top" src="https://media.lifespanfitness.com/media/catalog/product/cache/1/small_image/500x/9df78eab33525d08d6e5fb8d27136e95/l/i/lifespan-r7000i-commercial-recumbent-exercise-bike.jpg" alt="Card image cap"/>
+                <div className="card-body">
+                    <h5 className="card-title">Weight & Strength</h5>
+                    <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <div className="buy button text-right">
+                        <button className="btn btn-outline-danger my-2 sm-0" type="submit">Buy</button>
+                    </div>
+                    <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            
+            <div className="card">
+                <img className="card-img-top" src="https://www.bestwomensworkoutreviews.com/wp-content/uploads/2014/06/Bowflex-PR1000-Home-Gym-1-1024x1024.jpg" alt="Card image cap"/>
+                <div className="card-body">
+                    <h5 className="card-title">Weight & Strength</h5>
+                    <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <div className="buy button text-right">
+                        <button className="btn btn-outline-danger my-2 sm-0" type="submit">Buy</button>
+                    </div>
+                    <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    );
 }
 
 export default ProductCard;
                     
+                                
+                    
+                        
+                        
