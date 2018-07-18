@@ -164,6 +164,3 @@ class RegisterBox extends React.Component {
 
 }
 
-reactDOM.render(
-    <App/>, document.getElementById("root"));
-  
