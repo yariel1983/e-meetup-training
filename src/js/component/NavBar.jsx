@@ -104,8 +104,6 @@ render(){
 }
   
 
-         
-
 }
 export default withSession(Navbar);
 Navbar.propTypes = {
@@ -113,6 +111,8 @@ Navbar.propTypes = {
   actions: PropTypes.object,
   currentView: PropTypes.string
 };
+         
+
                             
                             
                             

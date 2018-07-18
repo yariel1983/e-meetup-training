@@ -17,11 +17,11 @@ constructor(){
     
     this.state = {
             "meetups": [],
-            "session":{/*
+            "session":{
                 ID: 2,
                 username: "theUser",
                 password: "1234",
-                token: "qwerty12345asdfgzxcv"*/
+                token: "qwerty12345asdfgzxcv"
             },
             "isLoading": true
         };
