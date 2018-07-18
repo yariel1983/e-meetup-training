@@ -30,7 +30,7 @@ render(){
         return(
 
             <div>
-                <nav className="navbar navbar-expand-lg navbar-light bg-white">
+                <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
                     <img src="http://www.hertsmereleisure.co.uk/centre_uploads/1/images/HM%20-%20Training%20Academy%20logo.jpg" width="150 px" height="60 px"/>
                     <div className="container">
                         <form className="form-inline my-2 my-lg-0">

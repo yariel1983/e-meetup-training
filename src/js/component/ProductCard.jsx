@@ -43,7 +43,7 @@ return (
         
         <div className="card-group mt-5 mb-5">
             <div className="card">
-                <img className="card-img-top" src="https://assets.academy.com/mgen/81/10213981.jpg?is=500,500" alt="Card image cap"/>
+                <img className="card-img-top" src="https://media.lifespanfitness.com/media/catalog/product/cache/1/small_image/500x/9df78eab33525d08d6e5fb8d27136e95/t/r/tr2000e-electric-folding-treadmill-female-running.jpg" alt="Card image cap"/>
                 <div className="card-body">
                     <h5 className="card-title">Weight & Strength</h5>
                     <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -54,7 +54,7 @@ return (
                 </div>
             </div>
             <div className="card">
-                <img className="card-img-top" src="https://freepngimg.com/download/exercise_bike/1-2-exercise-bike-free-download-png.png" alt="Card image cap"/>
+                <img className="card-img-top" src="https://media.lifespanfitness.com/media/catalog/product/cache/1/small_image/500x/9df78eab33525d08d6e5fb8d27136e95/l/i/lifespan-r7000i-commercial-recumbent-exercise-bike.jpg" alt="Card image cap"/>
                 <div className="card-body">
                     <h5 className="card-title">Weight & Strength</h5>
                     <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -66,7 +66,7 @@ return (
             </div>
             
             <div className="card">
-                <img className="card-img-top" src="https://assets.academy.com/mgen/24/10711924.jpg" alt="Card image cap"/>
+                <img className="card-img-top" src="https://www.bestwomensworkoutreviews.com/wp-content/uploads/2014/06/Bowflex-PR1000-Home-Gym-1-1024x1024.jpg" alt="Card image cap"/>
                 <div className="card-body">
                     <h5 className="card-title">Weight & Strength</h5>
                     <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
