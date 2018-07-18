@@ -16,11 +16,11 @@ class Navbar extends React.Component{
         };
     }
     
-    componentDidUpdate(prevProps, prevState) {
+    //componentDidUpdate(prevProps, prevState) {
         // Previous ThemeContext value is prevProps.theme
         // New ThemeContext value is this.props.theme
-        if(this.props.session.token) $('#exampleModal').modal('hide');
-    }
+    //    if(this.props.session.token) $('#exampleModal').modal('hide');
+    //}
 
 render(){
         let homeActive = this.props.currentView === "home" ? "active" :"";

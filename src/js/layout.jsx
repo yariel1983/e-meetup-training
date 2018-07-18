@@ -12,21 +12,30 @@ import {Provider} from './stores/AppContext.jsx';
 
 export default class Layout extends React.Component {
 
-constructor(){
-    super();
+    constructor(props){
+        super(props);
     
     this.state = {
-            "meetups": [],
-            "session":{/*
-                ID: 2,
-                username: "theUser",
-                password: "1234",
-                token: "qwerty12345asdfgzxcv"*/
-            },
-            "isLoading": true
+            "article": [
+                {
+                    id: 1,
+                    name: "sdfas fsdfsdf dsfsdf",
+                    description: "sfsdfsdafdsafsda fsdaffdsa fsdfdsfsd fdsfdsf",
+                    price: 0.00
+                }
+            ]
         };
+            {/*"session":
+                
+                    ID: 2,
+                    username: "theUser",
+                    password: "1234",
+                    token: "qwerty12345asdfgzxcv"
+                },
+            "isLoading": true
+        };*/}
         
-    this.actions = {
+    {/*this.actions = {
             "loadSession": (receivedUsername, receivedPassword) => {
                 this.setState(
                     {
@@ -40,23 +49,30 @@ constructor(){
                     });
 
             }
-        };
+        };*/}
     }
+    
+    componentDidMount() {
+        if (this.state.isLoading) {
+            //this.actions.loadInitialData();
+            return null;
+        }
+      }
 
   render() {
     return (
         <React.Fragment>
             <BrowserRouter>
                 <Switch>
-                    <Provider value={{state:this.state, actions: this.actions}}>
+                    <Provider value={{ state:this.state, actions:this.actions }}>
                         <Route exact path="/" component={Home} />
                         <Route exact path="/about" component={About} />
                         <Route exact path="/products" component={Products} />
                         <Route exact path="/training" component={Training} />
                         <Route exact path="/events" component={Events} />
                         <Route exact path="/contact" component={Contact} />
-                        <Route render={() => <h1>Not found!</h1>} />
                     </Provider>
+                    <Route render={() => <h1>Not found!</h1>} />
                 </Switch>
             </BrowserRouter>
         </React.Fragment>
