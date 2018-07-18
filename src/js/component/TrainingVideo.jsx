@@ -14,26 +14,26 @@ function TrainingVideo(props){
                     <div className="carousel-item active">
                         <div className="view">
                             <video className="video-fluid" autoPlay loop>
-                                <source src="https://mdbootstrap.com/img/video/Lines.mp4" type="video/mp4" />
+                                <source src="https://mdbootstrap.com/img/video/Tropical.mp4" type="video/mp4" />
                             </video>
                             <div className="mask rgba-indigo-light"></div>
                         </div>
                         <div className="carousel-caption">
                             <div className="animated fadeInDown">
-                                <h3 className="h3-responsive">Light mask</h3>
+                                <h3 className="h3-responsive"></h3>
                             </div>
                         </div>
                     </div>
                     <div className="carousel-item">
                         <div className="view">
                             <video className="video-fluid" autoPlay loop>
-                                <source src="https://mdbootstrap.com/img/video/Lines.mp4" type="video/mp4" />
+                                <source src="https://mdbootstrap.com/img/video/forest.mp4" type="video/mp4" />
                             </video>
                             <div className="mask rgba-purple-slight"></div>
                         </div>
                         <div className="carousel-caption">
                             <div className="animated fadeInDown">
-                                <h3 className="h3-responsive">Super light mask</h3>
+                                <h3 className="h3-responsive"></h3>
                             </div>
                         </div>
                     </div>
