@@ -30,7 +30,7 @@ render(){
         return(
 
             <div>
-                <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+                <nav className="navbar navbar-expand-lg navbar-light bg-white">
                     <img src="http://www.hertsmereleisure.co.uk/centre_uploads/1/images/HM%20-%20Training%20Academy%20logo.jpg" width="150 px" height="60 px"/>
                     <div className="container">
                         <form className="form-inline my-2 my-lg-0">
@@ -83,16 +83,16 @@ render(){
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <div className="modal-body" id="mymodal">
+                            <div className="modal-body">
                                 <form role="form" onSubmit={(e) => {
                                                                     e.preventDefault();
                                                                     actions.loadSession(this.state.username, this.state.password);
                                 }}>
                                     <div className="form-group">
                                         <input type="text" name="user" value={this.state.user} placeholder="Username" onChange={(e) => this.setState({username: e.target.value})} />
-                                        <input type="password" name="password" id="passinput"value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})} />
+                                        <input type="password" name="password" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})} />
                                     </div>
-                                    <input type="submit" value="Login" id="loginb"/>
+                                    <input type="submit" value="Login" />
                                 </form>
                             </div>
                         </div>
@@ -104,6 +104,8 @@ render(){
 }
   
 
+         
+
 }
 export default withSession(Navbar);
 Navbar.propTypes = {
@@ -111,8 +113,6 @@ Navbar.propTypes = {
   actions: PropTypes.object,
   currentView: PropTypes.string
 };
-         
-
                             
                             
                             
