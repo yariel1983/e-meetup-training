@@ -55,8 +55,8 @@ constructor(){
                         <Route exact path="/training" component={Training} />
                         <Route exact path="/events" component={Events} />
                         <Route exact path="/contact" component={Contact} />
-                        <Route render={() => <h1>Not found!</h1>} />
                     </Provider>
+                    <Route render={() => <h1>Not found!</h1>} />
                 </Switch>
             </BrowserRouter>
         </React.Fragment>
