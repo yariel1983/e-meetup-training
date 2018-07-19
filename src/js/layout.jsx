@@ -16,7 +16,6 @@ export default class Layout extends React.Component {
         super(props);
     
     this.state = {
-<<<<<<< HEAD
             "article": [
                 {
                     id: 1,
@@ -24,8 +23,7 @@ export default class Layout extends React.Component {
                     description: "sfsdfsdafdsafsda fsdaffdsa fsdfdsfsd fdsfdsf",
                     price: 0.00
                 }
-            ]
-=======
+            ],
             "meetups": [],
             "session":{
                 ID: 2,
@@ -34,40 +32,26 @@ export default class Layout extends React.Component {
                 token: "qwerty12345asdfgzxcv"
             },
             "isLoading": true
->>>>>>> 37a7a2dd3022013b5905608bb444dcd2775beaae
-        };
-            {/*"session":
-                
-                    ID: 2,
-                    username: "theUser",
-                    password: "1234",
-                    token: "qwerty12345asdfgzxcv"
-                },
-            "isLoading": true
-        };*/}
-        
-    {/*this.actions = {
-            "loadSession": (receivedUsername, receivedPassword) => {
-                this.setState(
-                    {
-                        session: {
-                            ID: 1000,
-                            user_nicename: receivedUsername,
-                            password: receivedPassword,
-                            token: "gfdrtu6545hftydhgrhxfh"
-                        }
-                        
-                    });
+    };
 
-            }
-        };*/}
+    this.actions = {
+              "loadInitialData": () => {
+                fetch('https://wordpress-breathecode-cli-nachovz.c9users.io/wp-json/sample_api/v1/events')
+                  .then(response => response.json())
+                  .then(data => this.setState({ events: data, isLoading: false }))
+                  .catch(error => console.log(error));
+                  
+                fetch('https://wordpress-breathecode-cli-nachovz.c9users.io/wp-json/sample_api/v1/meetups')
+                  .then(response => response.json())
+                  .then(data => this.setState({ meetups: data }))
+                  .catch(error => console.log(error));
+              },
+              "logout": () => this.setState({session: {}})
+        }; 
     }
     
     componentDidMount() {
-        if (this.state.isLoading) {
-            //this.actions.loadInitialData();
-            return null;
-        }
+        this.actions.loadInitialData();
       }
 
   render() {
