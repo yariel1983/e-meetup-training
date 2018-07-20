@@ -7,6 +7,7 @@ import Products from "./views/Products.jsx";
 import Training from "./views/Training.jsx";
 import Events from "./views/Events.jsx";
 import Contact from "./views/Contact.jsx";
+import Register from "./views/Register.jsx";
 import Cart from "./views/Cart.jsx";
 import {Provider} from './stores/AppContext.jsx';
 
@@ -65,9 +66,10 @@ export default class Layout extends React.Component {
                         <Route exact path="/about" component={About} />
                         <Route exact path="/products" component={Products} />
                         <Route exact path="/training" component={Training} />
-                        <Route exact path="/events" component={Events} />
+                        {/* Eliminar para presentacion <Route exact path="/events" component={Events} /> */}
                         <Route exact path="/contact" component={Contact} />
                         <Route exact path="/cart" component={Cart} />
+                        <Route exact path="/register" component={Register} />
                     </Provider>
                     <Route render={() => <h1>Not found!</h1>} />
                 </Switch>

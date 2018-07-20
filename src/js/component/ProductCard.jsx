@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap';
 import { Link } from "react-router-dom";
+import Article from '../component/Article.jsx';
 
 function ProductCard(props){
 return (
