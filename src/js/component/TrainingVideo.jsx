@@ -10,7 +10,7 @@ function TrainingVideo(props){
                     <li data-target="#video-carousel-example2" data-slide-to="0" className="active"></li>
                     <li data-target="#video-carousel-example2" data-slide-to="1"></li>
                 </ol>
-                <div className="carousel-inner" role="listbox">
+                <div className="carousel-inner text-center" role="listbox">
                     <div className="carousel-item active">
                         <div className="view">
                             <video className="video-fluid" autoPlay loop>
@@ -39,15 +39,15 @@ function TrainingVideo(props){
                     </div>
                 </div>    
             </div>
-            <div className="container text-center">
+            <div className="container text-center mt-5">
                 <div className="slick">
                     <div className="item youtube">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/Tx3W6XAO7Yo" frameBorder="0" allow="autoplay; encrypted-media" allowFullscreen></iframe>
                         <p className="caption">YouTube</p>
                     </div>
-                    <div className="item vimeo">
+                    <div className="item youtube">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/ralZmBh4lk0" frameBorder="0" allow="autoplay; encrypted-media" allowFullscreen></iframe>
-                        <p className="caption">Vimeo</p>
+                        <p className="caption">YouTube</p>
                     </div>
                 </div>
             </div>

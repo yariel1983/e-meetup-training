@@ -54,7 +54,8 @@ function Footer(props){
                         <img title="Instagram" src="https://socialmediawidgets.files.wordpress.com/2014/03/10_instagram.png" alt="RSS" width="35" height="35"/>
                     </div>
                 </div>
-    
+                
+                
             </footer>   
         </div>     
             );

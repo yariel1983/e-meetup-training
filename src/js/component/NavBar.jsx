@@ -1,9 +1,11 @@
 import React from 'react';
+//import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import {withSession} from '../stores/AppContext.jsx';
 import $ from "jquery";
 import {Consumer} from "../stores/AppContext.jsx";
+
 
 class Navbar extends React.Component{
     constructor(props){
@@ -30,7 +32,7 @@ class Navbar extends React.Component{
             return(
     
                 <div>
-                    <nav className="navbar navbar-expand-lg navbar-toggler-sm navbar-light bg-white">
+                    <nav className="navbar navbar-expand-lg navbar-toggler-sm navbar-light bg-white border-bottom" id="mynavbar">
                         <img src="http://www.hertsmereleisure.co.uk/centre_uploads/1/images/HM%20-%20Training%20Academy%20logo.jpg" width="150 px" height="60 px"/>
                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
@@ -50,6 +52,7 @@ class Navbar extends React.Component{
                                 <Link to={"/events"} className="nav-item nav-link" >Events</Link>
                                 <Link to={"/contact"} className="nav-item nav-link" >Contacts</Link>
                                 <Link to={"/cart"} className="nav-item nav-link">Cart</Link>
+                                <Link to={"/register"} className="nav-item nav-link">Register</Link>
                                 {
                                     session && typeof(session.user_nicename) !== 'undefined' ?
                                         
@@ -74,7 +77,7 @@ class Navbar extends React.Component{
                         </div>
                 
                     </nav>
-                
+                    
                     <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div className="modal-dialog" role="document">
                             <div className="modal-content">
@@ -110,3 +113,4 @@ Navbar.propTypes = {
   actions: PropTypes.object,
   currentView: PropTypes.string
 };
+                                        
