@@ -16,7 +16,8 @@ function Article(props) {
                             <option>Price: low to high</option>
                             <option>Price: high to low</option>
                         </select>
-                        <span className="select2 select2-container select2-container--default" dir="ltr" style="width: 146px;">
+                        <span className="select2 select2-container select2-container--default" dir="ltr" >
+                            <style>{'.select2 {width: 146px}'}</style>
                             <span className="selection">
                                 <span className="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false"  aria-labelledby="select2-sorting-0n-container">
                                     <span className="select2-selection__rendered" id="select2-sorting-0n-container" title="Default Sorting">Default Sorting</span>
