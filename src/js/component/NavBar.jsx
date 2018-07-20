@@ -57,7 +57,7 @@ class Navbar extends React.Component{
                                         
                                         <div className="d-flex">
                                             <Link className="nav-item nav-link " to={"/user/"+session.user_nicename.value}>
-                                                    Hello, {/*session.user_display_name.charAt(0).toUpperCase()+session.user_display_name.substring(1)*/}
+                                                    Hello, session.user_display_name.charAt(0).toUpperCase()+session.user_display_name.substring(1)
                                             </Link>
                                             <a className="nav-item nav-link" href="#" onClick={() => actions.logout()}>
                                                     Logout
