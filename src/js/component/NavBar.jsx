@@ -32,7 +32,7 @@ class Navbar extends React.Component{
             return(
     
                 <div>
-                    <nav className="navbar navbar-expand-lg navbar-toggler-sm navbar-light bg-white border-bottom">
+                    <nav className="navbar navbar-expand-lg navbar-toggler-sm navbar-light bg-white border-bottom" id="mynavbar">
                         <img src="http://www.hertsmereleisure.co.uk/centre_uploads/1/images/HM%20-%20Training%20Academy%20logo.jpg" width="150 px" height="60 px"/>
                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>

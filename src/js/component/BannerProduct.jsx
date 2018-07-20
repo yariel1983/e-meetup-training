@@ -15,10 +15,10 @@ function BannerProduct(props){
                               Categories
                                 </button>
                                 <div className="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                    <a className="dropdown-item" href="#">Women</a>
-                                    <a className="dropdown-item" href="#">Women</a>
-                                    <a className="dropdown-item" href="#">Women</a>
-                                    <a className="dropdown-item" href="#">Women</a>
+                                    <a className="dropdown-item" href="#">Weights</a>
+                                    <a className="dropdown-item" href="#">Exercise Bicycle</a>
+                                    <a className="dropdown-item" href="#">cardio Machine</a>
+                                    <a className="dropdown-item" href="#">Women All in One Gym</a>
                                 </div>
                             </div>
                         </div>
