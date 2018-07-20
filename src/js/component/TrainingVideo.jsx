@@ -10,7 +10,7 @@ function TrainingVideo(props){
                     <li data-target="#video-carousel-example2" data-slide-to="0" className="active"></li>
                     <li data-target="#video-carousel-example2" data-slide-to="1"></li>
                 </ol>
-                <div className="carousel-inner" role="listbox">
+                <div className="carousel-inner text-center" role="listbox">
                     <div className="carousel-item active">
                         <div className="view">
                             <video className="video-fluid" autoPlay loop>
