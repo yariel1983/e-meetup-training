@@ -64,7 +64,7 @@ export default class Layout extends React.Component {
                         <Route exact path="/about" component={About} />
                         <Route exact path="/products" component={Products} />
                         <Route exact path="/training" component={Training} />
-                        <Route exact path="/events" component={Events} />
+                        {/* Eliminar para presentacion <Route exact path="/events" component={Events} /> */}
                         <Route exact path="/contact" component={Contact} />
                     </Provider>
                     <Route render={() => <h1>Not found!</h1>} />
