@@ -14,7 +14,7 @@ export default class Contact extends React.Component{
                
                 
                 <div className="jumbotron jumbotron-sm">
-                    <div className="container">
+                    <div className="container text-center">
                         <div className="row">
                             <div className="col-sm-12 col-lg-12">
                                 <h1 className="h1">
