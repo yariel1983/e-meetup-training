@@ -16,29 +16,28 @@ function Login(props) {
                             </div>
                             <fieldset>
                                 <div className="form-group has-error">
-                                    <div className="form-control input-lg" placeholder="E-mail Address" name="email" type="text" />
+                                    <input className="form-control input-lg" placeholder="E-mail Address" name="email" type="text" />
                                 </div>
                                 <div className="form-group has-success">
-                                    <div className="form-control input-lg" placeholder="Password" name="password" value="" type="password" />
+                                    <input className="form-control input-lg" placeholder="Password" name="password" value="" type="password" />
                                 </div>
                                 <div className="form-group has-success">
-                                    <div className="form-control input-lg" placeholder="Confirm Password" name="password" value="" type="password" />
+                                    <input className="form-control input-lg" placeholder="Confirm Password" name="password" value="" type="password" />
                                 </div>
                                 <div className="form-group">
                                     <select className="form-control input-lg">
-                                        <option selecterd="">Sequrity Question</option>
+                                        <option selecterd="">Security Question</option>
                                     </select>
                                 </div>
                                 <div className="form-group">
-                                    <div className="form-control input-lg" placeholder="Sequrity Answer" name="answer" value="" type="text" />
                                 </div>
                                 <div className="checkbox">
                                     <label className="small">
-                                        <div className="terms" type="checkbox">I have read and agree to the <a href="#">terms of service</a>
-                                        </div>
+                                        <input className="terms mr-1" type="checkbox"/>I have read and agree to the <a href="#">terms of service</a>
+                            
                                     </label>
                                 </div>
-                                <div className="btn btn-lg btn-primary btn-block" value="Sign Me Up" type="submit" />
+                                <input className="btn btn-lg btn-primary btn-block" value="Sign Me Up" type="submit" />
                             </fieldset>
                         </div>
                     </div>
