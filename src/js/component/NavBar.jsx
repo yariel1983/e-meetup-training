@@ -67,7 +67,7 @@ class Navbar extends React.Component{
                                     :
                                         
                                         <button 
-                                            type="button" 
+                                            type="button"
                                             className="btn btn-outline-success pl-3 pr-3 mt-0 my-3 my-sm-0 ml-3" 
                                             data-toggle="modal" 
                                             data-target="#exampleModal">Login</button>
