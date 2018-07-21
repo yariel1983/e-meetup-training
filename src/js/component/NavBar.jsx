@@ -5,6 +5,9 @@ import PropTypes from "prop-types";
 import {withSession} from '../stores/AppContext.jsx';
 import $ from "jquery";
 import {Consumer} from "../stores/AppContext.jsx";
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import faUser from '@fortawesome/fontawesome-free-regular/faUser';
+import faSearch from '@fortawesome/fontawesome-free-solid/faSearch';
 
 
 class Navbar extends React.Component{
@@ -42,7 +45,9 @@ class Navbar extends React.Component{
                                 <div className="container">
                                     <form className="form-inline my-2 my-lg-0">
                                         <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-                                        <button className="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+                                        <button className="btn btn-outline-primary my-2 my-sm-0" type="submit">
+                                            <span><FontAwesomeIcon className="fas fa-search text-primary" icon={faSearch} />&nbsp;Search</span>  
+                                        </button>
                                     </form>
                                 </div>                              
                                 <Link to={"/"} className="nav-item nav-link active" >Home <span className="sr-only">(current)</span></Link>
@@ -70,7 +75,9 @@ class Navbar extends React.Component{
                                             type="button"
                                             className="btn btn-outline-success pl-3 pr-3 mt-0 my-3 my-sm-0 ml-3" 
                                             data-toggle="modal" 
-                                            data-target="#exampleModal">Login</button>
+                                            data-target="#exampleModal">Login&nbsp;
+                                            <span><FontAwesomeIcon className="fa-1x text-success" icon={faUser} /></span>    
+                                        </button>
                                 }
     
                             </div>
