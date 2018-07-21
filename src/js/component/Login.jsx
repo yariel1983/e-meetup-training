@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Login(props) {
     return (
         <div className="container text-center mt-5 mb-5">
-            <div className="container-fluid bg-light py-3">
+            <div className="container-fluid py-3">
                 <div className="row">
                     <div className="col-md-6 mx-auto">
                         <div className="card card-body">
