@@ -78,10 +78,10 @@ class Navbar extends React.Component{
                 
                     </nav>
                     
-                    <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div className="modal fade-md" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div className="modal-dialog" role="document">
                             <div className="modal-content">
-                                <div className="modal-header">
+                                <div className="modal-header bg-outline-secondary">
                                     <h5 className="modal-title" id="exampleModalLabel">Login</h5>
                                     <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
@@ -92,12 +92,17 @@ class Navbar extends React.Component{
                                                                         e.preventDefault();
                                                                         actions.loadSession(this.state.username, this.state.password);
                                     }}>
-                                        <div className="form-group">
-                                            <input type="text" name="user" value={this.state.user} placeholder="Username" onChange={(e) => this.setState({username: e.target.value})} />
+                                        <div className="form-group text-center">
+                                            <input type="text" name="user" id="myuser"value={this.state.user} placeholder="Username" onChange={(e) => this.setState({username: e.target.value})} />
                                             <input type="password" name="password" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})} />
                                         </div>
-                                        <input type="submit" value="Login" />
+                                        <button className="btn btn-primary" id="mylogb" type="submit" value="Login">Login</button>
                                     </form>
+                                    <div className="checkbox">
+                                        <label className="small">
+                                            <input className="Remember mr-1" type="checkbox"/>Remember me
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -114,3 +119,4 @@ Navbar.propTypes = {
   currentView: PropTypes.string
 };
                                         
+                            
