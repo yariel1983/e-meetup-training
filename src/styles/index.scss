@@ -72,8 +72,8 @@ font-size: 24px;
     padding: 4rem;
 }
 #loginb{
-    color: blue;
-    text-align: right;
+    color: green;
+    float: right;
 }
 .html5{    
 width: 510px; height: 287px; left: 0px; top: 0px;   
@@ -89,7 +89,7 @@ width: 510px; height: 287px; left: 0px; top: 0px;
 }
 #mylogb{
     float: right;
-    color: white;
+    color: blue;
     border-radius: 5px;
     margin-top: 52px;
     margin-bottom: -40px;
@@ -100,3 +100,6 @@ width: 510px; height: 287px; left: 0px; top: 0px;
 .modal-header{
     background: #1240d040;
 }    
+.sortdiv{
+    float: right;
+}

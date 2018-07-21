@@ -1,11 +1,9 @@
 import React from 'react';
-//import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import {withSession} from '../stores/AppContext.jsx';
 import $ from "jquery";
 import {Consumer} from "../stores/AppContext.jsx";
-
 
 class Navbar extends React.Component{
     constructor(props){
@@ -18,22 +16,25 @@ class Navbar extends React.Component{
         };
     }
     
-    //componentDidUpdate(prevProps, prevState) {
+    componentDidUpdate(prevProps, prevState) {
         // Previous ThemeContext value is prevProps.theme
         // New ThemeContext value is this.props.theme
-    //    if(this.props.session.token) $('#exampleModal').modal('hide');
-    //}
+        if(this.props.session.token) $('#exampleModal').modal('hide');
+    }
 
     render(){
             let homeActive = this.props.currentView === "home" ? "active" :"";
-            
-            const {session, actions} = this.props;
-            
+        
+        const {session, actions} = this.props;
+        
             return(
     
                 <div>
                     <nav className="navbar navbar-expand-lg navbar-toggler-sm navbar-light bg-white border-bottom" id="mynavbar">
-                        <img src="http://www.hertsmereleisure.co.uk/centre_uploads/1/images/HM%20-%20Training%20Academy%20logo.jpg" width="150 px" height="60 px"/>
+                        <Link to={"/"} className="nav-item text-left">
+                            <img src="http://www.hertsmereleisure.co.uk/centre_uploads/1/images/HM%20-%20Training%20Academy%20logo.jpg" width="150 px" height="60 px"/>
+                        </Link>
+                        
                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
@@ -53,12 +54,15 @@ class Navbar extends React.Component{
                                 <Link to={"/contact"} className="nav-item nav-link" >Contacts</Link>
                                 <Link to={"/cart"} className="nav-item nav-link">Cart</Link>
                                 <Link to={"/register"} className="nav-item nav-link">Register</Link>
-                                {
+                                
+                            </div>
+                        </div>
+                        {
                                     session && typeof(session.user_nicename) !== 'undefined' ?
                                         
                                         <div className="d-flex">
                                             <Link className="nav-item nav-link " to={"/user/"+session.user_nicename.value}>
-                                                    Hello, session.user_display_name.charAt(0).toUpperCase()+session.user_display_name.substring(1)
+                                                    Hello Yariel, Jesus & Jobel, {/*session.user_display_name.charAt(0).toUpperCase()+session.user_display_name.substring(1)*/}
                                             </Link>
                                             <a className="nav-item nav-link" href="#" onClick={() => actions.logout()}>
                                                     Logout
@@ -68,14 +72,10 @@ class Navbar extends React.Component{
                                         
                                         <button 
                                             type="button" 
-                                            className="btn btn-outline-success pl-3 pr-3 mt-0 my-3 my-sm-0 ml-3" 
+                                            className="nav-item btn btn-outline-success" id="loginb"
                                             data-toggle="modal" 
                                             data-target="#exampleModal">Login</button>
                                 }
-    
-                            </div>
-                        </div>
-                
                     </nav>
                     
                     <div className="modal fade-md" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -96,7 +96,7 @@ class Navbar extends React.Component{
                                             <input type="text" name="user" id="myuser"value={this.state.user} placeholder="Username" onChange={(e) => this.setState({username: e.target.value})} />
                                             <input type="password" name="password" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})} />
                                         </div>
-                                        <button className="btn btn-primary" id="mylogb" type="submit" value="Login">Login</button>
+                                        <button className="btn btn-outline-primary" id="mylogb" type="submit" value="Login">Login</button>
                                     </form>
                                     <div className="checkbox">
                                         <label className="small">
@@ -120,3 +120,6 @@ Navbar.propTypes = {
 };
                                         
                             
+
+
+            
