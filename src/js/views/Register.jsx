@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import NavBar from '../component/NavBar.jsx';
 import Footer from '../component/Footer.jsx';
+import Banner from '../component/Banner.jsx';
 import Login from '../component/Login.jsx';
 
 export default class Register extends React.Component{
@@ -11,6 +12,7 @@ export default class Register extends React.Component{
         return (
             <React.Fragment>
                 <NavBar />
+                <Banner />
                 <Login  />
                 <Footer />
             </React.Fragment>
