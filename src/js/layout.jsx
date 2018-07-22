@@ -9,6 +9,7 @@ import Events from "./views/Events.jsx";
 import Contact from "./views/Contact.jsx";
 import Register from "./views/Register.jsx";
 import Cart from "./views/Cart.jsx";
+import DetailsProduct from "./views/DetailsProduct.jsx";
 import {Provider} from './stores/AppContext.jsx';
 
 
@@ -33,6 +34,15 @@ export default class Layout extends React.Component {
                 password: "1234",
                 token: "qwerty12345asdfgzxcv"
             },
+            "cart":[
+                {
+                    id: 1,
+                    name: "A Laptop computer",
+                    price: 30,
+                    image_url: "http://picsum.photos/600/600/?image=1",
+                    description: "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham."
+                }
+            ],
             "isLoading": true
     };
 
@@ -65,6 +75,7 @@ export default class Layout extends React.Component {
                         <Route exact path="/" component={Home} />
                         <Route exact path="/about" component={About} />
                         <Route exact path="/products" component={Products} />
+                        <Route exact path="/DetailsProduct/:ArtId" component={DetailsProduct} />
                         <Route exact path="/training" component={Training} />
                         {/* Eliminar para presentacion <Route exact path="/events" component={Events} /> */}
                         <Route exact path="/contact" component={Contact} />

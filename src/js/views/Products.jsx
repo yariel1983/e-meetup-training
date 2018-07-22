@@ -8,6 +8,7 @@ import BannerProduct from '../component/BannerProduct.jsx';
 import Footer from '../component/Footer.jsx';
 import Article from '../component/Article.jsx';
 
+
 export default class Products extends React.Component{
     constructor(props) {
         super(props);
@@ -20,7 +21,7 @@ export default class Products extends React.Component{
                 <NavBar />
                 <BannerProduct />
                 <ProductCard />
-                
+
                 <Article />
 
                 <Footer />
