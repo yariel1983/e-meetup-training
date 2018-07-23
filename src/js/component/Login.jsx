@@ -36,11 +36,11 @@ function Login(props) {
                                 </div>
                                 
                                 <div className="form-group has-error">
-                                    <input className="form-control input-lg" placeholder="Adress Line 1" name="Address" type="text" />
+                                    <input className="form-control input-lg" placeholder="Address Line 1" name="Address" type="text" />
                                 </div>
                                 
                                 <div className="form-group has-error">
-                                    <input className="form-control input-lg" placeholder="Adress Line 2" name="Address" type="text" />
+                                    <input className="form-control input-lg" placeholder="Address Line 2" name="Address" type="text" />
                                 </div>
                                     
                                     
