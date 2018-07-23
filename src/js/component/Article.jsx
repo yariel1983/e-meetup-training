@@ -5,11 +5,16 @@ import { Link } from "react-router-dom";
 //NavBar
 function Article(props) {
     return (
+<<<<<<< HEAD
         <div className="col-sm-6 col-md-8 col-lg-9 p-b-50">
+=======
+        <div className="col-sm-6 col-md-8 col-lg-9 p-b-50" id="sortdiv">
+            {/*<!--  -->*/}
+>>>>>>> ab7d0bb9a9509487e2998aadf63f0bab590042a3
             <div className="flex-sb-m flex-w p-b-35">
                 <div className="flex-w">
                     <div className="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">
-                        <select className="selection-2 select2-hidden-accessible" name="sorting"  aria-hidden="true">
+                        <select className="selection-2 select2-hidden-accessible border border-dark" name="sorting"  aria-hidden="true border">
                             <option>Default Sorting</option>
                             <option>Popularity</option>
                             <option>Price: low to high</option>

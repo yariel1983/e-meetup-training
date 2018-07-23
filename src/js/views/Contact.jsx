@@ -13,7 +13,7 @@ export default class Contact extends React.Component{
                 <NavBar />
                
                 
-                <div className="jumbotron jumbotron-sm">
+                <div className="jumbotron jumbotron-sm border border-dark">
                     <div className="container text-center">
                         <div className="row">
                             <div className="col-sm-12 col-lg-12">

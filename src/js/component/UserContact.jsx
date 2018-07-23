@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function UserContact(props) {
     return (
         
-        <div className="container col-4 border border-secondary mt-5 mb-5">
+        <div className="container col-4 mt-5 mb-5">
             <form>
                 <div className="form-group mt-3">
                     <label className="exampleInputEmail1">Email address</label>
