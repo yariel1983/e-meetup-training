@@ -5,12 +5,8 @@ import { Link } from "react-router-dom";
 //NavBar
 function Article(props) {
     return (
-<<<<<<< HEAD
-        <div className="col-sm-6 col-md-8 col-lg-9 p-b-50">
-=======
-        <div className="col-sm-6 col-md-8 col-lg-9 p-b-50" id="sortdiv">
+        <div className="col-sm-6 col-md-8 col-lg-9 p-b-50" >
             {/*<!--  -->*/}
->>>>>>> ab7d0bb9a9509487e2998aadf63f0bab590042a3
             <div className="flex-sb-m flex-w p-b-35">
                 <div className="flex-w">
                     <div className="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">
