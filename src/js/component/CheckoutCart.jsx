@@ -17,14 +17,12 @@ export default class CheckoutCart extends React.Component{
         return (
             <div className="container">
                 <div className="row">
-                    <div className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3 align-items-center ">
-                        <div className="containerleft p-2">
-                            <div className="containerleftProduct mr-5">
-                                <img className="card-img-top" src="https://www.bestwomensworkoutreviews.com/wp-content/uploads/2014/06/Bowflex-PR1000-Home-Gym-1-1024x1024.jpg" />
-                            </div>
+                    <div className="d-md-flex flex-md-6 w-100 my-md-3 pl-md-3 align-items-center ">
+                        <div className="containerleft p-2 mr-5">
+                            <img className="card-img-top" src="https://www.bestwomensworkoutreviews.com/wp-content/uploads/2014/06/Bowflex-PR1000-Home-Gym-1-1024x1024.jpg" />
                         </div>
-                        <div className="containerRight p-2">
-                            <div className="col-md-4 order-md-2 mb-4">
+                        <div className="containerRight p-2 mr-5">
+                            <div className="col-md-12 order-md-2 mb-4">
                                 <h4 className="d-flex justify-content-between align-items-center mb-3">
                                     <span className="text-muted">Your cart</span>
                                     <span className="badge badge-secondary badge-pill">{this.state.totalItems}</span>
