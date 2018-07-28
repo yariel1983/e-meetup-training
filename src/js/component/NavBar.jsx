@@ -60,50 +60,28 @@ class Navbar extends React.Component{
                                 <Link to={"/contact"} className="nav-item nav-link" >Contacts</Link>
                                 <Link to={"/cart"} className="nav-item nav-link">Cart</Link>
                                 <Link to={"/register"} className="nav-item nav-link">Register</Link>
-                                {
-                                session && typeof(session.username) !== 'undefined' ?
-                                    
-                                    <div className="d-flex">
-                                        <Link className="nav-item nav-link " to={"/profile/"+session.username.value}>
-                                            Hello, {session.username}
-                                            {/*.charAt(0).toUpperCase()+session.username.substring(1)}*/}
-                                        </Link>
-                                        <a className="nav-item nav-link" href="#" onClick={() => actions.logout()}>
-                                                Logout
-                                        </a>
-                                    </div>
-                                :
-                                    
-                                    <button 
-                                        type="button" 
-                                        className="btn btn-primary" 
-                                        data-toggle="modal" 
-                                        data-target="#exampleModal">Login</button>
-                            }                                
                             </div>
                         </div>
 
                         {
-                                    session && typeof(session.user_nicename) !== 'undefined' ?
-                                        
-                                        <div className="d-flex">
-                                            <Link className="nav-item nav-link " to={"/user/"+session.user_nicename.value}>
-                                                    Hello Yariel, Jesus & Jobel,&nbsp; {session.user_display_name.charAt(0).toUpperCase()+session.user_display_name.substring(1)}
-                                            </Link>
-                                            <a className="nav-item nav-link" href="#" onClick={() => actions.logout()}>
-                                                    Logout
-                                            </a>
-                                        </div>
-                                    :
-                                        
-                                        <button 
-                                        type="button" 
+                            session && typeof(session.user_nicename) !== 'undefined' ?
+                                
+                                <div className="d-flex">
+                                    <Link className="nav-item nav-link " to={"/user/"+session.username.value}>
+                                        Hello, {session.username}
+                                        {/*.charAt(0).toUpperCase()+session.user_display_name.substring(1)}*/}
+                                    </Link>
+                                    <a className="nav-item nav-link" href="#" onClick={() => actions.logout()}>
+                                        Logout
+                                    </a>
+                                </div>
+                            :
+                                
+                                <button type="button" 
                                         className="btn btn-success" 
                                         data-toggle="modal" 
                                         data-target="#exampleModal">Login</button>
-                                }
-=======
->>>>>>> 46a4bfef816e85fa19009700f33e86afc34eee61
+                        }
                     </nav>
                     
                     <div className="modal fade-md" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -136,6 +114,7 @@ class Navbar extends React.Component{
 }
 
 export default withSession(Navbar);
+
 Navbar.propTypes = {
   session: PropTypes.object,
   actions: PropTypes.object,
