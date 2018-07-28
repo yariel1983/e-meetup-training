@@ -1,16 +1,19 @@
 import React from 'react';
 import 'bootstrap';
 import { Link } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { browserhistory } from "react-router";
 
 
 
 
 function ProductCard(props){
+    let ArticleId = 1;
 return (
     <div>
         <div className="card-group mt-5 mb-5">
             <div className="card">
-                <Link className="card-text" to={"/DetailsProducts/:ArtId"}> 
+                <Link to={"/DetailsProduct/"+ArticleId} className="card-text" > 
                     <img className="card-img-top" src="https://assets.academy.com/mgen/81/10213981.jpg?is=500,500" alt="Card image cap"/>
                 </Link>
                     
