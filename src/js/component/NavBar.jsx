@@ -46,8 +46,8 @@ class Navbar extends React.Component{
                                 <div className="container">
                                     <form className="form-inline my-2 my-lg-0">
                                         <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-                                        <button className="btn btn-outline-primary my-2 my-sm-0" type="submit">
-                                            <span><FontAwesomeIcon className="fas fa-search text-primary" icon={faSearch} />&nbsp;Search</span>  
+                                        <button className="btn btn-secondary text-white my-2 my-sm-0" type="submit">
+                                            <span><FontAwesomeIcon className="fas fa-search text-white" icon={faSearch} />&nbsp;Search</span>  
                                         </button>
                                     </form>
                                 </div>                              
@@ -68,7 +68,7 @@ class Navbar extends React.Component{
                                         
                                         <div className="d-flex">
                                             <Link className="nav-item nav-link " to={"/user/"+session.user_nicename.value}>
-                                                    Hello Yariel, Jesus & Jobel, {/*session.user_display_name.charAt(0).toUpperCase()+session.user_display_name.substring(1)*/}
+                                                    Hello Yariel, Jesus & Jobel,&nbsp; {session.user_display_name.charAt(0).toUpperCase()+session.user_display_name.substring(1)}
                                             </Link>
                                             <a className="nav-item nav-link" href="#" onClick={() => actions.logout()}>
                                                     Logout
@@ -77,12 +77,10 @@ class Navbar extends React.Component{
                                     :
                                         
                                         <button 
-                                            type="button"
-                                            className="btn btn-outline-success pl-3 pr-3 mt-0 my-3 my-sm-0 ml-3" id="loginb"
-                                            data-toggle="modal" 
-                                            data-target="#exampleModal">Login&nbsp;
-                                            <span><FontAwesomeIcon className="fa-1x text-success" icon={faUser} /></span>    
-                                        </button>
+                                        type="button" 
+                                        className="btn btn-success" 
+                                        data-toggle="modal" 
+                                        data-target="#exampleModal">Login</button>
                                 }
                     </nav>
                     

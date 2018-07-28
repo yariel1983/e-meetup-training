@@ -72,7 +72,7 @@ function Login(props) {
                                         <input className="terms mr-1" type="checkbox"/>I have read and agree to the <a href="#">terms of service</a>
                                     </label>
                                     
-                                    <input className="btn btn-lg btn-primary btn-block" value="Sign Me Up" type="submit" />
+                                    <input className="btn btn-lg btn-secondary btn-block" value="Sign Me Up" type="submit" />
                                 </div>
                             </fieldset>
                         </div>
