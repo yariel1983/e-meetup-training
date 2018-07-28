@@ -9,9 +9,9 @@ import Events from "./views/Events.jsx";
 import Contact from "./views/Contact.jsx";
 import Register from "./views/Register.jsx";
 import Cart from "./views/Cart.jsx";
-import DetailsProduct from "./views/DetailsProduct.jsx";
 import {Provider} from './stores/AppContext.jsx';
 
+import DetailsProduct from "./views/DetailsProduct.jsx";
 
 export default class Layout extends React.Component {
 
@@ -21,16 +21,20 @@ export default class Layout extends React.Component {
     this.state = {
             "article": [
                 {
-                    id: 1,
-                    name: "sdfas fsdfsdf dsfsdf",
-                    description: "sfsdfsdafdsafsda fsdaffdsa fsdfdsfsd fdsfdsf",
-                    price: 0.00
+                    articleid: 1,
+                    name: "Weight & Strength",
+                    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+                    price: "65.00",
+                    oldprice: "90.00",
+                    imgurl: "https://www.bestwomensworkoutreviews.com/wp-content/uploads/2014/06/Bowflex-PR1000-Home-Gym-1-1024x1024.jpg"
+
                 }
             ],
             "meetups": [],
             "session":{
                 ID: 2,
                 username: "theUser",
+                email: "test@gmail.com",
                 password: "1234",
                 token: "qwerty12345asdfgzxcv"
             },
@@ -46,14 +50,61 @@ export default class Layout extends React.Component {
             "isLoading": true
     };
 
-    this.actions = {
-              "loadInitialData": () => {
-                fetch('https://wordpress-breathecode-cli-nachovz.c9users.io/wp-json/sample_api/v1/events')
+    this.actions = {"loadSession": (receivedUsername, receivedPassword) => {
+                /*this.setState(
+                    {
+                        session: {
+                            ID: 1000,
+                            user_nicename: receivedUsername,
+                            password: receivedPassword,
+                            token: "gfdrtu6545hftydhgrhxfh"
+                        }
+                        
+                    });
+                */    //REST API AUTH
+                    var data = {
+                        "username":receivedUsername, 
+                        "password":receivedPassword
+                      };
+                      
+                    fetch('https://wordpress-breathecode-cli-nachovz.c9users.io/wp-json/jwt-auth/v1/token',
+                    {
+                      method: 'POST',
+                      body: JSON.stringify(data),
+                      headers: new Headers({
+                        'Content-Type': 'application/json'
+                        })
+                    })
+                    .then( (response) => response.json())
+                    .then( (data) => {
+                        
+                        if (typeof(data.token) === "undefined" ) throw new Error(data.message);
+                        this.setState({session: data});
+                        
+                        //ReactGA.set({ userId: data.user_nicename });
+                    })
+                    .catch(error => console.log(error));
+                  
+                    //Simulating user ID
+                    /*
+                    fetch('https://randomuser.me/api/?inc=id,name,picture')
+                    .then(res => res.json())
+                    .catch(error => {
+                      //console.error('Error:', error)
+                    })
+                    .then(response => {
+                      this.dispatch('MeetupStore.setSession', response);
+                    });*/
+                    
+                    
+                  },
+            "loadInitialData": () => {
+                fetch('https://myfirst-php-jpironag.c9users.io/wp-json/sample_api/v1/courses')
                   .then(response => response.json())
                   .then(data => this.setState({ events: data, isLoading: false }))
                   .catch(error => console.log(error));
                   
-                fetch('https://wordpress-breathecode-cli-nachovz.c9users.io/wp-json/sample_api/v1/meetups')
+                fetch('https://myfirst-php-jpironag.c9users.io/wp-json/sample_api/v1/courses')
                   .then(response => response.json())
                   .then(data => this.setState({ meetups: data }))
                   .catch(error => console.log(error));

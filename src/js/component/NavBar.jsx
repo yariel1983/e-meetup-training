@@ -19,14 +19,14 @@ class Navbar extends React.Component{
         };
     }
     
-    componentDidUpdate(prevProps, prevState) {
+    /*componentDidUpdate(prevProps, prevState) {
         // Previous ThemeContext value is prevProps.theme
         // New ThemeContext value is this.props.theme
         if(this.props.session.token) $('#exampleModal').modal('hide');
-    }
+    }*/
 
     render(){
-            let homeActive = this.props.currentView === "home" ? "active" :"";
+        let homeActive = this.props.currentView === "home" ? "active" :"";
         
         const {session, actions} = this.props;
         
@@ -54,15 +54,35 @@ class Navbar extends React.Component{
                                 <Link to={"/"} className="nav-item nav-link active" >Home <span className="sr-only">(current)</span></Link>
                                 <Link to={"/about"} className="nav-item nav-link" >About</Link>
                                 <Link to={"/products"} className="nav-item nav-link" >Products</Link>
-                                <Link to={"/DetailsProduct"} className="nav-item nav-link" >DetailsProduct</Link>
+                                {/*<Link to={"/DetailsProduct"} className="nav-item nav-link" >DetailsProduct</Link>*/}
                                 <Link to={"/training"} className="nav-item nav-link" >Trainings</Link>
                                 {/*<Link to={"/events"} className="nav-item nav-link" >Events</Link>*/}
                                 <Link to={"/contact"} className="nav-item nav-link" >Contacts</Link>
                                 <Link to={"/cart"} className="nav-item nav-link">Cart</Link>
                                 <Link to={"/register"} className="nav-item nav-link">Register</Link>
-                                
+                                {
+                                session && typeof(session.username) !== 'undefined' ?
+                                    
+                                    <div className="d-flex">
+                                        <Link className="nav-item nav-link " to={"/profile/"+session.username.value}>
+                                            Hello, {session.username}
+                                            {/*.charAt(0).toUpperCase()+session.username.substring(1)}*/}
+                                        </Link>
+                                        <a className="nav-item nav-link" href="#" onClick={() => actions.logout()}>
+                                                Logout
+                                        </a>
+                                    </div>
+                                :
+                                    
+                                    <button 
+                                        type="button" 
+                                        className="btn btn-primary" 
+                                        data-toggle="modal" 
+                                        data-target="#exampleModal">Login</button>
+                            }                                
                             </div>
                         </div>
+
                         {
                                     session && typeof(session.user_nicename) !== 'undefined' ?
                                         
@@ -82,6 +102,8 @@ class Navbar extends React.Component{
                                         data-toggle="modal" 
                                         data-target="#exampleModal">Login</button>
                                 }
+=======
+>>>>>>> 46a4bfef816e85fa19009700f33e86afc34eee61
                     </nav>
                     
                     <div className="modal fade-md" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -95,20 +117,15 @@ class Navbar extends React.Component{
                                 </div>
                                 <div className="modal-body">
                                     <form role="form" onSubmit={(e) => {
-                                                                        e.preventDefault();
-                                                                        actions.loadSession(this.state.username, this.state.password);
+                                                                    e.preventDefault();
+                                                                    actions.loadSession(this.state.username, this.state.password);
                                     }}>
-                                        <div className="form-group text-center">
-                                            <input type="text" name="user" id="myuser"value={this.state.user} placeholder="Username" onChange={(e) => this.setState({username: e.target.value})} />
+                                        <div className="form-group">
+                                            <input type="text" name="user" value={this.state.username} placeholder="Username" onChange={(e) => this.setState({username: e.target.value})} />
                                             <input type="password" name="password" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})} />
                                         </div>
-                                        <button className="btn btn-outline-primary" id="mylogb" type="submit" value="Login">Login</button>
+                                        <input type="submit" value="Login" />
                                     </form>
-                                    <div className="checkbox">
-                                        <label className="small">
-                                            <input className="Remember mr-1" type="checkbox"/>Remember me
-                                        </label>
-                                    </div>
                                 </div>
                             </div>
                         </div>
