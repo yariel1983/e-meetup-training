@@ -8,6 +8,8 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faUser from '@fortawesome/fontawesome-free-regular/faUser';
 import faSearch from '@fortawesome/fontawesome-free-solid/faSearch';
 
+
+
 class Navbar extends React.Component{
     constructor(props){
         super(props);
@@ -64,10 +66,10 @@ class Navbar extends React.Component{
                         </div>
 
                         {
-                            session && typeof(session.user_nicename) !== 'undefined' ?
+                            session && typeof(session.username) !== 'undefined' ?
                                 
                                 <div className="d-flex">
-                                    <Link className="nav-item nav-link " to={"/user/"+session.username.value}>
+                                    <Link className="nav-item nav-link " to={"/Register/"+session.ID}>
                                         Hello, {session.username}
                                         {/*.charAt(0).toUpperCase()+session.user_display_name.substring(1)}*/}
                                     </Link>
