@@ -33,7 +33,7 @@ class Navbar extends React.Component{
             return(
     
                 <div>
-                    <nav className="navbar navbar-expand-lg navbar-toggler-sm navbar-light bg-white border-bottom" id="mynavbar">
+                    <nav className="navbar navbar-expand-lg navbar-toggler-sm navbar-light bg-white border-bottom fixed-top" id="mynavbar">
                         <Link to={"/"} className="nav-item text-left">
                             <img src="http://www.hertsmereleisure.co.uk/centre_uploads/1/images/HM%20-%20Training%20Academy%20logo.jpg" width="150 px" height="60 px"/>
                         </Link>
