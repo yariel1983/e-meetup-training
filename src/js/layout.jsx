@@ -39,12 +39,12 @@ export default class Layout extends React.Component {
                 token: "qwerty12345asdfgzxcv"
             },
             "cart":[
-                {
-                    id: 1,
+                {   id: 1,
                     name: "A Laptop computer",
                     price: 30,
                     image_url: "http://picsum.photos/600/600/?image=1",
                     description: "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham."
+  
                 }
             ],
             "isLoading": true
@@ -98,6 +98,7 @@ export default class Layout extends React.Component {
                     
                     
                   },
+                  
             "loadInitialData": () => {
                 fetch('https://myfirst-php-jpironag.c9users.io/wp-json/sample_api/v1/courses')
                   .then(response => response.json())
@@ -109,7 +110,18 @@ export default class Layout extends React.Component {
                   .then(data => this.setState({ meetups: data }))
                   .catch(error => console.log(error));
               },
-              "logout": () => this.setState({session: {}})
+              
+            addProductToCart: (productId) => {
+                let tempCart = this.state.cart;
+                let arrayWithTheProduct = this.state.article.filter( (article) => {
+                    return article.articleid === productId;  
+                });
+                
+                tempCart.push(arrayWithTheProduct[0]);
+                this.setState({cart: tempCart});
+            },
+            
+            "logout": () => this.setState({session: {}})
         }; 
     }
     
@@ -131,7 +143,7 @@ export default class Layout extends React.Component {
                         {/* Eliminar para presentacion <Route exact path="/events" component={Events} /> */}
                         <Route exact path="/contact" component={Contact} />
                         <Route exact path="/cart" component={Cart} />
-                        <Route exact path="/register" component={Register} />
+                        <Route exact path="/register/:userId" component={Register} />
                     </Provider>
                     <Route render={() => <h1>Not found!</h1>} />
                 </Switch>

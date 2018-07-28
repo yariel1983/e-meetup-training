@@ -12,7 +12,7 @@ function ProductDetails(props) {
             <div className="row">
                 <Consumer>
                     {
-                ({ state, actions }) => {   const product = state.article.find( product => product.articleid === parseInt(props.artId) );
+                        ({ state, actions }) => {   const product = state.article.find( product => product.articleid === parseInt(props.artId) );
                             if (!product) {
                                 return <div>Erros, Contact to Administrator</div>;
                             } else {
@@ -40,22 +40,19 @@ function ProductDetails(props) {
                                             </div>
                                         </div>
                                         <p className="mb-4 text-muted">{product.desc}</p>
-                                        <form >
-                                            <div className="row">
-                                                <div className="col-12 detail-option mb-5">
-                                                    <label className="detail-option-heading font-weight-bold">Items <span> (required) </span></label>
-                                                    <input name="items" type="number" value="1" />
-                                                </div>
+                                        <div className="row">
+                                            <div className="col-12 detail-option mb-5">
+                                                <label className="detail-option-heading font-weight-bold">Items <span> (required) </span></label>
+                                                <input name="items" type="number" value="1" />
                                             </div>
-                                            <ul className="list-inline">
-                                                <li className="list-inline-item">
-                                                    <button type="submit" className="btn btn-dark btn-lg mb-1"><i className="fa fa-shopping-cart mr-2"></i>Add to Cart</button>
-                                                </li>
-                                                <li className="list-inline-item"><a href="#" className="btn btn-outline-secondary mb-1"> 
-                                                    <i className="far fa-heart mr-2"></i>Add to wishlist</a>
-                                                </li> 
-                                            </ul>
-                                        </form>
+                                        </div>
+                                        <ul className="list-inline">
+                                            <li className="list-inline-item">
+                                                <button className="btn btn-primary" onClick={() => actions.addProductToCart(product.articleid)}>Buy</button>                                            </li>
+                                            <li className="list-inline-item"><a href="#" className="btn btn-outline-secondary mb-1"> 
+                                                <i className="far fa-heart mr-2"></i>Add to wishlist</a>
+                                            </li> 
+                                        </ul>
                                     </div>
                                 </div>);
                             }
