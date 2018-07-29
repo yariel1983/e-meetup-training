@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function HomeSlide(props) {
     return (
         <div className="container-fluid text-center mb-5">
-            <div id="carouselExampleIndicators" className="carousel slide carousel-fade" data-ride="carousel">
+            <div id="carouselExampleIndicators" className="carousel-fluid slide carousel-fade" data-ride="carousel">
                 <ol className="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>

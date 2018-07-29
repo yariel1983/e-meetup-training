@@ -100,7 +100,7 @@ class Navbar extends React.Component{
                                                                     actions.loadSession(this.state.username, this.state.password);
                                     }}>
                                         <div className="form-group">
-                                            <input type="text" name="user" value={this.state.username} placeholder="Username" onChange={(e) => this.setState({username: e.target.value})} />
+                                            <input type="text" name="user" value={this.state.username} placeholder="Username" onChange={(e) => this.setState({username: e.target.value})} />&nbsp;&nbsp;
                                             <input type="password" name="password" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})} />
                                         </div>
                                         <input type="submit" value="Login" />
