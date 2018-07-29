@@ -9,6 +9,7 @@ import BannerProduct from '../component/BannerProduct.jsx';
 import Article from '../component/Article.jsx';
 import Footer from '../component/Footer.jsx';
 import Login from '../component/Login.jsx';
+import TrainingVideo from '../component/TrainingVideo.jsx';
 
 export default class Home extends React.Component{
     
@@ -16,8 +17,9 @@ export default class Home extends React.Component{
         return (
             <React.Fragment>
                 <NavBar />
-                <Banner />
+               
                 <HomeSlide />
+                <TrainingVideo />
                 <Footer />
                 
             </React.Fragment>
