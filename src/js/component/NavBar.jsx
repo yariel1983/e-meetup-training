@@ -78,7 +78,6 @@ class Navbar extends React.Component{
                                     </a>
                                 </div>
                             :
-                                
                                 <button type="button" 
                                         className="btn btn-success" 
                                         data-toggle="modal" 

@@ -20,14 +20,12 @@ export default class Layout extends React.Component {
     
     this.state = {
             "article": [
-                {
-                    articleid: 1,
-                    name: "Weight & Strength",
-                    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-                    price: "65.00",
-                    oldprice: "90.00",
-                    imgurl: "https://www.bestwomensworkoutreviews.com/wp-content/uploads/2014/06/Bowflex-PR1000-Home-Gym-1-1024x1024.jpg"
-
+            {   articleid: 1,
+                name: "Marcy Gym System",
+                desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                price: 65.00,
+                oldprice: 90.00,
+                imgurl: "https://assets.academy.com/mgen/81/10213981.jpg?is=500,500"
                 }
             ],
             "meetups": [],
