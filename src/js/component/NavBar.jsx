@@ -66,11 +66,11 @@ class Navbar extends React.Component{
                         </div>
 
                         {
-                            session && typeof(session.username) !== 'undefined' ?
+                            session && typeof(session.user_nicename) !== 'undefined' ?
                                 
                                 <div className="d-flex">
-                                    <Link className="nav-item nav-link " to={"/Register/"+session.ID}>
-                                        Hello, {session.username}
+                                    <Link className="nav-item nav-link " to={"/Register"}>
+                                        Hello, {session.user_nicename}
                                         {/*.charAt(0).toUpperCase()+session.user_display_name.substring(1)}*/}
                                     </Link>
                                     <a className="nav-item nav-link" href="#" onClick={() => actions.logout()}>

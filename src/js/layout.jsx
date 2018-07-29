@@ -32,20 +32,14 @@ export default class Layout extends React.Component {
             ],
             "meetups": [],
             "session":{
-                ID: 2,
+                /*ID: 2,
                 username: "theUser",
                 email: "test@gmail.com",
                 password: "1234",
-                token: "qwerty12345asdfgzxcv"
+                token: "qwerty12345asdfgzxcv"*/
             },
             "cart":[
-                {   id: 1,
-                    name: "A Laptop computer",
-                    price: 30,
-                    image_url: "http://picsum.photos/600/600/?image=1",
-                    description: "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham."
-  
-                }
+                
             ],
             "isLoading": true
     };
@@ -113,15 +107,15 @@ export default class Layout extends React.Component {
               
             addProductToCart: (productId) => {
                 let tempCart = this.state.cart;
-                let arrayWithTheProduct = this.state.article.filter( (article) => {
+                let arrayWithTheProduct = this.state.article.find( (article) => {
                     return article.articleid === productId;  
                 });
                 
-                tempCart.push(arrayWithTheProduct[0]);
-                this.setState({cart: tempCart});
+                tempCart.push(arrayWithTheProduct);
+                this.setState( { cart: tempCart } );
             },
             
-            "logout": () => this.setState({session: {}})
+            "logout": () => this.setState(  {session: {}}   )
         }; 
     }
     
@@ -143,7 +137,7 @@ export default class Layout extends React.Component {
                         {/* Eliminar para presentacion <Route exact path="/events" component={Events} /> */}
                         <Route exact path="/contact" component={Contact} />
                         <Route exact path="/cart" component={Cart} />
-                        <Route exact path="/register/:userId" component={Register} />
+                        <Route exact path="/register" component={Register} />
                     </Provider>
                     <Route render={() => <h1>Not found!</h1>} />
                 </Switch>
