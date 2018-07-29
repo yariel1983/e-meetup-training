@@ -17,9 +17,7 @@ export default class Home extends React.Component{
         return (
             <React.Fragment>
                 <NavBar />
-               
                 <HomeSlide />
-                <TrainingVideo />
                 <Footer />
                 
             </React.Fragment>
@@ -27,7 +25,9 @@ export default class Home extends React.Component{
     }
 }
                
+               
 
 
 
 
+                
