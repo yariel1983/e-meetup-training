@@ -64,7 +64,7 @@ class Navbar extends React.Component{
                                 <Link to={"/register"} className="nav-item nav-link">Register</Link>
                             </div>
                         </div>
-
+    
                         {
                             session && typeof(session.user_nicename) !== 'undefined' ?
                                 

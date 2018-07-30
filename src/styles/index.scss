@@ -14,7 +14,8 @@ color: #FFF;
 border-radius: 0px;
 }
 
-.jumbotron-sm { padding-top: 24px;
+.jumbotron-sm { 
+padding-top: 80px;
 padding-bottom: 24px; }
 .jumbotron small {
 color: #FFF;
@@ -112,4 +113,7 @@ div.modal-body{
 }
 .imglogo{
     margin-bottom: 5px;
+}
+#regjumb{
+    font-size: 12px;
 }

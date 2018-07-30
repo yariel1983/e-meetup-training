@@ -8,9 +8,8 @@ function BannerRegister(props){
             <div className="jumbotron jumbotron-sm bg-secondary text-center">
                 <div className="container">
                     <div className="row">
-                        <div className="col-sm-12 col-lg-12">
+                        <div className="col-sm-12 col-lg-12" id="regjumb">
                             <h1 className="h1">Welcome to Trainning Academy</h1>
-                            
                         </div>
                     </div>
                 </div>
@@ -25,6 +24,7 @@ function BannerRegister(props){
     
 export default BannerRegister;
                         
+                            
                             
                             
                             
