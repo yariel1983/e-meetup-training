@@ -18,6 +18,7 @@ export default class Home extends React.Component{
             <React.Fragment>
                 <NavBar />
                 <HomeSlide />
+                <Banner />
                 <Footer />
                 
             </React.Fragment>
