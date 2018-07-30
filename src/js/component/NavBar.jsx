@@ -85,10 +85,10 @@ class Navbar extends React.Component{
                         }
                     </nav>
                     
-                    <div className="modal fade-md" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div className="modal fade-sm" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div className="modal-dialog" role="document">
                             <div className="modal-content">
-                                <div className="modal-header bg-outline-secondary">
+                                <div className="modal-header">
                                     <h5 className="modal-title" id="exampleModalLabel">Login</h5>
                                     <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
@@ -103,7 +103,7 @@ class Navbar extends React.Component{
                                             <input type="text" name="user" value={this.state.username} placeholder="Username" onChange={(e) => this.setState({username: e.target.value})} />&nbsp;&nbsp;
                                             <input type="password" name="password" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})} />
                                         </div>
-                                        <input type="submit" value="Login" />
+                                        <input type="submit" value="Login" id="submitbotton"/>
                                     </form>
                                 </div>
                             </div>
