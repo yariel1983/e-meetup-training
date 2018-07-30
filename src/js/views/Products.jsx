@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import NavBar from '../component/NavBar.jsx';
 import ProductCard from '../component/ProductCard.jsx';
-import BannerProduct from '../component/BannerProduct.jsx';
+//import BannerProduct from '../component/BannerProduct.jsx';
 import Footer from '../component/Footer.jsx';
 import Article from '../component/Article.jsx';
 

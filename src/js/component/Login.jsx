@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 import {Consumer} from "../stores/AppContext.jsx";
 import {withSession} from '../stores/AppContext.jsx';
-
+import BannerRegister from '../component/BannerRegister.jsx';
 
 class Login extends React.Component {
     constructor(props){
