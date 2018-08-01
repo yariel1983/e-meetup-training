@@ -12,7 +12,7 @@ function ProductDetails(props) {
             <div className="row">
                 <Consumer>
                     {
-                        ({ state, actions }) => {   const product = state.article.find( product => product.articleid === parseInt(props.artId) );
+                        ({ state, actions }) => {   const product = state.article.find( product => product.articleId === parseInt(props.artId) );
                             if (!product) {
                                 return <div>Erros, Contact to Administrator</div>;
                             } else {
@@ -48,7 +48,7 @@ function ProductDetails(props) {
                                         </div>
                                         <ul className="list-inline">
                                             <li className="list-inline-item">
-                                                <button className="btn btn-primary" onClick={() => actions.addProductToCart(product.articleid)}>Buy</button>                                            </li>
+                                                <button className="btn btn-primary" onClick={() => actions.addProductToCart(product.articleId)}>Buy</button>                                            </li>
                                             <li className="list-inline-item"><a href="#" className="btn btn-outline-secondary mb-1"> 
                                                 <i className="far fa-heart mr-2"></i>Add to wishlist</a>
                                             </li> 

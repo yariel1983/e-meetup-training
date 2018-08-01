@@ -20,13 +20,48 @@ export default class Layout extends React.Component {
     
     this.state = {
             "article": [
-            {   articleid: 1,
+            {   articleId:1,
                 name: "Marcy Gym System",
                 desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
                 price: 65.00,
                 oldprice: 90.00,
                 imgurl: "https://assets.academy.com/mgen/81/10213981.jpg?is=500,500"
-                }
+                },
+            {   articleId:2,
+                name: "Exercise Bike",
+                desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                price: 80.00,
+                oldprice: 120.20,
+                imgurl: "https://freepngimg.com/download/exercise_bike/1-2-exercise-bike-free-download-png.png"
+                },
+            {   articleId:3,
+                name: "Incline Bench Gym",
+                desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                price: 45.50,
+                oldprice: 50.84,
+                imgurl: "https://assets.academy.com/mgen/24/10711924.jpg"
+                },           
+            {   articleId:4,
+                name: "Tread Mill",
+                desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                price: 76.00,
+                oldprice: 80.00,
+                imgurl: "https://media.lifespanfitness.com/media/catalog/product/cache/1/small_image/500x/9df78eab33525d08d6e5fb8d27136e95/t/r/tr2000e-electric-folding-treadmill-female-running.jpg"
+                },            
+            {   articleId:5,
+                name: "Exercise Bike 2",
+                desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                price: 65.00,
+                oldprice: 70.00,
+                imgurl: "https://media.lifespanfitness.com/media/catalog/product/cache/1/small_image/500x/9df78eab33525d08d6e5fb8d27136e95/l/i/lifespan-r7000i-commercial-recumbent-exercise-bike.jpg"
+                },           
+            {   articleId:6,
+                name: "Bowflex home gym",
+                desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                price: 10.00,
+                oldprice: 15.00,
+                imgurl: "https://www.bestwomensworkoutreviews.com/wp-content/uploads/2014/06/Bowflex-PR1000-Home-Gym-1-1024x1024.jpg"
+                }            
             ],
             "meetups": [],
             "session":{
@@ -92,12 +127,12 @@ export default class Layout extends React.Component {
                   },
                   
             "loadInitialData": () => {
-                fetch('https://myfirst-php-jpironag.c9users.io/wp-json/sample_api/v1/courses')
+                fetch('https://myfirst-php-jpironag.c9users.io/wp-json/sample_api/v1/training')
                   .then(response => response.json())
                   .then(data => this.setState({ events: data, isLoading: false }))
                   .catch(error => console.log(error));
                   
-                fetch('https://myfirst-php-jpironag.c9users.io/wp-json/sample_api/v1/courses')
+                fetch('https://myfirst-php-jpironag.c9users.io/wp-json/sample_api/v1/training')
                   .then(response => response.json())
                   .then(data => this.setState({ meetups: data }))
                   .catch(error => console.log(error));
@@ -106,7 +141,7 @@ export default class Layout extends React.Component {
             addProductToCart: (productId) => {
                 let tempCart = this.state.cart;
                 let arrayWithTheProduct = this.state.article.find( (article) => {
-                    return article.articleid === productId;  
+                    return article.articleId === productId;  
                 });
                 
                 tempCart.push(arrayWithTheProduct);
