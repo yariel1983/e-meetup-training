@@ -24,9 +24,9 @@ return (
                     <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 
                   
-                    <div className="buy button alig-right">
+                    {/*<div className="buy button alig-right">
                         <button className="btn btn-secondary my-2 sm-0" type="submit">Add to Cart</button>
-                    </div>
+                    </div>*/}
     
                     <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
                 </div>
@@ -38,9 +38,9 @@ return (
                     <h5 className="card-title">See Price in Cart</h5>
                     
                     <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <div className="buy button text-right">
+                    {/*<div className="buy button text-right">
                         <button className="btn btn-secondary my-2 sm-0" type="submit">Add to Cart</button>
-                    </div>
+                    </div>*/}
                     <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
                 </div>
             </div>
@@ -51,9 +51,9 @@ return (
                     <h5 className="card-title">See Price in Cart</h5>
                     
                     <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <div className="buy button text-right">
+                    {/*<div className="buy button text-right">
                         <button className="btn btn-secondary my-2 sm-0" type="submit">Add to Cart</button>
-                    </div>
+                    </div>*/}
                     <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
                 </div>
             </div>
@@ -67,9 +67,9 @@ return (
                     <h5 className="card-title">See Price in Cart</h5>
                     
                     <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <div className="buy button text-right">
+                    {/*<div className="buy button text-right">
                         <button className="btn btn-secondary my-2 sm-0" type="submit">Add to Cart</button>
-                    </div>
+                    </div>*/}
                     <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
                 </div>
             </div>
@@ -79,9 +79,9 @@ return (
                     <h4 className="card-title">Exercise Bike</h4>
                     <h5 className="card-title">See Price in Cart</h5>
                     <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <div className="buy button text-right">
+                    {/*<div className="buy button text-right">
                         <button className="btn btn-secondary my-2 sm-0" type="submit">Add to Cart</button>
-                    </div>
+                    </div>*/}
                     <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
                 </div>
             </div>
@@ -93,9 +93,9 @@ return (
                     <h5 className="card-title">See Price in Cart</h5>
                     
                     <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <div className="buy button text-right">
+                    {/*<div className="buy button text-right">
                         <button className="btn btn-secondary my-2 sm-0" type="submit">Add to Cart</button>
-                    </div>
+                    </div>*/}
                     <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
                 </div>
             </div>
