@@ -14,7 +14,8 @@ color: #FFF;
 border-radius: 0px;
 }
 
-.jumbotron-sm { padding-top: 24px;
+.jumbotron-sm { 
+padding-top: 80px;
 padding-bottom: 24px; }
 .jumbotron small {
 color: #FFF;
@@ -68,13 +69,7 @@ font-size: 24px;
 #passinput{
     margin-left: 15px;
 }
-#mymodal{
-    padding: 4rem;
-}
-#loginb{
-    color: green;
-    float: right;
-}
+
 .html5{    
 width: 510px; height: 287px; left: 0px; top: 0px;   
 }
@@ -82,7 +77,7 @@ width: 510px; height: 287px; left: 0px; top: 0px;
     width: 40px;
 }
 #mynavbar{
-    padding: 30px;
+    
 }
 #myuser{
     margin-right: 10px;
@@ -96,13 +91,29 @@ width: 510px; height: 287px; left: 0px; top: 0px;
 }
 .modal-body{
     padding: 71px;
+    font-size: 13px;
 }
-.modal-header{
-    background: #1240d040;
+div.modal-header{
+    background: #6c757d;
+    color: white;
 }    
-.sortdiv{
-    float: right;
-}
+
 .btnGroupDrop1{
     background: lightgray;
+}
+div.modal-body{
+    padding-left: 103px;
+}
+#submitbotton{
+    float: right;
+    margin-right: 15px;
+}
+#imgabout{
+    height: 340px;
+}
+.imglogo{
+    margin-bottom: 5px;
+}
+#regjumb{
+    font-size: 12px;
 }

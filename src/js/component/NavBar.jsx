@@ -37,7 +37,7 @@ class Navbar extends React.Component{
                 <div>
                     <nav className="navbar navbar-expand-lg navbar-toggler-sm navbar-light bg-white border-bottom " id="mynavbar">
                         <Link to={"/"} className="nav-item text-left">
-                            <img src="http://www.hertsmereleisure.co.uk/centre_uploads/1/images/HM%20-%20Training%20Academy%20logo.jpg" width="150 px" height="60 px"/>
+                            <img src="http://www.hertsmereleisure.co.uk/centre_uploads/1/images/HM%20-%20Training%20Academy%20logo.jpg" id="imglogo" width="100 px" height="40 px"/>
                         </Link>
                         
                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,8 +47,8 @@ class Navbar extends React.Component{
                             <div className="navbar-nav mr-auto">
                                 <div className="container">
                                     <form className="form-inline my-2 my-lg-0">
-                                        <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-                                        <button className="btn btn-secondary text-white my-2 my-sm-0" type="submit">
+                                        <input className="form-control btn-sm mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+                                        <button className="btn btn-secondary btn-sm &nbsp;text-white my-2 my-sm-0" type="submit">
                                             <span><FontAwesomeIcon className="fas fa-search text-white" icon={faSearch} />&nbsp;Search</span>  
                                         </button>
                                     </form>
@@ -64,7 +64,7 @@ class Navbar extends React.Component{
                                 <Link to={"/register"} className="nav-item nav-link">Register</Link>
                             </div>
                         </div>
-
+    
                         {
                             session && typeof(session.user_nicename) !== 'undefined' ?
                                 
@@ -79,16 +79,18 @@ class Navbar extends React.Component{
                                 </div>
                             :
                                 <button type="button" 
-                                        className="btn btn-success" 
+                                        className="btn btn-success btn-sm" 
                                         data-toggle="modal" 
                                         data-target="#exampleModal">Login</button>
+                        
+                            
                         }
                     </nav>
                     
-                    <div className="modal fade-md" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div className="modal fade-sm" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div className="modal-dialog" role="document">
                             <div className="modal-content">
-                                <div className="modal-header bg-outline-secondary">
+                                <div className="modal-header">
                                     <h5 className="modal-title" id="exampleModalLabel">Login</h5>
                                     <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
@@ -103,7 +105,7 @@ class Navbar extends React.Component{
                                             <input type="text" name="user" value={this.state.username} placeholder="Username" onChange={(e) => this.setState({username: e.target.value})} />&nbsp;&nbsp;
                                             <input type="password" name="password" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})} />
                                         </div>
-                                        <input type="submit" value="Login" />
+                                        <input className="btn btn-success btn-sm" type="submit" value="Login" id="submitbotton"/>
                                     </form>
                                 </div>
                             </div>
