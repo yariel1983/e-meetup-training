@@ -59,8 +59,11 @@ class CheckoutCart extends React.Component{
                                             <span className="text-success">-${(this.state.discount/100 * this.state.totalPrice).toFixed(2)}</span>
                                         </li>
                                         <li className="list-group-item d-flex justify-content-between">
+                                            <span className="text-muted">{this.state.quantity} Quantity</span>
+                                        </li>        
+                                        <li className="list-group-item d-flex justify-content-between">
                                             <span>Total (USD)</span>
-                                            <strong>${(this.state.totalPrice - this.state.discount/100 * this.state.totalPrice).toFixed(2)}</strong>
+                                            <strong>${(this.state.totalPrice - this.state.discount/100 * (this.state.quantity * this.state.totalPrice)).toFixed(2)}</strong>
                                         </li>
                                     </ul>
                                     <form className="card p-2">
