@@ -34,13 +34,14 @@ class CheckoutCart extends React.Component{
             } 
         else {
             const showpingCart = cart.map((item, index) => (
-                <div className="container" key={index}>
+                <div className="ShoppingCard p-5" key={index}>
                     <div className="row">
-                        <div className="d-md-flex flex-md-6 w-100 my-md-3 pl-md-3 align-items-center ">
-                            <div className="containerleft p-2 mr-5">
+                        <div className="d-md-flex flex-md-6">
+                            <div className="containerleft ml-5">
                                 <img className="card-img-top" src={item.imgurl} />
+                                <style>{'.ShoppingCard .containerleft .card-img-top {max-width: 20rem;}'}</style>
                             </div>
-                            <div className="containerRight p-2 mr-5">
+                            <div className="containerRight mr-5">
                                 <div className="col-md-12 order-md-2 mb-4">
                                     <ul className="list-group mb-3">
                                         <li key={item.articleid} className="list-group-item d-flex justify-content-between lh-condensed">
@@ -75,7 +76,7 @@ class CheckoutCart extends React.Component{
                         </div>
                     </div>
                 </div>));
-                return showpingCart;}
+                return <div className="container">{showpingCart}</div>;}
         }
     }
 
