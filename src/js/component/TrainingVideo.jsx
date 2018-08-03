@@ -41,41 +41,41 @@ function TrainingVideo(props){
             </div>
             <div className="container-fluid pb-video-container">
                 <div className="col-md-12 col-md-offset-1">
-                    <h3 className="text-center">Sample Video Gallery</h3>
+                    <h3 className="text-center">Videos Gallery</h3>
                     <div className="row pb-row">
                         <div className="col-md-3 pb-video">
-                            <iframe className="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/K68UrdUOr2Y?list=RDzuAcaBkcYGE?ecver=1" frameBorder="0" allowFullScreen></iframe>
-                            <label className="form-control label-warning text-center">Claydee - Alena</label>
+                            <iframe className="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/Tx3W6XAO7Yo" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+                            <label className="form-control label-warning text-center">Epic Girls Training</label>
                         </div>
                         <div className="col-md-3 pb-video">
-                            <iframe className="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/wjT2JVlUFY4?list=RDzuAcaBkcYGE?ecver=1" frameBorder="0" allowFullScreen></iframe>
-                            <label className="form-control label-warning text-center">Manuel Riva - Mhm Mhm</label>
+                            <iframe className="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/plVyo39og3I" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+                            <label className="form-control label-warning text-center">Female Fitness Motivation</label>
                         </div>
                         <div className="col-md-3 pb-video">
-                            <iframe className="pb-video-frame " width="100%" height="230" src="https://www.youtube.com/embed/papuvlVeZg8?list=RDzuAcaBkcYGE?ecver=1" frameBorder="0" allowFullScreen></iframe>
-                            <label className="form-control label-warning text-center">Clean Bandit - Rockabye</label>
+                            <iframe className="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/P84ktN7w-EM" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+                            <label className="form-control label-warning text-center">Full Body Cable Workout</label>
                         </div>
                         <div className="col-md-3 pb-video">
                             <iframe className="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/Y1_VsyLAGuk?list=RDzuAcaBkcYGE?ecver=1" frameBorder="0" allowFullScreen></iframe>
-                            <label className="form-control label-warning text-center">Burak Yeter - Tuesday</label>
+                            <label className="form-control label-warning text-center">Full Body Workout In The Gym (Training for Women)</label>
                         </div>
                     </div>
                     <div className="row pb-row">
                         <div className="col-md-3 pb-video">
-                            <iframe className="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/UY1bt8ilps4?ecver=1" frameBorder="0" allowFullScreen></iframe>
-                            <label className="form-control label-warning text-center">F.O. and Peeva - Lichnata</label>
+                            <iframe className="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/24fdcMw0Bj0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+                            <label className="form-control label-warning text-center">The Rock Working out</label>
                         </div>
                         <div className="col-md-3 pb-video">
-                            <iframe className="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/QpbQ4I3Eidg?ecver=1" frameBorder="0" allowFullScreen></iframe>
-                            <label className="form-control label-warning text-center">Machine Gun - Bad Things</label>
+                            <iframe className="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/wyNPbHOX_EI" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+                            <label className="form-control label-warning text-center">Jhon Cena Working out</label>
                         </div>
                         <div className="col-md-3 pb-video">
-                            <iframe className="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/h3kRIxLruDs?ecver=" frameBorder="0" allowFullScreen></iframe>
-                            <label className="form-control label-warning text-center">INNA - Say it with your body</label>
+                            <iframe className="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/zMPMJo5kdVc" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+                            <label className="form-control label-warning text-center">Ryback Working out</label>
                         </div>
                         <div className="col-md-3 pb-video">
-                            <iframe className="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/Jr4TMIU9oQ4?ecver=1" frameBorder="0" allowFullScreen></iframe>
-                            <label className="form-control label-warning text-center">INNA - Gimme Gimme</label>
+                            <iframe className="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/BWyN0bngHQs" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+                            <label className="form-control label-warning text-center">Batista Working out</label>
                         </div>
                     </div>
                 </div>
