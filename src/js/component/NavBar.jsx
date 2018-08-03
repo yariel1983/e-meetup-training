@@ -35,7 +35,7 @@ class Navbar extends React.Component{
             return(
     
                 <div>
-                    <nav className="navbar navbar-expand-lg navbar-toggler-sm navbar-light bg-white border-bottom fixed-top" id="mynavbar">
+                    <nav className="navbar navbar-expand-lg navbar-toggler-sm navbar-light bg-white border-bottom fixed-top shadow-lg bg-white rounded" id="mynavbar">
                         <Link to={"/"} className="nav-item text-left">
                             <img src="http://www.hertsmereleisure.co.uk/centre_uploads/1/images/HM%20-%20Training%20Academy%20logo.jpg" id="imglogo" width="100 px" height="40 px"/>
                         </Link>
@@ -61,7 +61,7 @@ class Navbar extends React.Component{
                                 {/*<Link to={"/events"} className="nav-item nav-link" >Events</Link>*/}
                                 <Link to={"/contact"} className="nav-item nav-link" >Contacts</Link>
                                 <Link to={"/cart"} className="nav-item nav-link">Cart</Link>
-                                <Link to={"/register"} className="nav-item nav-link">Register</Link>
+                                {/*<Link to={"/register"} className="nav-item nav-link">Register</Link>*/}
                             </div>
                         </div>
     
@@ -73,16 +73,25 @@ class Navbar extends React.Component{
                                         Hello, {session.user_nicename}
                                         {/*.charAt(0).toUpperCase()+session.user_display_name.substring(1)}*/}
                                     </Link>
-                                    <a className="nav-item nav-link" href="#" onClick={() => actions.logout()}>
-                                        Logout
-                                    </a>
+                                    <Link to={"/"} className="nav-item text-left">
+                                        <a className="nav-item nav-link" href="#" onClick={() => actions.logout()}>
+                                            Logout
+                                        </a>
+                                    </Link>
                                 </div>
                             :
-                                <button type="button" 
-                                        className="btn btn-success btn-sm" 
-                                        data-toggle="modal" 
-                                        data-target="#exampleModal">Login</button>
-                        
+                                <div className="d-flex">
+                                    <Link to={"Register"} className="nav-item text-left">
+                                        <a className="nav-item nav-link text-secondary" href="#">
+                                            Sign-Up
+                                        </a>
+                                    </Link>
+                                    
+                                    <button type="button" 
+                                            className="btn btn-success btn-md" 
+                                            data-toggle="modal" 
+                                            data-target="#exampleModal">Login</button>
+                                </div>
                             
                         }
                     </nav>

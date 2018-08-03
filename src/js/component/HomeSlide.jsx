@@ -12,7 +12,7 @@ function HomeSlide(props) {
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                 </ol>
-                <div className="carousel-inner">
+                <div className="carousel-inner mt-4">
                     <div className="carousel-item active">
                         <img className="d-block w-100 img-fluid" src="https://wallportal.com/uploads/posts/boxing-gym-wallpaper/boxing_gym_wallpaper_009.jpg" alt="Responsive image First slide"/>
                     </div>

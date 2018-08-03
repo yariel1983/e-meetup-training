@@ -39,42 +39,43 @@ function TrainingVideo(props){
                     </div>
                 </div>    
             </div>
-            <div className="container text-center mt-5">
-                <div className="slick">
-                    <div className="item youtube">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Tx3W6XAO7Yo" frameBorder="0" allow="autoplay; encrypted-media" allowFullscreen></iframe>
-                        <p className="caption">YouTube</p>
+            <div className="container-fluid pb-video-container">
+                <div className="col-md-12 col-md-offset-1">
+                    <h3 className="text-center">Sample Video Gallery</h3>
+                    <div className="row pb-row">
+                        <div className="col-md-3 pb-video">
+                            <iframe className="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/K68UrdUOr2Y?list=RDzuAcaBkcYGE?ecver=1" frameBorder="0" allowFullScreen></iframe>
+                            <label className="form-control label-warning text-center">Claydee - Alena</label>
+                        </div>
+                        <div className="col-md-3 pb-video">
+                            <iframe className="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/wjT2JVlUFY4?list=RDzuAcaBkcYGE?ecver=1" frameBorder="0" allowFullScreen></iframe>
+                            <label className="form-control label-warning text-center">Manuel Riva - Mhm Mhm</label>
+                        </div>
+                        <div className="col-md-3 pb-video">
+                            <iframe className="pb-video-frame " width="100%" height="230" src="https://www.youtube.com/embed/papuvlVeZg8?list=RDzuAcaBkcYGE?ecver=1" frameBorder="0" allowFullScreen></iframe>
+                            <label className="form-control label-warning text-center">Clean Bandit - Rockabye</label>
+                        </div>
+                        <div className="col-md-3 pb-video">
+                            <iframe className="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/Y1_VsyLAGuk?list=RDzuAcaBkcYGE?ecver=1" frameBorder="0" allowFullScreen></iframe>
+                            <label className="form-control label-warning text-center">Burak Yeter - Tuesday</label>
+                        </div>
                     </div>
-                    <div className="item youtube">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ralZmBh4lk0" frameBorder="0" allow="autoplay; encrypted-media" allowFullscreen></iframe>
-                        <p className="caption">YouTube</p>
-                    </div>
-                </div>
-            </div>
-            
-            {/***************************************
-             **** Manejo de VIdeos en Training  ****
-             ***************************************
-             ***************************************/}
-            <div className="album py-5 bg-light">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-4">
-                            <div className="card mb-4 box-shadow">
-                                <div className="embed-responsive embed-responsive-16by9">
-                                    <iframe className="embed-responsive-item" src="https://www.youtube.com/embed/Tx3W6XAO7Yo" data-gtm-yt-inspected-2340190_699="true"></iframe>
-                                </div>
-                                <div className="card-body">
-                                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <div className="d-flex justify-content-between align-items-center">
-                                        <div className="btn-group">
-                                            <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
-                                            <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small className="text-muted">9 mins</small>
-                                    </div>
-                                </div>
-                            </div>
+                    <div className="row pb-row">
+                        <div className="col-md-3 pb-video">
+                            <iframe className="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/UY1bt8ilps4?ecver=1" frameBorder="0" allowFullScreen></iframe>
+                            <label className="form-control label-warning text-center">F.O. and Peeva - Lichnata</label>
+                        </div>
+                        <div className="col-md-3 pb-video">
+                            <iframe className="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/QpbQ4I3Eidg?ecver=1" frameBorder="0" allowFullScreen></iframe>
+                            <label className="form-control label-warning text-center">Machine Gun - Bad Things</label>
+                        </div>
+                        <div className="col-md-3 pb-video">
+                            <iframe className="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/h3kRIxLruDs?ecver=" frameBorder="0" allowFullScreen></iframe>
+                            <label className="form-control label-warning text-center">INNA - Say it with your body</label>
+                        </div>
+                        <div className="col-md-3 pb-video">
+                            <iframe className="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/Jr4TMIU9oQ4?ecver=1" frameBorder="0" allowFullScreen></iframe>
+                            <label className="form-control label-warning text-center">INNA - Gimme Gimme</label>
                         </div>
                     </div>
                 </div>
@@ -85,7 +86,10 @@ function TrainingVideo(props){
     
     export default TrainingVideo;
                         
+            
     
+                        
+            
             
                 
     

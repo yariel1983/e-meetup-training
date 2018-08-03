@@ -37,7 +37,7 @@ function Banner(props){
                 </div>
             </div>
         </div>            
-
+    
         
 
             );
