@@ -109,7 +109,7 @@ function FlipGallery(props){
                                     <div className="card">
                                         <div className="card-body text-center">
                                             <p>
-                                                <img className=" img-fluid" alt="Team Cards Flipper" src="https://previews.123rf.com/images/argus456/argus4561702/argus456170219441/72131530-grunge-old-venezuela-flag.jpg" /></p>
+                                                <img className=" img-fluid" alt="Team Cards Flipper" src="https://scontent-mia3-2.xx.fbcdn.net/v/t1.0-9/10389073_10152698987828269_2492101987113140912_n.jpg?_nc_cat=0&oh=87a29ada3b4114168e17a5e827ec185b&oe=5BCEBBB5" /></p>
                                             <h4 className="card-title">Web Developer</h4>
                                             <p className="card-text">The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
                                             <a href="#" className="btn btn-primary btn-sm">More</a>

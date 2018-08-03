@@ -71,7 +71,13 @@ class CheckoutCart extends React.Component{
                                         <div className="input-group">
                                             <input type="text" className="form-control" placeholder="Promo code"></input>
                                             <div className="input-group-append">
-                                                <button type="submit" className="btn btn-secondary">Redeem</button>
+                                                <button type="submit" className="btn btn-secondary">Delete item</button>&nbsp;
+                                                <Link to={"/Cart"} className="btn btn-secondary">
+                                                    <a className="nav-item nav-link" href={"/Cart"}>
+                                                    Redeem code
+                                                    </a>
+                                                </Link>
+                                            
                                             </div>
                                         </div>
                                     </form>

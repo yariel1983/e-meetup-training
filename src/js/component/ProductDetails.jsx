@@ -11,7 +11,7 @@ class ProductDetails extends React.Component {
     constructor(props) {
         super(props);
         
-    this.state = {quantity: ''};
+    this.state = {quantity: '1'};
     
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
