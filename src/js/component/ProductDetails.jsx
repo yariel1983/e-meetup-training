@@ -30,7 +30,7 @@ class ProductDetails extends React.Component {
     
     render () {
     return (
-        <div className="container">
+        <div className="container mt-5 mb-5">
             <div className="row">
                 <Consumer>
                     {

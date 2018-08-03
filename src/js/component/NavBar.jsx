@@ -83,7 +83,7 @@ class Navbar extends React.Component{
                                 <div className="d-flex">
                                     <Link to={"Register"} className="nav-item text-left">
                                         <a className="nav-item nav-link text-secondary" href="#">
-                                            Sign-Up
+                                            Sign-Up!
                                         </a>
                                     </Link>
                                     

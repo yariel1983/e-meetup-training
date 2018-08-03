@@ -21,7 +21,7 @@ class CheckoutCart extends React.Component{
 
         if (cart.length <= 0) {
             return (
-                <div className="container">
+                <div className="container mt-5">
                     <div className="row">
                         <h1>Tu cesta está vacía.</h1>
                         <h4>Haz que tu cesta de compra sea útil: llénala de libros, CD, vídeos, DVD, juguetes, productos electrónicos y otros productos. Si ya tienes una cuenta, Identifícate para ver su cesta.</h4>
@@ -34,7 +34,7 @@ class CheckoutCart extends React.Component{
             } 
         else {
             const showpingCart = cart.map((item, index) => (
-                <div className="ShoppingCard p-5" key={index}>
+                <div className="ShoppingCard p-5 mt-5" key={index}>
                     <div className="row">
                         <div className="d-md-flex flex-md-6">
                             <div className="containerleft ml-5">
@@ -79,7 +79,7 @@ class CheckoutCart extends React.Component{
                         </div>
                     </div>
                 </div>));
-                return <div className="container">{showpingCart}</div>;}
+                return <div className="container mt-5 mb-5">{showpingCart}</div>;}
         }
     }
 
