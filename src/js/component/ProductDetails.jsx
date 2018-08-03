@@ -6,13 +6,35 @@ import PropTypes from 'prop-types';
 import {Consumer} from "../stores/AppContext.jsx";
 
 
-function ProductDetails(props) {
+
+class ProductDetails extends React.Component {
+    constructor(props) {
+        super(props);
+        
+    this.state = {quantity: ''};
+    
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    
+    }
+    
+    handleChange(event) {
+        this.setState({quantity: event.target.value});
+    }
+
+    handleSubmit(event) {
+        event.preventDefault();
+    }    
+    
+    
+    
+    render () {
     return (
         <div className="container">
             <div className="row">
                 <Consumer>
                     {
-                        ({ state, actions }) => {   const product = state.article.find( product => product.articleId === parseInt(props.artId) );
+                        ({ state, actions }) => {   const product = state.article.find( product => product.articleId === parseInt(this.props.artId) );
                             if (!product) {
                                 return <div>Erros, Contact to Administrator</div>;
                             } else {
@@ -42,17 +64,20 @@ function ProductDetails(props) {
                                         <p className="mb-4 text-muted">{product.desc}</p>
                                         <div className="row">
                                             <div className="col-12 detail-option mb-5">
-                                                <label className="detail-option-heading font-weight-bold">Items <span> (required) </span></label>
-                                                <input name="items" type="number" value="1" />
+                                                <label className=" font-weight-bold">Items <span> (required) </span></label>
+                                                <input type="number" value={this.state.quantity} onChange={this.handleChange} />
+                                                
                                             </div>
                                         </div>
-                                        <ul className="list-inline">
-                                            <li className="list-inline-item">
-                                                <button className="btn btn-primary" onClick={() => actions.addProductToCart(product.articleId)}>Buy</button>                                            </li>
-                                            <li className="list-inline-item"><a href="#" className="btn btn-outline-secondary mb-1"> 
-                                                <i className="far fa-heart mr-2"></i>Add to wishlist</a>
-                                            </li> 
-                                        </ul>
+                                        <form onSubmit={this.handleSubmit}>
+                                            <ul className="list-inline">
+                                                <li className="list-inline-item">
+                                                    <input className="btn btn-primary" type="submit" value="Submit" onClick={() => actions.addProductToCart(product.articleId,this.state.quantity)} />                                            </li>
+                                                <li className="list-inline-item"><a href="#" className="btn btn-outline-secondary mb-1"> 
+                                                    <i className="far fa-heart mr-2"></i>Add to wishlist</a>
+                                                </li> 
+                                            </ul>
+                                        </form>    
                                     </div>
                                 </div>);
                             }
@@ -63,8 +88,8 @@ function ProductDetails(props) {
                 </Consumer>
             </div>
         </div>);
+    }
 }
-
 ProductDetails.propTypes = {
     artId: PropTypes.string
     };

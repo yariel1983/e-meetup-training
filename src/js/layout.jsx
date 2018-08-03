@@ -138,14 +138,44 @@ export default class Layout extends React.Component {
                   .catch(error => console.log(error));
               },
               
-            addProductToCart: (productId) => {
-                let tempCart = this.state.cart;
-                let arrayWithTheProduct = this.state.article.find( (article) => {
-                    return article.articleId === productId;  
-                });
-                
-                tempCart.push(arrayWithTheProduct);
-                this.setState( { cart: tempCart } );
+            addProductToCart: (productId, qty) => {
+                if ( qty > 0 ) {
+                    let tempCart = this.state.cart;
+                    let arrayWithTheProduct = this.state.article.find( (article) => {
+                        return article.articleId === productId;  
+                    });
+                    if (!arrayWithTheProduct) {
+                        alert('The article no exit');
+                    }
+                    else {
+                        let arrayWithTheCart = this.state.cart.find( (cart) => {
+                        return cart.articleId === productId;
+                        });
+                            if (!arrayWithTheCart) {
+                                arrayWithTheCart = [
+                                    {   articleId:1,
+                                        quantity: qty,  
+                                        name: "Marcy Gym System",
+                                        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                                        price: 65.00,
+                                        oldprice: 90.00,
+                                        imgurl: "https://assets.academy.com/mgen/81/10213981.jpg?is=500,500"
+                                        }
+                                    
+                                    ];
+                                this.setState( { cart: arrayWithTheCart } );
+                                }
+                            else {
+                                arrayWithTheCart = arrayWithTheCart.quantity + qty;
+                                this.setState( { cart: arrayWithTheCart } );
+                                }
+                            
+                        
+                        }
+                    }
+                else {
+                    alert('The quantity is less or iqual than 0');
+                    }
             },
             
             "logout": () => this.setState(  {session: {}}   )
