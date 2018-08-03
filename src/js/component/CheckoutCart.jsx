@@ -23,12 +23,13 @@ class CheckoutCart extends React.Component{
             return (
                 <div className="container mt-5">
                     <div className="row">
-                        <h1>Tu cesta está vacía.</h1>
-                        <h4>Haz que tu cesta de compra sea útil: llénala de libros, CD, vídeos, DVD, juguetes, productos electrónicos y otros productos. Si ya tienes una cuenta, Identifícate para ver su cesta.</h4>
-                        <h4>Siga comprando en Amazon.es, vea información de las ofertas de hoy, o visite su Lista de deseos.</h4>
-                        <h4>El precio y la disponibilidad de los productos de Amazon.es están sujetos a cambio. En la cesta de compra puedes dejar tempo/.ralmente los productos que quieres. En ella aparecerá el precio más reciente de cada producto.</h4>
+                        <img className="card-img-top" src="https://envato-shoebox-0.imgix.net/d058/5643-5fee-4d55-8c62-d322b6ddf1ed/012812+%2810%29.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=700&s=2e7b71bb4617088f5f6dd9daa5644873" alt="Card image cap"/>
+                        <h1>Your shopping cart is empty, but it does not have to be.</h1>
+                        <h4>There are lots of great deals and one-of-a-kind items just waiting for you.</h4>
+                        <h4>Start shopping, and look for the Add to cart button. You can add several items to your cart from different sellers and pay for them all at once.</h4>
+                        <h4>Covers your purchase price plus original shipping on virtually all items.</h4>
 
-                        <h5>¿Tienes un cheque regalo o código promocional? Te pediremos que introduzcas el código de canjeo en el momento de pago.</h5>
+                        <h5>Do you have a gift certificate or promotional code? We will ask you to enter the redemption code at the time of payment.</h5>
                     </div>
                 </div>);
             } 

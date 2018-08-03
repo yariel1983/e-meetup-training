@@ -7,6 +7,7 @@ import {Consumer} from "../stores/AppContext.jsx";
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faUser from '@fortawesome/fontawesome-free-regular/faUser';
 import faSearch from '@fortawesome/fontawesome-free-solid/faSearch';
+import faShoppingCart from '@fortawesome/fontawesome-free-solid/faShoppingCart';
 
 
 
@@ -60,7 +61,9 @@ class Navbar extends React.Component{
                                 <Link to={"/training"} className="nav-item nav-link" >Trainings</Link>
                                 {/*<Link to={"/events"} className="nav-item nav-link" >Events</Link>*/}
                                 <Link to={"/contact"} className="nav-item nav-link" >Contacts</Link>
-                                <Link to={"/cart"} className="nav-item nav-link">Cart</Link>
+                                <Link to={"/cart"} className="nav-item nav-link">
+                                    <span><FontAwesomeIcon className="fa ShoppingCart text-dark" icon={faShoppingCart} /></span>
+                                </Link>
                                 {/*<Link to={"/register"} className="nav-item nav-link">Register</Link>*/}
                             </div>
                         </div>
@@ -90,7 +93,9 @@ class Navbar extends React.Component{
                                     <button type="button" 
                                             className="btn btn-success btn-md" 
                                             data-toggle="modal" 
-                                            data-target="#exampleModal">Login</button>
+                                            data-target="#exampleModal">
+                                        <span><FontAwesomeIcon className="fas fa-search text-white" icon={faUser} />&nbsp; Login</span>
+                                    </button>
                                 </div>
                             
                         }

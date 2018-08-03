@@ -72,7 +72,7 @@ class ProductDetails extends React.Component {
                                         <form onSubmit={this.handleSubmit}>
                                             <ul className="list-inline">
                                                 <li className="list-inline-item">
-                                                    <input className="btn btn-primary" type="submit" value="Submit" onClick={() => actions.addProductToCart(product.articleId,this.state.quantity)} />                                            </li>
+                                                    <input className="btn btn-primary" type="Buy" value="Buy" onClick={() => actions.addProductToCart(product.articleId,this.state.quantity)} />                                            </li>
                                                 <li className="list-inline-item"><a href="#" className="btn btn-outline-secondary mb-1"> 
                                                     <i className="far fa-heart mr-2"></i>Add to wishlist</a>
                                                 </li> 
