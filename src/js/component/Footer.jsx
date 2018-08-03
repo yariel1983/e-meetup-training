@@ -42,7 +42,7 @@ function Footer(props){
                 </div>
                 <div className="textwidget mt-5">
                     <div>
-                        <a href="[full link to your Twitter]"/>
+                        <Link to="https://twitter.com/"/>
                         <img title="Twitter" src="https://socialmediawidgets.files.wordpress.com/2014/03/01_twitter.png" alt="Twitter" width="35" height="35" />
                         <a href="[full link to your Pinterest]"/> 
                         <img title="Pinterest" src="https://socialmediawidgets.files.wordpress.com/2014/03/13_pinterest.png" alt="Pinterest" width="35" height="35"/>

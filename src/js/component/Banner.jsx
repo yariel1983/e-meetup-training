@@ -29,14 +29,11 @@ function Banner(props){
                 <div className="container-fluid mt-3">
                     <div className="alert alert-default" role="alert">
                         <img className="card-img-top" src="https://wallpapermemory.com/uploads/510/gym-wallpaper-full-hd-1920x1080-301981.jpg" alt="Card image cap"/>
-                        <h4 className="alert-heading">Well done!</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p className="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
-                        <a href="#" className="btn btn-secondary">Go To Top</a>
                     </div>
                 </div>
             </div>
         </div>            
+                        
     
         
 

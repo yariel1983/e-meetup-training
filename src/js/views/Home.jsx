@@ -10,6 +10,7 @@ import Article from '../component/Article.jsx';
 import Footer from '../component/Footer.jsx';
 import Login from '../component/Login.jsx';
 import TrainingVideo from '../component/TrainingVideo.jsx';
+import FlipGallery from '../component/FlipGallery.jsx';
 
 export default class Home extends React.Component{
     
@@ -19,6 +20,7 @@ export default class Home extends React.Component{
                 <NavBar />
                 <HomeSlide />
                 <Banner />
+                <FlipGallery />
                 <Footer />
                 
             </React.Fragment>
