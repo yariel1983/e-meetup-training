@@ -64,8 +64,8 @@ class ProductDetails extends React.Component {
                                         <p className="mb-4 text-muted">{product.desc}</p>
                                         <div className="row">
                                             <div className="col-12 detail-option mb-5">
-                                                <label className=" font-weight-bold">Items <span> (required) </span></label>
-                                                <input type="number" value={this.state.quantity} onChange={this.handleChange} />
+                                                <label className=" font-weight-bold">Items <span> (required) </span></label>&nbsp;
+                                                <input type="number" value={this.state.quantity} onChange={this.handleChange} id="proquant"/>
                                                 
                                             </div>
                                         </div>
