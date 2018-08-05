@@ -137,7 +137,7 @@ Navbar.propTypes = {
   session: PropTypes.object,
   actions: PropTypes.object,
   currentView: PropTypes.string,
-  cartNumItem: PropTypes.string
+  cartNumItem: PropTypes.number
 };
                                         
                             

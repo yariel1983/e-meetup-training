@@ -9,11 +9,13 @@ class ProductCard extends React.Component {
         
     getSmailImage (array) {
         const smallimg = array.map((array, index) => (
-            <div className="card-img-overlay" key={index}>
-                <img className="card-img" id="smallImg" src={array.src} alt="Card image cap" />
-                <style>{'#smallImg {max-width: 4rem;}'}</style>
+            <div className="card border-light col-lg-4 col-md-6" key={index}>
+                <div className="card-img-overlay" >
+                    <img className="card-img" id="smallImg" src={array.src} alt="Card image cap" />
+                    <style>{'#smallImg {max-width: 8rem;}'}</style>
+                </div>
             </div>));
-            return <div className="container"><div className="card border-light">{smallimg}</div></div>;         
+            return <div className="container"><div className="row">{smallimg}</div></div>;         
         }
     
     render () {

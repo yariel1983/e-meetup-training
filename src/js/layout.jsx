@@ -156,8 +156,7 @@ export default class Layout extends React.Component {
                     }
                     else {
                         let arrayWithTheCart = this.state.cart.find( (cart, qty) => {
-
-                        return cart.id === productId;                        });
+                            return cart.articleId === productId;                        });
                             if (!arrayWithTheCart) {
                                 arrayWithTheCart = {
                                         articleId: arrayWithTheProduct.id,
