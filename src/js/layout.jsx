@@ -19,7 +19,7 @@ export default class Layout extends React.Component {
         super(props);
     
     this.state = {
-            "article": [
+            "article": [/**
             {   articleId:1,
                 name: "Marcy Gym System",
                 desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
@@ -61,7 +61,7 @@ export default class Layout extends React.Component {
                 price: 10.00,
                 oldprice: 15.00,
                 imgurl: "https://www.bestwomensworkoutreviews.com/wp-content/uploads/2014/06/Bowflex-PR1000-Home-Gym-1-1024x1024.jpg"
-                }            
+                } **/           
             ],
             "meetups": [],
             "session":{
@@ -74,6 +74,7 @@ export default class Layout extends React.Component {
             "cart":[
                 
             ],
+            "cartNumItem":  0,
             "isLoading": true
     };
 
@@ -136,47 +137,64 @@ export default class Layout extends React.Component {
                   .then(response => response.json())
                   .then(data => this.setState({ meetups: data }))
                   .catch(error => console.log(error));
+                  
+                fetch('https://first-wordpress-jcabezas.c9users.io/wp-json/wc/v2/products?consumer_key=ck_b25db0a141ce216901302c872657ce6ce22488b6&consumer_secret=cs_ffe5a1cda6d785b35a19e7b1ef345c3aa224e4ea')
+                  .then(response => response.json())
+                  .then(data => this.setState({ article: data }))
+                  .catch(error => console.log(error));  
+                  
               },
               
             addProductToCart: (productId, qty) => {
                 if ( qty > 0 ) {
                     let tempCart = this.state.cart;
                     let arrayWithTheProduct = this.state.article.find( (article) => {
-                        return article.articleId === productId;  
+                        return article.id === productId;  
                     });
                     if (!arrayWithTheProduct) {
                         alert('The article no exit');
                     }
                     else {
-                        let arrayWithTheCart = this.state.cart.find( (cart) => {
-                        return cart.articleId === productId;
-                        });
+                        let arrayWithTheCart = this.state.cart.find( (cart, qty) => {
+
+                        return cart.id === productId;                        });
                             if (!arrayWithTheCart) {
-                                arrayWithTheCart = [
-                                    {   articleId:1,
+                                arrayWithTheCart = {
+                                        articleId: arrayWithTheProduct.id,
                                         quantity: qty,  
-                                        name: "Marcy Gym System",
-                                        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                                        price: 65.00,
-                                        oldprice: 90.00,
-                                        imgurl: "https://assets.academy.com/mgen/81/10213981.jpg?is=500,500"
-                                        }
+                                        name: arrayWithTheProduct.name,
+                                        desc: arrayWithTheProduct.description,
+                                        price: arrayWithTheProduct.sale_price,
+                                        oldprice: arrayWithTheProduct.regular_price,
+                                        imgurl: arrayWithTheProduct.images[0].src
+                                        
                                     
-                                    ];
-                                this.setState( { cart: arrayWithTheCart } );
+                                    };
+                                tempCart.push(arrayWithTheCart);
+                                this.setState( { cart: tempCart } );
+                                let tempNumItemCart = +this.state.cartNumItem + +qty;
+                                this.setState( { cartNumItem: tempNumItemCart } );
                                 }
                             else {
-                                arrayWithTheCart = arrayWithTheCart.quantity + qty;
+                                arrayWithTheCart.quantity = +arrayWithTheCart.quantity +  +qty;
                                 this.setState( { cart: arrayWithTheCart } );
+                                let tempNumItemCart = +this.state.cartNumItem + +qty;
+                                this.setState( { cartNumItem: tempNumItemCart } );
                                 }
-                            
-                        
                         }
                     }
                 else {
                     alert('The quantity is less or iqual than 0');
                     }
             },
+            
+            delProductToCart: (index,id, qty) => {
+                let arrayWithTheCart = this.state.cart.filter( (cart) => {
+                    return cart.articleId !== id;});
+                        this.setState( { cart: arrayWithTheCart } ); 
+                let tempNumItemCart = +this.state.cartNumItem - +qty;
+                        this.setState( { cartNumItem: tempNumItemCart } );    
+                },
             
             "logout": () => this.setState(  {session: {}}   )
         }; 

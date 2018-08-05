@@ -16,7 +16,7 @@ class CheckoutCart extends React.Component{
     }
     
     render(){
-        const { cart } = this.props;
+        const { cart, actions } = this.props;
     
 
         if (cart.length <= 0) {
@@ -63,20 +63,14 @@ class CheckoutCart extends React.Component{
                                             <strong>${(this.state.totalPrice - this.state.discount/100 * (this.state.quantity * this.state.totalPrice)).toFixed(2)}</strong>
                                         </li>
                                     </ul>
-                                    <form className="card p-2">
-                                        <div className="input-group">
-                                            <input type="text" className="form-control" placeholder="Promo code"></input>
-                                            <div className="input-group-append">
-                                                <button type="submit" className="btn btn-secondary">Delete item</button>&nbsp;
-                                                <Link to={"/Cart"} className="btn btn-secondary text-white">
-                                                    <a className="nav-item nav-link" href={"/Cart"}>
-                                                    Redeem code
-                                                    </a>
-                                                </Link>
-                                            
-                                            </div>
+                                    <div className="input-group">
+                                        <input type="text" className="form-control" placeholder="Promo code"></input>
+                                        <div className="input-group-append">
+                                            <button type="submit" className="btn btn-secondary" onClick={() => actions.delProductToCart(index, item.articleId,item.quantity )}>Delete item</button>&nbsp;
+                                            <a className="nav-item nav-link" href="#">Redeem code</a>
                                         </div>
-                                    </form>
+                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>

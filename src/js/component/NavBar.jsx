@@ -31,7 +31,7 @@ class Navbar extends React.Component{
     render(){
         let homeActive = this.props.currentView === "home" ? "active" :"";
         
-        const {session, actions} = this.props;
+        const {session, actions, cartNumItem} = this.props;
         
             return(
     
@@ -63,7 +63,7 @@ class Navbar extends React.Component{
                                 <Link to={"/contact"} className="nav-item nav-link" >Contacts</Link>
                                 <Link to={"/cart"} className="nav-item nav-link">
                                     <span><FontAwesomeIcon className="fa ShoppingCart text-darkc" icon={faShoppingCart} /></span>
-                                    <span className="badge badge-pill badge-danger" id="cartnoti">2</span>
+                                    <span className="badge badge-pill badge-danger" id="cartnoti">{cartNumItem}</span>
                                 </Link>
                                 
                             </div>
@@ -136,7 +136,8 @@ export default withSession(Navbar);
 Navbar.propTypes = {
   session: PropTypes.object,
   actions: PropTypes.object,
-  currentView: PropTypes.string
+  currentView: PropTypes.string,
+  cartNumItem: PropTypes.string
 };
                                         
                             

@@ -6,9 +6,18 @@ class ProductCard extends React.Component {
     constructor() {
         super();
         }
+        
+    getSmailImage (array) {
+        const smallimg = array.map((array, index) => (
+            <div className="card-img-overlay" key={index}>
+                <img className="card-img" id="smallImg" src={array.src} alt="Card image cap" />
+                <style>{'#smallImg {max-width: 4rem;}'}</style>
+            </div>));
+            return <div className="container"><div className="card border-light">{smallimg}</div></div>;         
+        }
     
     render () {
-        
+        const smallimg = [];
         return (
             
             <div className="container  mt-5" >
@@ -21,18 +30,22 @@ class ProductCard extends React.Component {
                                     return (
                                         
                                         <div className="card border-light col-lg-4 col-md-6 ml-5 mt-5 mb-5 " key={index} >
-                                            <Link to={"/DetailsProduct/"+article.articleId}>
+                                            <Link to={"/DetailsProduct/"+article.id}>
                                                 <style>{'.card{max-width: 18rem;}'}</style>
-                                                <img className="card-img" src={article.imgurl} alt="Card image cap"/>
+                                                <img className="card-img" src={article.images[0].src} alt="Card image cap"/>
                                                 <div className="card-img-overlay">
                                                     
                                                 </div>
-                                                <div className="card-footer border-light">
+                                            </Link>
+                                            <div className="card-footer border-light">
+                                                <div className="card-text">
                                                     <p className="card-text border-light m-0 p-0">
                                                         <small className="text-muted border-light">{article.name}</small>
                                                     </p>
                                                 </div>
-                                            </Link>
+                                                {this.getSmailImage(article.images)}                                                    
+                                            </div>
+                                            
                                         </div>
                                          
                                             

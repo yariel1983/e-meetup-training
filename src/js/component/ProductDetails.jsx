@@ -34,7 +34,7 @@ class ProductDetails extends React.Component {
             <div className="row">
                 <Consumer>
                     {
-                        ({ state, actions }) => {   const product = state.article.find( product => product.articleId === parseInt(this.props.artId) );
+                        ({ state, actions }) => {   const product = state.article.find( product => product.id === parseInt(this.props.artId) );
                             if (!product) {
                                 return <div>Erros, Contact to Administrator</div>;
                             } else {
@@ -42,15 +42,15 @@ class ProductDetails extends React.Component {
                             return (
                                 <div className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3 ">
                                     <div className="containerleftProduct mr-5 p-2">
-                                        <img className="card-img-top" src={product.imgurl} />
+                                        <img className="card-img-top" src={product.images[0].src} />
                                     </div>
                                     <div className="containerRigthProduct mr-5 p-2">
                                         <h1 className="mb-4">{product.name}</h1>
                                         <div className="d-flex align-items-center justify-content-between mb-4">
                                             <ul className="list-inline mb-0">
-                                                <li className="list-inline-item h4 font-weight-light mb-0">${product.price}</li>
+                                                <li className="list-inline-item h4 font-weight-light mb-0">${product.sale_price}</li>
                                                 <li className="list-inline-item text-muted font-weight-light"> 
-                                                    <del>${product.oldprice}</del>
+                                                    <del>${product.regular_price}</del>
                                                 </li>
                                             </ul>
                                             <div className="d-flex align-items-center">
@@ -61,18 +61,17 @@ class ProductDetails extends React.Component {
                                                 </ul><span className="text-muted text-uppercase text-sm">25 reviews</span>
                                             </div>
                                         </div>
-                                        <p className="mb-4 text-muted">{product.desc}</p>
+                                        <p className="mb-4 text-muted">{product.description}</p>
                                         <div className="row">
                                             <div className="col-12 detail-option mb-5">
                                                 <label className=" font-weight-bold">Items <span> (required) </span></label>&nbsp;
-                                                <input type="number" value={this.state.quantity} onChange={this.handleChange} id="proquant"/>
                                                 
                                             </div>
                                         </div>
                                         <form onSubmit={this.handleSubmit}>
                                             <ul className="list-inline">
                                                 <li className="list-inline-item">
-                                                    <input className="btn btn-primary" type="Add to cart" value="Add to cart" onClick={() => actions.addProductToCart(product.articleId,this.state.quantity)} />                                            </li>
+                                                    <input className="btn btn-primary" type="Add to cart" value="Add to cart" onClick={() => actions.addProductToCart(product.id,this.state.quantity)} />                                            </li>
                                                 <li className="list-inline-item"><a href="#" className="btn btn-outline-secondary mb-1"> 
                                                     <i className="far fa-heart mr-2"></i>Add to wishlist</a>
                                                 </li> 
