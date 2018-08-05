@@ -382,6 +382,19 @@ a {
 }
 
 #cartnoti{
-float:right;
-margin-bottom:-10px;
+position: absolute;
+    top: 11px;
+    display:inline-block;
+    min-width:10px;
+    padding:3px 5px;
+    font-size:12px;
+    font-weight:700;
+    line-height:1;
+    color:#fff;
+    text-align:center;
+    white-space:nowrap;
+    vertical-align:baseline;
+    border-radius:10px;
 }
+   
+    

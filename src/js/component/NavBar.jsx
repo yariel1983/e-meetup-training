@@ -63,7 +63,7 @@ class Navbar extends React.Component{
                                 <Link to={"/contact"} className="nav-item nav-link" >Contacts</Link>
                                 <Link to={"/cart"} className="nav-item nav-link">
                                     <span><FontAwesomeIcon className="fa ShoppingCart text-darkc" icon={faShoppingCart} /></span>
-                                    <span className="badge badge-pill badge-danger" id="cartnoti">1</span>
+                                    <span className="badge badge-pill badge-danger" id="cartnoti">2</span>
                                 </Link>
                                 
                             </div>
