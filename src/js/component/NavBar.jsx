@@ -62,9 +62,10 @@ class Navbar extends React.Component{
                                 {/*<Link to={"/events"} className="nav-item nav-link" >Events</Link>*/}
                                 <Link to={"/contact"} className="nav-item nav-link" >Contacts</Link>
                                 <Link to={"/cart"} className="nav-item nav-link">
-                                    <span><FontAwesomeIcon className="fa ShoppingCart text-dark" icon={faShoppingCart} /></span>
+                                    <span><FontAwesomeIcon className="fa ShoppingCart text-darkc" icon={faShoppingCart} /></span>
+                                    <span className="badge badge-pill badge-danger" id="cartnoti">1</span>
                                 </Link>
-                                {/*<Link to={"/register"} className="nav-item nav-link">Register</Link>*/}
+                                
                             </div>
                         </div>
     

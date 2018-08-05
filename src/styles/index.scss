@@ -26,7 +26,7 @@ font-size: 24px;
 }
 
 .owl-wrapper{
-    display: block; 
+    /*display: block;*/
     width: 3648px; 
     left: 0px; 
     transition: all 0ms ease; 
@@ -76,9 +76,7 @@ width: 510px; height: 287px; left: 0px; top: 0px;
 #prodquant{
     width: 40px;
 }
-#mynavbar{
-    
-}
+
 #myuser{
     margin-right: 10px;
 }
@@ -349,10 +347,10 @@ section, .container, .container-fluid {
   font-weight:bold;
 }
 
-
-
-
-#ex1 .icon-grey {color: grey}
+#ex1 .icon-grey {
+    color: grey
+    
+}
 #ex1 i {   
     width:100px;
     text-align:center;
@@ -381,4 +379,9 @@ a {
 #proquant{
     width: 60px;
     border-radius: 5px;
+}
+
+#cartnoti{
+float:right;
+margin-bottom:-10px;
 }

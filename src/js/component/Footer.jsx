@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 function Footer(props){
     return (
        
-        <footer className="page-footer font-small unique-color-dark pt-4 bg-dark text-white">
-            <div className="container">
+        <footer className="page-footer font-small unique-color-dark pt-4 bg-dark text-white mt-5">
+            <div className="container-footer">
                 <ul className="list-unstyled list-inline text-center py-2">
                     <li className="list-inline-item">
                         <h5 className="mb-1">Register for free</h5>
