@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Banner(props){
     return (
         <div>
-            <div className="row">
+            <div className="row feature">
                 <div className="col-sm-6">
                     <div className="card">
                         <div className="card-body">

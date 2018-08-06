@@ -6,7 +6,7 @@ function FlipGallery(props){
     return (
         <section id="team" className="pb-5">
             <div className="container">
-                <h5 className="section-title h1">OUR DEV TEAM</h5>
+                <h5 className="section-title h1"></h5>
                 <div className="row">
                     <div className="col-xs-12 col-sm-6 col-md-4">
                         <div className="image-flip" ontouchstart="this.classNameList.toggle('hover');">

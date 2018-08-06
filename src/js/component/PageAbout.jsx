@@ -20,7 +20,7 @@ function PageAbout(props){
                                         Duis condimentum feugiat sollicitudin. Sed non lacinia turpis. 
                                         Proin gravida turpis consequat porta condimentum. 
                                         Nam consequat ultricies elit nec consectetur.</p>          
-                                    <a href="#" className="btn btn-success lower">See Feature details</a>
+                                    <a href="#" className="btn btn-info lower">Coming Soon !!!</a>
                                 </div>
                             </div>
                                         
@@ -34,7 +34,7 @@ function PageAbout(props){
                                         Duis condimentum feugiat sollicitudin. Sed non lacinia turpis. 
                                         Proin gravida turpis consequat porta condimentum. 
                                         Nam consequat ultricies elit nec consectetur.</p> 
-                                    <a href="#" className="btn btn-success lower">See Feature details</a>
+                                    <a href="#" className="btn btn-info lower">Coming Soon !!!</a>
                                 </div>
                             </div>
                                         
@@ -48,7 +48,7 @@ function PageAbout(props){
                                         Duis condimentum feugiat sollicitudin. Sed non lacinia turpis. 
                                         Proin gravida turpis consequat porta condimentum. 
                                         Nam consequat ultricies elit nec consectetur.</p>
-                                    <a href="#" className="btn btn-success lower">See Feature details</a>
+                                    <a href="#" className="btn btn-info lower">Coming Soon !!!</a>
                                 </div>
                             </div>
                         </div>

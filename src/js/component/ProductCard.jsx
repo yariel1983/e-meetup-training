@@ -23,7 +23,7 @@ class ProductCard extends React.Component {
         return (
             
             <div className="container  mt-5" >
-                <div className="row align-center">
+                <div className="row align-center feature">
                     <Consumer>
                         {
                         ({ state }) => 
@@ -31,7 +31,7 @@ class ProductCard extends React.Component {
     
                                     return (
                                         
-                                        <div className="card border-light col-lg-4 col-md-6 ml-5 mt-5 mb-5 " key={index} >
+                                        <div className="card border-light col-lg-4 col-md-6 ml-5 mt-5 mb-5 feature" key={index} >
                                             <Link to={"/DetailsProduct/"+article.id}>
                                                 <style>{'.card{max-width: 18rem;}'}</style>
                                                 <img className="card-img" src={article.images[0].src} alt="Card image cap"/>
