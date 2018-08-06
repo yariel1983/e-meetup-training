@@ -28,28 +28,28 @@ export default class Layout extends React.Component {
                 imgurl: "https://assets.academy.com/mgen/81/10213981.jpg?is=500,500"
                 },
             {   articleId:2,
-                name: "Exercise Bike",
+                name: "Sunny Belt-driven Indoor Cycling Bike",
                 desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
                 price: 80.00,
                 oldprice: 120.20,
-                imgurl: "https://freepngimg.com/download/exercise_bike/1-2-exercise-bike-free-download-png.png"
+                imgurl: "https://i5.walmartimages.com/asr/dc270a79-6d10-42e0-b8b5-b9a213a2b7d4_2.821440dd285eff4d0fcb2515ed028300.jpeg?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff"
                 },
             {   articleId:3,
-                name: "Incline Bench Gym",
+                name: "Body Champ Power Rack System",
                 desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
                 price: 45.50,
                 oldprice: 50.84,
                 imgurl: "https://assets.academy.com/mgen/24/10711924.jpg"
                 },           
             {   articleId:4,
-                name: "Tread Mill",
+                name: "Lifespan Electric Folding Tread Mill",
                 desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
                 price: 76.00,
                 oldprice: 80.00,
                 imgurl: "https://media.lifespanfitness.com/media/catalog/product/cache/1/small_image/500x/9df78eab33525d08d6e5fb8d27136e95/t/r/tr2000e-electric-folding-treadmill-female-running.jpg"
                 },            
             {   articleId:5,
-                name: "Exercise Bike 2",
+                name: "Lifespan Recumbent Bike",
                 desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
                 price: 65.00,
                 oldprice: 70.00,
