@@ -11,7 +11,7 @@ class ProductDetails extends React.Component {
     constructor(props) {
         super(props);
         
-    this.state = {quantity: '1'};
+    this.state = {quantity: 0};
     
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -68,15 +68,16 @@ class ProductDetails extends React.Component {
                                                 
                                             </div>
                                         </div>
-                                        <form onSubmit={this.handleSubmit}>
-                                            <ul className="list-inline">
-                                                <li className="list-inline-item">
-                                                    <input className="btn btn-primary" type="Add to cart" value="Add to cart" onClick={() => actions.addProductToCart(product.id,this.state.quantity)} />                                            </li>
-                                                <li className="list-inline-item"><a href="#" className="btn btn-outline-secondary mb-1"> 
-                                                    <i className="far fa-heart mr-2"></i>Add to wishlist</a>
-                                                </li> 
-                                            </ul>
-                                        </form>    
+                                        <ul className="list-inline">
+                                            <label className=" font-weight-bold">Items <span> (required) </span></label>
+                                            <input type="number" value={this.state.quantity} onChange={this.handleChange} />
+                                            <li className="list-inline-item">
+                                                <button className="btn btn-primary" type="Add to cart" value="Add to cart" onClick={() => actions.addProductToCart(product.id,this.state.quantity)} />                                            
+                                            </li>
+                                            <li className="list-inline-item"><a href="#" className="btn btn-outline-secondary mb-1"> 
+                                                <i className="far fa-heart mr-2"></i>Add to wishlist</a>
+                                            </li> 
+                                        </ul>
                                     </div>
                                 </div>);
                             }
@@ -89,8 +90,10 @@ class ProductDetails extends React.Component {
         </div>);
     }
 }
+ 
+export default ProductDetails;
+
 ProductDetails.propTypes = {
     artId: PropTypes.string
     };
 
-export default ProductDetails;

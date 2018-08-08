@@ -74,9 +74,7 @@ class Navbar extends React.Component{
                                                 {/*.charAt(0).toUpperCase()+session.user_display_name.substring(1)}*/}
                                             </Link>
                                             <Link to={"/"} className="nav-item text-left">
-                                                <a className="nav-item nav-link" href="#" onClick={() => actions.logout()}>
-                                                &nbsp;  Logout
-                                                </a>
+                                                <span className="nav-item nav-link" href="#" onClick={() => actions.logout()}>&nbsp;  Logout </span>
                                             </Link>
                                         </div>
                                     :
@@ -88,10 +86,8 @@ class Navbar extends React.Component{
                                                 <span><FontAwesomeIcon className="fas fa-search" icon={faUser} />&nbsp; Login</span>
                                             </button>
                                             
-                                            <Link to={"Register"} className="nav-item">
-                                                <a className="nav-item nav-link text-secondary" href="#">
-                                                    Sign-Up!
-                                                </a>
+                                            <Link to={"Register"} className="nav-item text-right">
+                                                <span className="nav-item nav-link" href="#"> Sign-Up! </span>
                                             </Link>
                                             <Link to={"/cart"} className="nav-item nav-link">
                                                 <span>&nbsp;<FontAwesomeIcon className="fa ShoppingCart text-dark" icon={faShoppingCart} /></span>

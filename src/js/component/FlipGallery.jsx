@@ -9,7 +9,7 @@ function FlipGallery(props){
                 <h5 className="section-title h1"></h5>
                 <div className="row">
                     <div className="col-xs-12 col-sm-6 col-md-4">
-                        <div className="image-flip" ontouchstart="this.classNameList.toggle('hover');">
+                        <div className="image-flip" >
                             <div className="mainflip">
                                 <div className="frontside">
                                     <div className="card">
@@ -56,7 +56,7 @@ function FlipGallery(props){
                         </div>
                     </div>
                     <div className="col-xs-12 col-sm-6 col-md-4">
-                        <div className="image-flip" ontouchstart="this.classNameList.toggle('hover');">
+                        <div className="image-flip" >
                             <div className="mainflip">
                                 <div className="frontside">
                                     <div className="card">
@@ -103,7 +103,7 @@ function FlipGallery(props){
                         </div>
                     </div>
                     <div className="col-xs-12 col-sm-6 col-md-4">
-                        <div className="image-flip" ontouchstart="this.classNameList.toggle('hover');">
+                        <div className="image-flip" >
                             <div className="mainflip">
                                 <div className="frontside">
                                     <div className="card">
@@ -150,7 +150,7 @@ function FlipGallery(props){
                         </div>
                     </div>
                     <div className="col-xs-12 col-sm-6 col-md-4">
-                        <div className="image-flip" ontouchstart="this.classNameList.toggle('hover');">
+                        <div className="image-flip" >
                             <div className="mainflip">
                                 <div className="frontside">
                                     <div className="card">
@@ -197,7 +197,7 @@ function FlipGallery(props){
                         </div>
                     </div>
                     <div className="col-xs-12 col-sm-6 col-md-4">
-                        <div className="image-flip" ontouchstart="this.classNameList.toggle('hover');">
+                        <div className="image-flip" >
                             <div className="mainflip">
                                 <div className="frontside">
                                     <div className="card">
@@ -244,7 +244,7 @@ function FlipGallery(props){
                         </div>
                     </div>
                     <div className="col-xs-12 col-sm-6 col-md-4">
-                        <div className="image-flip" ontouchstart="this.classNameList.toggle('hover');">
+                        <div className="image-flip" >
                             <div className="mainflip">
                                 <div className="frontside">
                                     <div className="card">
