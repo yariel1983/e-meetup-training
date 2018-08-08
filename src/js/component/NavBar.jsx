@@ -66,7 +66,7 @@ class Navbar extends React.Component{
                                     <span className="badge badge-pill badge-danger" id="cartnoti">{cartNumItem}</span>
                                 </Link>
                                 
-                          
+                
     
                                 {
                                     session && typeof(session.user_nicename) !== 'undefined' ?
