@@ -84,7 +84,7 @@ class CheckoutCart extends React.Component{
 export default withSession(CheckoutCart);
 
 CheckoutCart.propTypes = {
-    cart: PropTypes.object,
+    cart: PropTypes.array,
     actions: PropTypes.object
     };
                         

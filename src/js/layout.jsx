@@ -128,16 +128,7 @@ export default class Layout extends React.Component {
                   },
                   
             "loadInitialData": () => {
-                fetch('https://myfirst-php-jpironag.c9users.io/wp-json/sample_api/v1/training')
-                  .then(response => response.json())
-                  .then(data => this.setState({ events: data, isLoading: false }))
-                  .catch(error => console.log(error));
-                  
-                fetch('https://myfirst-php-jpironag.c9users.io/wp-json/sample_api/v1/training')
-                  .then(response => response.json())
-                  .then(data => this.setState({ meetups: data }))
-                  .catch(error => console.log(error));
-                  
+
                 fetch('https://first-wordpress-jcabezas.c9users.io/wp-json/wc/v2/products?consumer_key=ck_b25db0a141ce216901302c872657ce6ce22488b6&consumer_secret=cs_ffe5a1cda6d785b35a19e7b1ef345c3aa224e4ea')
                   .then(response => response.json())
                   .then(data => this.setState({ article: data }))
@@ -149,8 +140,7 @@ export default class Layout extends React.Component {
                 if ( qty > 0 ) {
                     let tempCart = this.state.cart;
                     let arrayWithTheProduct = this.state.article.find( (article) => {
-                        return article.id === productId;  
-                    });
+                        return article.id === productId;});
                     if (!arrayWithTheProduct) {
                         alert('The article no exit');
                     }
@@ -171,14 +161,18 @@ export default class Layout extends React.Component {
                                     };
                                 tempCart.push(arrayWithTheCart);
                                 this.setState( { cart: tempCart } );
-                                let tempNumItemCart = +this.state.cartNumItem + +qty;
+                                let tempNumItemCart = +this.state.cartNumItem;
+                                tempNumItemCart = tempNumItemCart + +qty;
                                 this.setState( { cartNumItem: tempNumItemCart } );
+                                arrayWithTheCart = [];
                                 }
                             else {
                                 arrayWithTheCart.quantity = +arrayWithTheCart.quantity +  +qty;
                                 this.setState( { cart: arrayWithTheCart } );
-                                let tempNumItemCart = +this.state.cartNumItem + +qty;
+                                let tempNumItemCart = +this.state.cartNumItem;
+                                tempNumItemCart = tempNumItemCart + +qty;
                                 this.setState( { cartNumItem: tempNumItemCart } );
+                                arrayWithTheCart = [];
                                 }
                         }
                     }
@@ -190,13 +184,25 @@ export default class Layout extends React.Component {
             delProductToCart: (index,id, qty) => {
                 let arrayWithTheCart = this.state.cart.filter( (cart) => {
                     return cart.articleId !== id;});
-                        this.setState( { cart: arrayWithTheCart } ); 
+                        /*this.setState( { cart: arrayWithTheCart } ); */
                 let tempNumItemCart = +this.state.cartNumItem - +qty;
-                        this.setState( { cartNumItem: tempNumItemCart } );    
+                        this.setState( { cartNumItem: tempNumItemCart } );
+                        arrayWithTheCart = [];
                 },
             
-            "logout": () => this.setState(  {session: {}}   )
-        }; 
+            "logout": () => this.setState(  {session: {}}   ),
+            
+            "fetchLoadData": () => {
+
+                fetch('https://first-wordpress-jcabezas.c9users.io/wp-json/wc/v2/products?consumer_key=ck_b25db0a141ce216901302c872657ce6ce22488b6&consumer_secret=cs_ffe5a1cda6d785b35a19e7b1ef345c3aa224e4ea')
+                  .then(response => response.json())
+                  .then(data => this.setState({ article: data }))
+                  .catch(error => console.log(error));  
+                  
+            }            
+        };
+        
+
     }
     
     componentDidMount() {

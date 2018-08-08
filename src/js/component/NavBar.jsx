@@ -77,9 +77,7 @@ class Navbar extends React.Component{
                                                 {/*.charAt(0).toUpperCase()+session.user_display_name.substring(1)}*/}
                                             </Link>
                                             <Link to={"/"} className="nav-item text-left">
-                                                <a className="nav-item nav-link" href="#" onClick={() => actions.logout()}>
-                                                    Logout
-                                                </a>
+                                                <span className="nav-item nav-link" href="#" onClick={() => actions.logout()}>&nbsp;  Logout </span>
                                             </Link>
                                         </div>
                                     :
@@ -90,6 +88,14 @@ class Navbar extends React.Component{
                                                     data-target="#exampleModal">
                                                 <span><FontAwesomeIcon className="fas fa-search text-dark" icon={faUser} /> Login</span>
                                             </button>
+                                            
+                                            <Link to={"Register"} className="nav-item text-right">
+                                                <span className="nav-item nav-link" href="#"> Sign-Up! </span>
+                                            </Link>
+                                            <Link to={"/cart"} className="nav-item nav-link">
+                                                <span>&nbsp;<FontAwesomeIcon className="fa ShoppingCart text-dark" icon={faShoppingCart} /></span>
+                                                <span className="badge badge-pill badge-danger" id="cartnoti">{cartNumItem}</span>
+                                            </Link>
                                         </div>
                                             
                                 }
