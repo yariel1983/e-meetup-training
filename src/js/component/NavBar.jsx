@@ -36,8 +36,8 @@ class Navbar extends React.Component{
             return(
     
                 <div>
-                    <nav className="navbar navbar-expand-lg navbar-toggler-sm navbar-light bg-white border-bottom fixed-top shadow-lg bg-white rounded" id="mynavbar">
-                        <Link to={"/"} className="nav-item d-flex">
+                    <nav className="navbar navbar-expand-lg navbar-toggler-sm navbar-light fixed-top shadow-lg bg-white" id="mynavbar">
+                        <Link to={"/"} className="nav-item d-flex mr-3">
                             <img src="http://www.hertsmereleisure.co.uk/centre_uploads/1/images/HM%20-%20Training%20Academy%20logo.jpg" id="imglogo" width="100 px" height="40 px"/>
                         </Link>
                         
@@ -49,7 +49,7 @@ class Navbar extends React.Component{
                                 <div className="d-flex">
                                     <form className="form-inline my-2 my-lg-0">
                                         <input className="form-control btn-sm mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-                                        <button className="btn btn-secondary btn-sm text-white my-2 my-sm-0" type="submit">
+                                        <button className="btn btn-dark btn-sm text-white my-2 my-sm-0 mr-5" type="submit">
                                             <span><FontAwesomeIcon className="fas fa-search text-white" icon={faSearch} />Search</span>  
                                         </button>
                                     </form>
@@ -61,7 +61,10 @@ class Navbar extends React.Component{
                                 <Link to={"/training"} className="nav-item nav-link" >Trainings</Link>
                                 {/*<Link to={"/events"} className="nav-item nav-link" >Events</Link>*/}
                                 <Link to={"/contact"} className="nav-item nav-link" >Contacts</Link>
-                                
+                                <Link to={"/cart"} className="nav-item nav-link">
+                                    <span><FontAwesomeIcon className="fa ShoppingCart text-dark mr-1" icon={faShoppingCart} /></span>
+                                    <span className="badge badge-pill badge-danger" id="cartnoti">{cartNumItem}</span>
+                                </Link>
                                 
                           
     
@@ -75,29 +78,20 @@ class Navbar extends React.Component{
                                             </Link>
                                             <Link to={"/"} className="nav-item text-left">
                                                 <a className="nav-item nav-link" href="#" onClick={() => actions.logout()}>
-                                                &nbsp;  Logout
+                                                    Logout
                                                 </a>
                                             </Link>
                                         </div>
                                     :
                                         <div className="d-flex">
-                                            <button type="button btn" 
-                                                    className="btn btn-light" 
+                                            <button type="button" 
+                                                    className="btn btn-outline-light text-dark" 
                                                     data-toggle="modal" 
                                                     data-target="#exampleModal">
-                                                <span><FontAwesomeIcon className="fas fa-search" icon={faUser} />&nbsp; Login</span>
+                                                <span><FontAwesomeIcon className="fas fa-search text-dark" icon={faUser} /> Login</span>
                                             </button>
-                                            
-                                            <Link to={"Register"} className="nav-item">
-                                                <a className="nav-item nav-link text-secondary" href="#">
-                                                    Sign-Up!
-                                                </a>
-                                            </Link>
-                                            <Link to={"/cart"} className="nav-item nav-link">
-                                                <span>&nbsp;<FontAwesomeIcon className="fa ShoppingCart text-dark" icon={faShoppingCart} /></span>
-                                                <span className="badge badge-pill badge-danger" id="cartnoti">{cartNumItem}</span>
-                                            </Link>
                                         </div>
+                                            
                                 }
                                         
                             </div>
@@ -121,7 +115,7 @@ class Navbar extends React.Component{
                                             <input type="text" name="user" value={this.state.username} placeholder="Username" onChange={(e) => this.setState({username: e.target.value})} />&nbsp;&nbsp;
                                             <input type="password" name="password" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})} />
                                         </div>
-                                        <input className="btn btn-success btn-sm" type="submit" value="Login" id="submitbotton"/>
+                                        <input className="btn btn-primary text-white" type="submit" value="Login" id="submitbotton"/>
                                     </form>
                                 </div>
                             </div>
@@ -146,13 +140,4 @@ Navbar.propTypes = {
   currentView: PropTypes.string,
   cartNumItem: PropTypes.number
 };
-                                        
-                            
-                                            
-                                            
-                                            
-                                            
-                                            
-
-
-            
+      

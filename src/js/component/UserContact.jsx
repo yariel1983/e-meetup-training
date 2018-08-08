@@ -1,45 +1,38 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-
-
+import faUser from '@fortawesome/fontawesome-free-regular/faUser';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
 function UserContact(props) {
     return (
-        
-        <div className="container-fluid col-4 border border-secondary mt-5 mb-5">
-            <form>
-                <div className="form-group mt-3">
-                    <label className="exampleInputEmail1">Email address</label>
-                    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
-                    <small id="emailHelp" className="form-text text-muted"></small>
+        <div className="container-fluid text-center mt-5 mb-5" id="contbackimag">
+            <div className="container-fluid py-3">
+                <div className="row" id="loginpt">
+                    <div className="col-md-6 mx-auto">
+                        <div className="card card-body" id="contopacid">
+                            <div className="form-group has-error">
+                                <input className="form-control input-lg"  placeholder="E-mail Address" name="email" type="text" />
+                            </div>
+                            <div className="form-group has-error">
+                                <input className="form-control input-lg" placeholder="First Name" name="First Name" type="text" />
+                            </div>
+                            <div className="form-group has-error">
+                                <input className="form-control input-lg" placeholder="Last Name" name="Last Name" type="text" />
+                            </div>
+                            <label htmlFor="name"></label>
+                            <textarea name="message" id="message" className="form-control" rows="9" cols="25" required="required"
+                            placeholder="Message"></textarea>
+                            <input className="btn btn-lg btn-primary btn-block mt-4" value="Send" type="submit" />
+                        </div>
+                    </div>
                 </div>
-                <div className="form-group">
-                    <label className="exampleInputPassword1">Password</label>
-                    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"/>
-                </div>
-                <div className="form-check">
-                    <input type="checkbox" className="form-check-input mt-1" id="exampleCheck1"/>
-                    <label className="form-check-label">Check me out</label>
-                </div>
-                <button type="submit" className="btn btn-outline-success mt-5 mb-3">Submit</button>
-            </form>
+            </div>
         </div>
-        
-            
+                            
+                        
+
+
     );
 }
-            
-export default UserContact;           
-            
-        
-        
-            
-           
-        
-            
-                
-
-    
-
-                        
-                    
+export default UserContact;                                                          
+ 
