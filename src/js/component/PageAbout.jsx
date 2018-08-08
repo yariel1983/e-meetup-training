@@ -6,7 +6,7 @@ function PageAbout(props){
         return (
             <div>
                 <div className="container-fluid mt-5">&nbsp;
-                    <img className="card-img-top" id="imgabout" src="https://i.pinimg.com/originals/8f/72/d3/8f72d3e974b6b3a0fd14f1cdb53955eb.jpg" alt="Card image cap"/>
+                    <img className="card-img-top" src="https://image.winudf.com/v2/image/Y29tLk1hZ2ljSWRlYS5HeW0xODFfc2NyZWVuXzBfOGFtNXNyZW0/screen-0.jpg?h=800&fakeurl=1&type=.jpg" alt="Responsive image"/>
                     <h1 className="display-4"></h1>
                     <div className="container-fluid mt-5" id="cnt1">
                         <div className="row feature">

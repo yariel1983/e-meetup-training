@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function TrainingVideo(props){
     return (
         <div>    
-            <div id="video-carousel-example2" className="carousel slide carousel-fade" data-ride="carousel">
+            <div id="video-carousel-example2" className="carousel slide carousel-fade" data-ride="carousel" >
                 <ol className="carousel-indicators">
                     <li data-target="#video-carousel-example2" data-slide-to="0" className="active"></li>
                     <li data-target="#video-carousel-example2" data-slide-to="1"></li>
@@ -20,7 +20,7 @@ function TrainingVideo(props){
                         </div>
                         <div className="carousel-caption">
                             <div className="animated fadeInDown">
-                                <h3 className="h3-responsive"></h3>
+                                <h3 className="h3-responsive text-dark">Welcome to Training Academy</h3>
                             </div>
                         </div>
                     </div>
@@ -33,15 +33,15 @@ function TrainingVideo(props){
                         </div>
                         <div className="carousel-caption">
                             <div className="animated fadeInDown">
-                                <h3 className="h3-responsive"></h3>
+                                <h3 className="h3-responsive">Welcome to Training Academy</h3>
                             </div>
                         </div>
                     </div>
                 </div>    
             </div>
-            <div className="container-fluid pb-video-container">
+            <div className="container-fluid pb-video-container mt-5">
                 <div className="col-md-12 col-md-offset-1">
-                    <h3 className="text-center">Videos Gallery</h3>
+                    <h3 className="text-center text-dark">Gallery</h3>
                     <div className="row pb-row">
                         <div className="col-md-3 pb-video">
                             <iframe className="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/Tx3W6XAO7Yo" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>

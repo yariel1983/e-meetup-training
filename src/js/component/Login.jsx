@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 import {Consumer} from "../stores/AppContext.jsx";
 import {withSession} from '../stores/AppContext.jsx';
-import BannerRegister from '../component/BannerRegister.jsx';
+//import BannerRegister from '../component/BannerRegister.jsx';
 
 class Login extends React.Component {
     constructor(props){
@@ -17,11 +17,11 @@ class Login extends React.Component {
     const { session, actions } = this.props;
     
     return (
-        <div className="container text-center mt-5 mb-5">
+        <div className="container-fluid text-center mt-5 mb-5" id="logbackimag">
             <div className="container-fluid py-3">
-                <div className="row">
+                <div className="row" id="loginpt">
                     <div className="col-md-6 mx-auto">
-                        <div className="card card-body">
+                        <div className="card card-body" id="signopacid">
                             {
                             session && typeof(session.user_nicename) !== 'undefined' ?
                                 <fieldset>
@@ -144,7 +144,7 @@ class Login extends React.Component {
                                             <input className="terms mr-1" type="checkbox"/>I have read and agree to the <a href="#">terms of service</a>
                                         </label>
                                         
-                                        <input className="btn btn-lg btn-secondary btn-block" value="Sign Me Up" type="submit" />
+                                        <input className="btn btn-lg btn-primary btn-block" value="Sign Me Up" type="submit" />
                                     </div>
                                 </fieldset>                                
                         }
