@@ -62,12 +62,10 @@ class Navbar extends React.Component{
                                 {/*<Link to={"/events"} className="nav-item nav-link" >Events</Link>*/}
                                 <Link to={"/contact"} className="nav-item nav-link" >Contacts</Link>
                                 <Link to={"/cart"} className="nav-item nav-link">
-                                    <span><FontAwesomeIcon className="fa ShoppingCart text-dark mr-1" icon={faShoppingCart} /></span>
+                                    <span>&nbsp;<FontAwesomeIcon className="fa ShoppingCart text-dark" icon={faShoppingCart} /></span>
                                     <span className="badge badge-pill badge-danger" id="cartnoti">{cartNumItem}</span>
                                 </Link>
                                 
-                
-    
                                 {
                                     session && typeof(session.user_nicename) !== 'undefined' ?
                                         
@@ -81,6 +79,10 @@ class Navbar extends React.Component{
                                             </Link>
                                         </div>
                                     :
+                                        
+                                        
+                                        
+                                        
                                         <div className="d-flex">
                                             <button type="button" 
                                                     className="btn btn-outline-light text-dark" 
@@ -88,18 +90,9 @@ class Navbar extends React.Component{
                                                     data-target="#exampleModal">
                                                 <span><FontAwesomeIcon className="fas fa-search text-dark" icon={faUser} /> Login</span>
                                             </button>
-                                            
-                                            <Link to={"Register"} className="nav-item text-right">
-                                                <span className="nav-item nav-link" href="#"> Sign-Up! </span>
-                                            </Link>
-                                            <Link to={"/cart"} className="nav-item nav-link">
-                                                <span>&nbsp;<FontAwesomeIcon className="fa ShoppingCart text-dark" icon={faShoppingCart} /></span>
-                                                <span className="badge badge-pill badge-danger" id="cartnoti">{cartNumItem}</span>
-                                            </Link>
                                         </div>
-                                            
                                 }
-                                        
+
                             </div>
                         </div>
                     </nav>
@@ -131,12 +124,7 @@ class Navbar extends React.Component{
             );
         }
 }
-                                        
-                                        
-                                    
-                            
-                            
-                            
+
 
 export default withSession(Navbar);
 
@@ -146,4 +134,4 @@ Navbar.propTypes = {
   currentView: PropTypes.string,
   cartNumItem: PropTypes.number
 };
-      
+    

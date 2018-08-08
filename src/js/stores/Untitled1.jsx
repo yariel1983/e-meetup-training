@@ -27,3 +27,15 @@
                 </div>
             </div>
         </div>
+
+
+<Link to={"/cart"} className="nav-item nav-link">
+                                    <span><FontAwesomeIcon className="fa ShoppingCart text-dark mr-1" icon={faShoppingCart} /></span>
+                                    <span className="badge badge-pill badge-danger" id="cartnoti">{cartNumItem}</span>
+                                </Link>
+                                
+                                
+                                
+                                <Link to={"Register"} className="nav-item text-right">
+                                                <span className="nav-item nav-link" href="#"> Sign-Up! </span>
+                                            </Link>
