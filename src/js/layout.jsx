@@ -11,6 +11,7 @@ import Register from "./views/Register.jsx";
 import Cart from "./views/Cart.jsx";
 import {Provider} from './stores/AppContext.jsx';
 
+
 import DetailsProduct from "./views/DetailsProduct.jsx";
 
 export default class Layout extends React.Component {
@@ -232,3 +233,4 @@ export default class Layout extends React.Component {
     );
   }
 }
+                        

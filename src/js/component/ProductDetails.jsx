@@ -4,8 +4,8 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { browserhistory } from "react-router";
 import PropTypes from 'prop-types';
 import {Consumer} from "../stores/AppContext.jsx";
-
-
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import faStar from '@fortawesome/fontawesome-free-regular/faStar';
 
 class ProductDetails extends React.Component {
     constructor(props) {
@@ -55,28 +55,26 @@ class ProductDetails extends React.Component {
                                             </ul>
                                             <div className="d-flex align-items-center">
                                                 <ul className="list-inline mr-2 mb-0">
-                                                    <li className="list-inline-item mr-0"><i className="fa fa-star text-primary"></i></li>
-                                                    <li className="list-inline-item mr-0"><i className="fa fa-star text-primary"></i></li>
-                                                    <li className="list-inline-item mr-0"><i className="fa fa-star text-primary"></i></li>
-                                                </ul><span className="text-muted text-uppercase text-sm">25 reviews</span>
-                                            </div>
-                                        </div>
-                                        <p className="mb-4 text-muted">{product.description}</p>
-                                        <div className="row">
-                                            <div className="col-12 detail-option mb-5">
-                                                <label className=" font-weight-bold">Items <span> (required) </span></label>&nbsp;
+                                                    <span><FontAwesomeIcon className="fas fa-star text-dark" icon={faStar} /></span>
+                                                    <span><FontAwesomeIcon className="fas fa-star text-dark" icon={faStar} /></span>
+                                                    <span><FontAwesomeIcon className="fas fa-star text-dark" icon={faStar} /></span>
+                                                    <span><FontAwesomeIcon className="fas fa-star text-dark" icon={faStar} /></span>
+                                                    <span><FontAwesomeIcon className="fas fa-star text-dark" icon={faStar} /></span>
+                                                </ul><span className="text-muted text-sm mt-1">REVIEWS</span>
                                                 
                                             </div>
                                         </div>
+                                        <span className="align-items-center">
+                                            <p className="mb-4 text-muted">{product.description}</p>
+                                        </span>
+                                        
                                         <ul className="list-inline">
-                                            <label className=" font-weight-bold">Items <span> (required) </span></label>
-                                            <input type="number" value={this.state.quantity} onChange={this.handleChange} />
+                                            <label className="font-weight-bold mr-3">Items <span> (required) </span></label>
+                                            <input type="number" value={this.state.quantity} onChange={this.handleChange} id="proquant"/>
                                             <li className="list-inline-item">
-                                                <button className="btn btn-primary" type="Add to cart" value="Add to cart" onClick={() => actions.addProductToCart(product.id,this.state.quantity)} />                                            
+                                                <input className="btn btn-primary btn-sm ml-3" type="Add to cart" value="Add to cart" name="Add to Cart" onClick={() => actions.addProductToCart(product.id,this.state.quantity)} />                                            
                                             </li>
-                                            <li className="list-inline-item"><a href="#" className="btn btn-outline-secondary mb-1"> 
-                                                <i className="far fa-heart mr-2"></i>Add to wishlist</a>
-                                            </li> 
+                                            
                                         </ul>
                                     </div>
                                 </div>);
@@ -97,3 +95,4 @@ ProductDetails.propTypes = {
     artId: PropTypes.string
     };
 
+                                                    
