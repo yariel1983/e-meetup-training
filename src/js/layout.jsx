@@ -192,14 +192,23 @@ export default class Layout extends React.Component {
             
             "logout": () => this.setState(  {session: {}}   ),
             
-            "fetchLoadData": () => {
+            "fetchLoadAllDataProduct": () => {
 
                 fetch('https://first-wordpress-jcabezas.c9users.io/wp-json/wc/v2/products?consumer_key=ck_b25db0a141ce216901302c872657ce6ce22488b6&consumer_secret=cs_ffe5a1cda6d785b35a19e7b1ef345c3aa224e4ea')
                   .then(response => response.json())
                   .then(data => this.setState({ article: data }))
                   .catch(error => console.log(error));  
                   
-            }            
+            },
+            
+            "fetchLoadDataProduct": (product) => {
+
+                fetch('https://first-wordpress-jcabezas.c9users.io/wp-json/sample_api/v1/products/'+product)
+                  .then(response => response.json())
+                  .then(data => this.setState({ article: data }))
+                  .catch(error => console.log(error));  
+                  
+            }  
         };
         
 

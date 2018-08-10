@@ -55,7 +55,7 @@ class ProductCard extends React.Component {
                     </Consumer>
                 </div>
             </div>);
-                }
-}
+        }
+    }
 
 export default ProductCard;
