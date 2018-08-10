@@ -2,11 +2,12 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import faUser from '@fortawesome/fontawesome-free-regular/faUser';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-
+import Info from '../component/Info.jsx';
 function UserContact(props) {
     return (
         <div className="container-fluid text-center mt-5 mb-5" id="contbackimag">
             <div className="container-fluid py-3">
+                <Info />
                 <div className="row" id="loginpt">
                     <div className="col-md-6 mx-auto">
                         <div className="card card-body" id="contopacid">

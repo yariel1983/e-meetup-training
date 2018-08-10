@@ -135,3 +135,4 @@ Navbar.propTypes = {
   cartNumItem: PropTypes.number
 };
     
+                                
