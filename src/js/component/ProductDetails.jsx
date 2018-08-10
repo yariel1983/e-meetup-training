@@ -29,6 +29,15 @@ class ProductDetails extends React.Component {
     
     
     render () {
+    return (
+        <div className="container mt-5 mb-5">
+            <div className="row">
+                <Consumer>
+                    {
+                        ({ state, actions }) => {   const product = state.article.find( product => product.id === parseInt(this.props.artId) );
+                            if (!product) {
+                                return <div>Erros, Contact to Administrator</div>;
+                            } else {
 
                             return (
                                 <div className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3 ">
@@ -54,16 +63,6 @@ class ProductDetails extends React.Component {
                                                 </ul><span className="text-muted text-sm mt-1">REVIEWS</span>
                                                 
                                             </div>
-                                            <ul className="list-inline">
-                                                <label className=" font-weight-bold">Items <span> (required) </span></label>
-                                                <input type="number" value={this.state.quantity} onChange={this.handleChange} />
-                                                <li className="list-inline-item">
-                                                    <button className="btn btn-primary" type="Add to cart" value="Add to cart" onClick={() => actions.addProductToCart(product.id,this.state.quantity)} />                                            
-                                                </li>
-                                                <li className="list-inline-item"><a href="#" className="btn btn-outline-secondary mb-1"> 
-                                                    <i className="far fa-heart mr-2"></i>Add to wishlist</a>
-                                                </li> 
-                                            </ul>
                                         </div>
                                         <span className="align-items-center">
                                             <p className="mb-4 text-muted">{product.description}</p>
@@ -81,16 +80,19 @@ class ProductDetails extends React.Component {
                                 </div>);
                             }
                 }
-                        
-    
-                    </Consumer>
-                </div>
-            </div>);
-        }
+            }
+                    
+
+                </Consumer>
+            </div>
+        </div>);
+    }
 }
  
 export default ProductDetails;
 
 ProductDetails.propTypes = {
-    artId: PropTypes.string   
+    artId: PropTypes.string
     };
+
+                                                    

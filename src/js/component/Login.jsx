@@ -79,7 +79,7 @@ class Login extends React.Component {
           
                                     <div className="checkbox">
                                         <label className="small">
-                                            <input className="terms mr-1" type="checkbox"/>I have read and agree to the <a href="#">terms of service</a>
+                                            <input className="terms mr-1" type="checkbox"/>I have read and agree to the <a href="#"> terms of service </a>
                                         </label>
                                         
                                         <input className="btn btn-lg btn-secondary btn-block" value="Update" type="submit" />
