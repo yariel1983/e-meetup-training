@@ -142,56 +142,35 @@ export default class Layout extends React.Component {
                     let tempCart = this.state.cart;
                     let arrayWithTheProduct = this.state.article.find( (article) => {
                         return article.id === productId;});
-                    if (!arrayWithTheProduct) {
+                    if (!arrayWithTheProduct) { //The product exit?
                         alert('The article no exit');
                     }
                     else {
-                        console.log("BEFORE", this.state.cart);
                         let arrayWithTheCart = this.state.cart.find( (article, qty) => {
-                                if(article.articleId === productId){
-                                    //UPDATE
-                                    article.quantity++;
-                                    let tempNumItemCart = +this.state.cartNumItem;
-                                    tempNumItemCart = tempNumItemCart + +qty;
-                                    this.setState( { cartNumItem: tempNumItemCart, cart: tempCart  } );
-                                    return true;
-                                }
-                                return false;
-                            });
-                            console.log("AFTER", this.state.cart);
-                            // 
-                            
-                            if (!arrayWithTheCart) { // Es un producto nuevo
-                                arrayWithTheCart = {
-                                        articleId: arrayWithTheProduct.id,
-                                        quantity: qty,  
-                                        name: arrayWithTheProduct.name,
-                                        desc: arrayWithTheProduct.description,
-                                        price: arrayWithTheProduct.sale_price,
-                                        oldprice: arrayWithTheProduct.regular_price,
-                                        imgurl: arrayWithTheProduct.images[0].src
-                                        };
-                                tempCart.push(arrayWithTheCart);
-                                // this.setState( { cart: tempCart } );
+                            if(article.articleId === productId){
+                                article.quantity++;
                                 let tempNumItemCart = +this.state.cartNumItem;
                                 tempNumItemCart = tempNumItemCart + +qty;
                                 this.setState( { cartNumItem: tempNumItemCart, cart: tempCart  } );
-                                // arrayWithTheCart = [];
-                                }
-                            // else {
-                                
-                            //     arrayWithTheCart.quantity = +arrayWithTheCart.quantity +  +qty;
-                            //     //tempCart.push(arrayWithTheCart);
-                            //     this.setState( { cart: arrayWithTheCart } );
-                            //     let tempNumItemCart = +this.state.cartNumItem;
-                            //     tempNumItemCart = tempNumItemCart + +qty;
-                            //     this.setState( { cartNumItem: tempNumItemCart } );
-                            //     }
+                                return true;
+                            }
+                            return false;
+                            });
+                            if (!arrayWithTheCart) { //Is it a new product?
+                                arrayWithTheCart = {// Create product in the cart
+                                        articleId: arrayWithTheProduct.id,
+                                        quantity: qty
+                                        };
+                                tempCart.push(arrayWithTheCart);
+                                let tempNumItemCart = +this.state.cartNumItem;
+                                tempNumItemCart = +qty;
+                                this.setState( { cartNumItem: tempNumItemCart, cart: tempCart  } );
+                            }
                         }
                     }
                 else {
                     alert('The quantity is less or iqual than 0');
-                    }
+                }
             },
             
             delProductToCart: (index,id, qty) => {
@@ -223,8 +202,6 @@ export default class Layout extends React.Component {
                   
             }  
         };
-        
-
     }
     
     componentDidMount() {
