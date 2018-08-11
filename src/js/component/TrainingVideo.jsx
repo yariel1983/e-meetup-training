@@ -1,6 +1,8 @@
 import React from 'react';
 import 'bootstrap';
 import { Link } from "react-router-dom";
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import faPlayCircle from '@fortawesome/fontawesome-free-solid/faPlayCircle';
 
 function TrainingVideo(props){
     return (
@@ -40,8 +42,13 @@ function TrainingVideo(props){
                 </div>    
             </div>
             <div className="container-fluid pb-video-container mt-5">
-                <div className="col-md-12 col-md-offset-1">
-                    <h3 className="text-center text-dark">Gallery</h3>
+                <div className="col-md-12 col-md-offset-1 text-center">
+                    
+                    <button className="btn btn-dark mb-5">
+                        <span><FontAwesomeIcon className="fas fa-search text-light fa-2x" icon={faPlayCircle} /></span>
+                        <h3 className="text-center text-white mb-2">Gallery</h3>
+                    </button>
+                    
                     <div className="row pb-row">
                         <div className="col-md-3 pb-video">
                             <iframe className="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/Tx3W6XAO7Yo" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>

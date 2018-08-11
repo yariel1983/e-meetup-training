@@ -100,7 +100,10 @@ class Navbar extends React.Component{
                         <div className="modal-dialog" role="document">
                             <div className="modal-content">
                                 <div className="modal-header">
-                                    <h5 className="modal-title" id="exampleModalLabel">Login</h5>
+                                    <button className="btn btn-dark rounded-circle mb-3">
+                                        <span><FontAwesomeIcon className="fas fa-search text-light fa-2x" icon={faUser} /></span>
+                                    </button>
+                                    <h5 className="modal-title ml-2 mt-2" id="exampleModalLabel">Login</h5>
                                     <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>

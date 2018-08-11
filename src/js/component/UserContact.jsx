@@ -3,6 +3,13 @@ import { Link } from "react-router-dom";
 import faUser from '@fortawesome/fontawesome-free-regular/faUser';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import Info from '../component/Info.jsx';
+
+
+
+
+
+
+
 function UserContact(props) {
     return (
         <div className="container-fluid text-center mt-5 mb-5" id="contbackimag">
