@@ -55,12 +55,12 @@ class Navbar extends React.Component{
                                     </form>
                                 </div>                              
                                 <Link to={"/"} className="nav-item nav-link active" >Home <span className="sr-only">(current)</span></Link>
-                                <Link to={"/about"} className="nav-item nav-link" >About</Link>
                                 <Link to={"/products"} className="nav-item nav-link" >Products</Link>
                                 {/*<Link to={"/DetailsProduct"} className="nav-item nav-link" >DetailsProduct</Link>*/}
                                 <Link to={"/training"} className="nav-item nav-link" >Trainings</Link>
                                 {/*<Link to={"/events"} className="nav-item nav-link" >Events</Link>*/}
                                 <Link to={"/contact"} className="nav-item nav-link" >Contacts</Link>
+                                <Link to={"/about"} className="nav-item nav-link" >About</Link>
                                 <Link to={"/cart"} className="nav-item nav-link">
                                     <span>&nbsp;<FontAwesomeIcon className="fa ShoppingCart text-dark" icon={faShoppingCart} /></span>
                                     <span className="badge badge-pill badge-danger" id="cartnoti">{cartNumItem}</span>
@@ -138,4 +138,5 @@ Navbar.propTypes = {
   cartNumItem: PropTypes.number
 };
     
+                                
                                 

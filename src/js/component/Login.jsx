@@ -150,6 +150,7 @@ class Login extends React.Component {
                                         </div>
                                     </div>
                                     <div className="form-group">
+                                        <div className="col-lg-12 text-center mb-2"><strong>Credit Card Info:</strong></div>
                                         <div className="form-control input-lg mb-3 bg-dark pb-4">
                                             <div className="col-lg-12 text-white"><strong>Card Type:</strong></div>
                                             <div className="col-lg-12">
