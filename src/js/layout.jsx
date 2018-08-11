@@ -146,9 +146,22 @@ export default class Layout extends React.Component {
                         alert('The article no exit');
                     }
                     else {
-                        let arrayWithTheCart = this.state.cart.find( (cart, qty) => {
-                            return cart.articleId === productId;                        });
-                            if (!arrayWithTheCart) {
+                        console.log("BEFORE", this.state.cart);
+                        let arrayWithTheCart = this.state.cart.find( (article, qty) => {
+                                if(article.articleId === productId){
+                                    //UPDATE
+                                    article.quantity++;
+                                    let tempNumItemCart = +this.state.cartNumItem;
+                                    tempNumItemCart = tempNumItemCart + +qty;
+                                    this.setState( { cartNumItem: tempNumItemCart, cart: tempCart  } );
+                                    return true;
+                                }
+                                return false;
+                            });
+                            console.log("AFTER", this.state.cart);
+                            // 
+                            
+                            if (!arrayWithTheCart) { // Es un producto nuevo
                                 arrayWithTheCart = {
                                         articleId: arrayWithTheProduct.id,
                                         quantity: qty,  
@@ -157,24 +170,23 @@ export default class Layout extends React.Component {
                                         price: arrayWithTheProduct.sale_price,
                                         oldprice: arrayWithTheProduct.regular_price,
                                         imgurl: arrayWithTheProduct.images[0].src
-                                        
-                                    
-                                    };
+                                        };
                                 tempCart.push(arrayWithTheCart);
-                                this.setState( { cart: tempCart } );
+                                // this.setState( { cart: tempCart } );
                                 let tempNumItemCart = +this.state.cartNumItem;
                                 tempNumItemCart = tempNumItemCart + +qty;
-                                this.setState( { cartNumItem: tempNumItemCart } );
-                                arrayWithTheCart = [];
+                                this.setState( { cartNumItem: tempNumItemCart, cart: tempCart  } );
+                                // arrayWithTheCart = [];
                                 }
-                            else {
-                                arrayWithTheCart.quantity = +arrayWithTheCart.quantity +  +qty;
-                                this.setState( { cart: arrayWithTheCart } );
-                                let tempNumItemCart = +this.state.cartNumItem;
-                                tempNumItemCart = tempNumItemCart + +qty;
-                                this.setState( { cartNumItem: tempNumItemCart } );
-                                arrayWithTheCart = [];
-                                }
+                            // else {
+                                
+                            //     arrayWithTheCart.quantity = +arrayWithTheCart.quantity +  +qty;
+                            //     //tempCart.push(arrayWithTheCart);
+                            //     this.setState( { cart: arrayWithTheCart } );
+                            //     let tempNumItemCart = +this.state.cartNumItem;
+                            //     tempNumItemCart = tempNumItemCart + +qty;
+                            //     this.setState( { cartNumItem: tempNumItemCart } );
+                            //     }
                         }
                     }
                 else {

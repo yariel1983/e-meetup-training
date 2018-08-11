@@ -11,7 +11,7 @@ class ProductDetails extends React.Component {
     constructor(props) {
         super(props);
         
-    this.state = {quantity: 0};
+    this.state = {quantity: 1};
     
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -70,9 +70,9 @@ class ProductDetails extends React.Component {
                                         
                                         <ul className="list-inline">
                                             <label className="font-weight-bold mr-3">Items <span> (required) </span></label>
-                                            <input type="number" value={this.state.quantity} onChange={this.handleChange} id="proquant"/>
+                                            <input type="number" min="1" max="10" value={this.state.quantity} onChange={this.handleChange} id="proquant"/>
                                             <li className="list-inline-item">
-                                                <input className="btn btn-primary btn-sm ml-3" type="Add to cart" value="Add to cart" name="Add to Cart" onClick={() => actions.addProductToCart(product.id,this.state.quantity)} />                                            
+                                                <button className="btn btn-primary btn-sm ml-3" type="Add to cart" value="" name="Add to Cart" onClick={() => actions.addProductToCart(product.id,this.state.quantity)}>Add to cart</button>                                            
                                             </li>
                                             
                                         </ul>
