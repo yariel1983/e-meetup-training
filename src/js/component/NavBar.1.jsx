@@ -10,41 +10,18 @@ import faSearch from '@fortawesome/fontawesome-free-solid/faSearch';
 import faShoppingCart from '@fortawesome/fontawesome-free-solid/faShoppingCart';
 
 
-import Modal from 'react-responsive-modal';
-
-
 
 class Navbar extends React.Component{
     constructor(props){
         super(props);
         
         this.state = {
-                        username: '',
-                        password: '',
-                        modal: false,
-                        open: false  };
-                        
-        this.myRef = React.createRef();
-    
-        this.onOpenModal = this.onOpenModal.bind(this);    
-        this.onCloseModal = this.onCloseModal.bind(this);
+          username: '',
+          password: '',
+          modal: false
+        };
     }
     
-    
-    onOpenModal () {
-        this.setState({ open: true });
-    }
-
-
-    onCloseModal () {
-        this.setState({ open: false });
-    }
-    
-    handleSubmit () {
-        this.setState({ open: false });
-        }
-        
-        
     /*componentDidUpdate(prevProps, prevState) {
         // Previous ThemeContext value is prevProps.theme
         // New ThemeContext value is this.props.theme
@@ -53,7 +30,7 @@ class Navbar extends React.Component{
 
     render(){
         let homeActive = this.props.currentView === "home" ? "active" :"";
-        const { open } = this.state;
+        
         const {session, actions, cartNumItem} = this.props;
         
             return(
@@ -103,45 +80,57 @@ class Navbar extends React.Component{
                                         </div>
                                     :
                                         
+                                        
+                                        
+                                        
                                         <div className="d-flex">
                                             <button type="button" 
                                                     className="btn btn-outline-light text-dark" 
-                                                    onClick={this.onOpenModal}>
+                                                    data-toggle="modal" 
+                                                    data-target="#exampleModal">
                                                 <span><FontAwesomeIcon className="fas fa-search text-dark" icon={faUser} /> Login</span>
                                             </button>
                                         </div>
                                 }
-                                
+                                <Link to={"/LoginUserPassword"} className="nav-item nav-link" >LoginTest</Link>
                             </div>
                         </div>
                     </nav>
-                    <div className="example">
-                        <div ref={this.myRef} />
-                        <Modal open={open} onClose={this.onCloseModal} center container={this.myRef.current}>
-                            <button className="btn btn-dark rounded-circle mb-3">
-                                <span><FontAwesomeIcon className="fas fa-search text-light fa-2x" icon={faUser} /></span>
-                            </button>
-                            <form role="form" onSubmit={(e) => {
-                                        e.preventDefault();
-                                        actions.loadSession(this.state.username, this.state.password);
-                                        this.handleSubmit();
-                                        }}>
-                                <div className="form-group row">
-                                    <div className=" col-7 col-sm-10 m-0 ">
-                                        <input className="inputUserModal form-control-sm" type="text" name="user" value={this.state.username} placeholder="Username" onChange={(e) => this.setState({username: e.target.value})} />&nbsp;&nbsp;
-                                        <style>{'.inputUserModal {width: 334px;}'}</style>
-                                    </div>
-                                    <div className="col-7 col-sm-10 m-0">
-                                        <input className="inputPasswordModal form-control-sm" type="password" name="password" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})} />
-                                        <style>{'.inputPasswordModal {width: 334px;}'}</style>
-                                    </div>
-                                    <div className="d-flex float-right" id="buttonModal" >
-                                        <input className="btn btn-primary text-white" type="submit" value="Login" id="submitbotton"/>
-                                        <button type="button" className="btn btn-default" onClick={this.onCloseModal}>Close</button>
-                                    </div>
+                    <div className="modal fade-sm" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div className="modal-dialog" role="document">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                    <button className="btn btn-dark rounded-circle mb-3">
+                                        <span><FontAwesomeIcon className="fas fa-search text-light fa-2x" icon={faUser} /></span>
+                                    </button>
+                                    <h5 className="modal-title ml-2 mt-2" id="exampleModalLabel">Login</h5>
+                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                 </div>
-                            </form>    
-                        </Modal>
+                                <div className="modal-body">
+                                    <form role="form" onSubmit={(e) => {
+                                                                    e.preventDefault();
+                                                                    actions.loadSession(this.state.username, this.state.password);
+                                    }}>
+                                        <div className="form-group row">
+                                            <div className=" col-7 col-sm-10 m-0 ">
+                                                <input className="inputUserModal form-control-sm" type="text" name="user" value={this.state.username} placeholder="Username" onChange={(e) => this.setState({username: e.target.value})} />&nbsp;&nbsp;
+                                                <style>{'.inputUserModal {width: 334px;}'}</style>
+                                            </div>
+                                            <div className="col-7 col-sm-10 m-0">
+                                                <input className="inputPasswordModal form-control-sm" type="password" name="password" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})} />
+                                                <style>{'.inputPasswordModal {width: 334px;}'}</style>
+                                            </div>
+                                        </div>
+                                        <div className="d-flex float-right" id="buttonModal" >
+                                            <input className="btn btn-primary text-white" type="submit" value="Login" id="submitbotton"/>
+                                            <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             );
