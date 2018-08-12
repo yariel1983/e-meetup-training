@@ -113,11 +113,20 @@ class Navbar extends React.Component{
                                                                     e.preventDefault();
                                                                     actions.loadSession(this.state.username, this.state.password);
                                     }}>
-                                        <div className="form-group">
-                                            <input type="text" name="user" value={this.state.username} placeholder="Username" onChange={(e) => this.setState({username: e.target.value})} />&nbsp;&nbsp;
-                                            <input type="password" name="password" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})} />
+                                        <div className="form-group row">
+                                            <div className=" col-7 col-sm-10 m-0 ">
+                                                <input className="inputUserModal form-control-sm" type="text" name="user" value={this.state.username} placeholder="Username" onChange={(e) => this.setState({username: e.target.value})} />&nbsp;&nbsp;
+                                                <style>{'.inputUserModal {width: 334px;}'}</style>
+                                            </div>
+                                            <div className="col-7 col-sm-10 m-0">
+                                                <input className="inputPasswordModal form-control-sm" type="password" name="password" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})} />
+                                                <style>{'.inputPasswordModal {width: 334px;}'}</style>
+                                            </div>
                                         </div>
-                                        <input className="btn btn-primary text-white" type="submit" value="Login" id="submitbotton"/>
+                                        <div className="d-flex float-right" id="buttonModal" >
+                                            <input className="btn btn-primary text-white" type="submit" value="Login" id="submitbotton"/>
+                                            <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
                                     </form>
                                 </div>
                             </div>
