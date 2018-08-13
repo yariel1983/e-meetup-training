@@ -1,182 +1,85 @@
 @import '~bootstrap/scss/bootstrap.scss';
-body{
-    background: none !important;
-}
 
-.slick-track{
-    opacity: 1; 
-    width: 1650px;
-}
-#logbackimag{
+#logbackimag{/*Register page Background start*/
     background-size: cover;
     background-image: url(https://i.ytimg.com/vi/fdeQ5pVYgR0/maxresdefault.jpg) 
-}
-/*#signopacid{
-    opacity: 0.7;
-}*/
-#contbackimag{
+}/*Register page Background end*/
+
+#contbackimag{/*contact us page Background start*/
     background-size: cover;
     background-image: url(https://dzbc.org/download/gym-wallpapers-4k/?file_path=112365) 
-}    
-/*#contopacid{
-    opacity: 0.6;
-}*/
-.navbar-nav .nav-link {
+}/*contact us page Background end*/    
+
+.navbar-nav .nav-link {/*Responsive navbar login icon in mobil-mode start*/ 
     padding-right: 65px;
     padding-left: 12px;
-}
+}/*Responsive navbar login icon in mobil-mode end*/ 
     
-.owl-wrapper{
-    /*display: block;*/
-    width: 3648px; 
-    left: 0px; 
-    transition: all 0ms ease; 
-    transform: translate3d(0px, 0px, 0px);
-}
-
-.product-slider owl-carousel owl-theme{
-    display: block; 
-    opacity: 1;
-}
-
-.owl-item{
-    width: 228px;
-    visibility: visible;
-}
-
-.item{
-    visibility: visible;
-}
-
-.product-slider img{
-    width: 100%;
-}
-
-._3fcx {
-    background-color: green;
-    font-size: 14px;
-    font-weight: 600;
-    color: white;
-    line-height: 18px;
-    padding: 4px;
+#prodquant{/*product quantity select style start*/
     width: 40px;
-    border-radius: 100%;
-    position: relative;
-}
+}/*product quantity select style end*/
 
-._7ye img{
-    height: 325; top: -40px; left: 0px;
-} 
-#passinput{
-    margin-left: 15px;
-}
-
-.html5{    
-    width: 510px; height: 287px; left: 0px; top: 0px;   
-}
-#prodquant{
-    width: 40px;
-}
-
-#myuser{
-    margin-right: 10px;
-}
-#mylogb{
-    float: right;
-    color: blue;
-    border-radius: 5px;
-    margin-top: 52px;
-    margin-bottom: -40px;
-}
-.modal-body{
-    padding: 71px;
-    font-size: 13px;
-}
-div.modal-header{
-    background:#194c7a;
-    color: white;
-}    
-
-.btnGroupDrop1{
-    background: lightgray;
-}
-div.modal-body{
-    padding-left: 90px;
-    
-}
-#submitbotton{
-    float: right;
-    margin-right: 15px;
-}
-/*#imgabout{
-    height: 340px;
-}*/
 .imglogo{
     margin-bottom: 5px;
 }
 #regjumb{
     font-size: 12px;
 }
-.pb-video-container {
+
+
+#pb-video-container {/*Training Videos Glow style start*/
     padding-top: 20px;
     font-family: Lato;
 }
 
-.pb-video {
+#trainingvideosid {
     border: 1px solid #e6e6e6;
     padding: 5px;
 }
 
-.pb-video-frame {
+#trainingvideosframe {
     transition: width 1s, height 1s;
 }
 
-.pb-video-frame:hover {
+#trainingvideosframe:hover {
     height: 400px;
 }
 
-.pb-row {
+#trainingvideosrow {
     margin-bottom: 10px;
-}
+}/*Training Videos Glow style end*/
 
-.btn-primary:hover,
-.btn-primary:focus
-{
-    background-color: #108d6f;
-    border-color: #108d6f;
-    box-shadow: none;
-    outline: none;
-}
 
-.btn-primary
-{
-    color: #fff;
-    background-color: #305891;
-    border-color: #305893;
-}
 
-section
-{
+#trainingvideoslide {/*responsive training video welcome slide start*/
+    width: 100%;
+    height: auto;
+}/*responsive training video welcome slide end*/
+
+
+
+#flipsection{/*flip gallery Flipping Cards start*/
+
     padding: 60px 0;
 }
 
-section .section-title
-{
+#flipsection .section-title{
+
     text-align: center;
     color: #305893;
     margin-bottom: 50px;
     text-transform: uppercase;
 }
 
-#team .card
-{
+#flipsection .card{
+
     border: none;
     background: #ffffff;
 }
 
 .image-flip:hover .backside,
-.image-flip.hover .backside
-{
+.image-flip.hover .backside{
+
     -webkit-transform: rotateY(0deg);
     -moz-transform: rotateY(0deg);
     -o-transform: rotateY(0deg);
@@ -186,16 +89,16 @@ section .section-title
 }
 
 .image-flip:hover .frontside,
-.image-flip.hover .frontside
-{
+.image-flip.hover .frontside{
+
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
 
-.mainflip
-{
+.mainflip{
+
     -webkit-transition: 1s;
     -webkit-transform-style: preserve-3d;
     -ms-transition: 1s;
@@ -208,8 +111,8 @@ section .section-title
     position: relative;
 }
 
-.frontside
-{
+.frontside{
+
     position: relative;
     -webkit-transform: rotateY(0deg);
     -ms-transform: rotateY(0deg);
@@ -217,8 +120,8 @@ section .section-title
     margin-bottom: 30px;
 }
 
-.backside
-{
+.backside{
+
     position: absolute;
     top: 0;
     left: 0;
@@ -234,8 +137,8 @@ section .section-title
 }
 
 .frontside,
-.backside
-{
+.backside{
+
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
@@ -253,30 +156,121 @@ section .section-title
 }
 
 .frontside .card,
-.backside .card
-{
+.backside .card{
+
     min-height: 312px;
 }
 
-.backside .card a
-{
+.backside .card a{
+
     font-size: 18px;
     color: #305893 !important;
 }
 
 .frontside .card .card-title,
-.backside .card .card-title
-{
+.backside .card .card-title{
+
     color: #305893 !important;
 }
 
-.frontside .card .card-body img
-{
+.frontside .card .card-body img{
+
     width: 120px;
     height: 120px;
     border-radius: 50%;
+}/*flip gallery Flipping Cards end*/
+
+
+#proquant{
+    width: 60px;
+    border-radius: 5px;
 }
-.w-100{
+
+#cartnoti{
+    position: relative;
+    top: -7px;
+    left: -4px;
+    display: inline-block;
+    min-width: 10px;
+    padding: 0px 0px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color:#fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 10px;
+}
+
+#aboutid {            
+    
+    width: 90%;
+    margin-bottom: 70px;
+ }
+  
+ #aboutfeature{
+    padding: 20px 0;
+    text-align: center;
+ }
+ #aboutfeature > div > div{
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: 0.2s;
+ }
+ #aboutfeature > div:hover > div{
+    margin-top: -10px;
+    border: 1px solid rgb(128, 128, 128);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 5px;
+    background: rgba(232, 215, 215, 0.10);
+    transition: 0.3s;
+ }   
+.about .body{
+    opacity: 0.5;
+    background-image: url(http://getwallpapers.com/wallpaper/full/8/2/c/200229.jpg)
+}
+
+
+
+/*contact*/
+
+ody{
+
+   
+    background-image: linear-gradient(#79a06d, #79a06d); 
+}
+
+#box{
+    border: 1px solid rgb(200, 200, 200);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+    background: rgba(200, 200, 200, 0.1);
+    border-radius: 4px;
+    top:50px;
+}
+
+#submitbotton{
+    float: right;
+    
+}
+
+
+
+
+
+
+
+
+
+/*h2{
+    text-align:center;
+    color:#fff;
+}*/
+
+
+
+
+/*.w-100{
     margin-top: 60px;
 }
 .cid-qv5AL7fBTQ {
@@ -319,7 +313,7 @@ section .section-title
 }
 
 
-/* on ex2 if you include bootstrap v3 css the number is a rounded circle with the .has-badge class */
+
 #ex2 .fa-stack[data-count]:after{
   position: absolute;
   right: 0%;
@@ -361,84 +355,100 @@ section .section-title
     color: white;
     border: 1px solid blue;
 }
+*/
 
 
-#proquant{
-    width: 60px;
-    border-radius: 5px;
-}
 
-#cartnoti{
-    position: relative;
-    top: -7px;
-    left: -4px;
-    display: inline-block;
-    min-width: 10px;
-    padding: 0px 0px;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 1;
-    color:#fff;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: 10px;
-}
-
-#cnt1 {            
-    /*background-color: rgba(215, 212, 212, 0.88);*/
-    width: 90%;
-    margin-bottom: 70px;
- }
-  
- .feature{
-    padding: 20px 0;
-    text-align: center;
- }
- .feature > div > div{
-    padding: 10px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    transition: 0.2s;
- }
- .feature > div:hover > div{
-    margin-top: -10px;
-    border: 1px solid rgb(128, 128, 128);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 5px;
-    background: rgba(232, 215, 215, 0.10);
-    transition: 0.3s;
- }   
-.about .body{
-    opacity: 0.5;
-    background-image: url(http://getwallpapers.com/wallpaper/full/8/2/c/200229.jpg)
-}
-.video-fluid {
-    width: 100%;
-    height: auto;
-}
-/*contact*/
-ody{
-
-   
-    background-image: linear-gradient(#79a06d, #79a06d); 
-}
-
-#box{
-    border: 1px solid rgb(200, 200, 200);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
-    background: rgba(200, 200, 200, 0.1);
-    border-radius: 4px;
-    top:50px;
-}
-
-/*h2{
-    text-align:center;
-    color:#fff;
+/*.slick-track{
+    opacity: 1; 
+    width: 1650px;
 }*/
 
+/*.owl-wrapper{
+    width: 3648px; 
+    left: 0px; 
+    transition: all 0ms ease; 
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.product-slider owl-carousel owl-theme{
+    display: block; 
+    opacity: 1;
+}
+
+.owl-item{
+    width: 228px;
+    visibility: visible;
+}
+
+.item{
+    visibility: visible;
+}
+
+.product-slider img{
+    width: 100%;
+}
+
+._3fcx {
+    background-color: green;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    line-height: 18px;
+    padding: 4px;
+    width: 40px;
+    border-radius: 100%;
+    position: relative;
+}
+
+._7ye img{
+    height: 325; top: -40px; left: 0px;
+}*/ 
+
+/*#passinput{
+    margin-left: 15px;
+}*/
+
+/*.html5{    
+    width: 510px; height: 287px; left: 0px; top: 0px;   
+}*/
+   
 
 
 
 
 
+/*#myuser{
+    margin-right: 10px;
+}*/
+/*#mylogb{
+    float: right;
+    color: blue;
+    border-radius: 5px;
+    margin-top: 52px;
+    margin-bottom: -40px;
+}
+.modal-body{
+    padding: 71px;
+    font-size: 13px;
+}
+div.modal-header{
+    background:#194c7a;
+    color: white;
+}    
 
+.btnGroupDrop1{
+    background: lightgray;
+}
+div.modal-body{
+    padding-left: 90px;
+    
+}
+
+/*#imgabout{
+    height: 340px;
+}*/
+/*#mylogb{
+    float: right;
+    color: blue;
+}*/

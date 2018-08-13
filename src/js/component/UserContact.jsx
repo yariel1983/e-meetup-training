@@ -20,12 +20,15 @@ function UserContact(props) {
                         <div className="card card-body" id="contopacid">
                             <div className="form-group has-error">
                                 <input className="form-control input-lg"  placeholder="E-mail Address" name="email" type="text" />
+                                <div className="col-lg-12 text-left"><small><strong>E-mail Address:</strong></small></div>
                             </div>
                             <div className="form-group has-error">
                                 <input className="form-control input-lg" placeholder="First Name" name="First Name" type="text" />
+                                <div className="col-lg-12 text-left"><small><strong>First Name:</strong></small></div>
                             </div>
                             <div className="form-group has-error">
                                 <input className="form-control input-lg" placeholder="Last Name" name="Last Name" type="text" />
+                                <div className="col-lg-12 text-left"><small><strong>Last Name:</strong></small></div>
                             </div>
                             <label htmlFor="name"></label>
                             <textarea name="message" id="message" className="form-control" rows="9" cols="25" required="required"
@@ -44,3 +47,4 @@ function UserContact(props) {
 }
 export default UserContact;                                                          
  
+                            

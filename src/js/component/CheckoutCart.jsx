@@ -63,27 +63,29 @@ class CheckoutCart extends React.Component{
                                             <strong>${(this.state.totalPrice - this.state.discount/100 * (this.state.quantity * this.state.totalPrice)).toFixed(2)}</strong>
                                         </li>
                                     </ul>
-                                    <div className="form-group">
-                                        <div className="form-control input-lg mb-3">
-                                            <div className="col-lg-12"><strong>Card Type:</strong></div>
+                                    <div className="form-group text-center pb-4">
+                                        <div className="col-lg-12 text-center mb-2"><strong>Credit Card Info:</strong></div>
+                                        <div className="form-control input-lg mb-3 pb-4">
+                                            <div className="col-lg-12"><strong>Card Type:</strong><img src="https://static.shoplightspeed.com/shops/606600/files/001462255/cards.jpg" width="230 px" height="60 px"/></div>
                                             <div className="col-lg-12">
                                                 <select id="CreditCardType" name="CreditCardType" className="form-control">
                                                     <option value="5">Visa</option>
                                                     <option value="6">MasterCard</option>
                                                     <option value="7">American Express</option>
                                                     <option value="8">Discover</option>
+                                                    <option value="9">PayPal</option>
                                                 </select>
                                             </div>
                                         </div>
-                                        <div className="form-group form-control input-lg">
+                                        <div className="form-group form-control input-lg pb-4">
                                             <div className="col-lg-12"><strong>Credit Card Number:</strong></div>
                                             <div className="col-lg-12"><input type="text" className="form-control" name="car_number" value="" /></div>
                                         </div>
-                                        <div className="form-group form-control input-lg mb-3">
+                                        <div className="form-group form-control input-lg mb-3 pb-4">
                                             <div className="col-lg-12"><strong>Card CVV:</strong></div>
                                             <div className="col-lg-12"><input type="text" className="form-control" name="car_code" value="" /></div>
                                         </div>
-                                        <div className="form-group form-control input-lg">
+                                        <div className="form-group form-control input-lg pb-4">
                                             <div className="col-lg-12 mb-3">
                                                 <strong>Expiration Date</strong>
                                             </div>

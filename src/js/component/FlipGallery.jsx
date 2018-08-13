@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 
 function FlipGallery(props){
     return (
-        <section id="team" className="pb-5">
+        <section id="flipsection" className="pb-5">
             <div className="container">
-                <h5 className="section-title h1"></h5>
+                <h5 className="section-title h1" id="fliptittle"></h5>
                 <div className="row">
                     <div className="col-xs-12 col-sm-6 col-md-4">
                         <div className="image-flip" >
                             <div className="mainflip">
                                 <div className="frontside">
-                                    <div className="card">
+                                    <div className="card" id="flipcard">
                                         <div className="card-body text-center">
                                             <p>
                                                 <img className=" img-fluid" alt="Team Cards Flipper" src="https://media.licdn.com/dms/image/C4E03AQHWsZFdJJiqXw/profile-displayphoto-shrink_200_200/0?e=1538006400&v=beta&t=e0wa1IpxitFfQ9DfvaKPgB00e1OnQ0i10DE3m9dID9g" /></p>

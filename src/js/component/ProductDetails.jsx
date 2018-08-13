@@ -69,10 +69,10 @@ class ProductDetails extends React.Component {
                                         </span>
                                         
                                         <ul className="list-inline">
-                                            <label className="font-weight-bold mr-3">Items <span> (required) </span></label>
+                                            <label className="font-weight-bold">Items <span> (required) </span></label>&nbsp;&nbsp;
                                             <input type="number" min="1" max="10" value={this.state.quantity} onChange={this.handleChange} id="proquant"/>
                                             <li className="list-inline-item">
-                                                <button className="btn btn-primary btn-sm ml-3" type="Add to cart" value="" name="Add to Cart" onClick={() => actions.addProductToCart(product.id,this.state.quantity)}>Add to cart</button>                                            
+                                                <button className="btn btn-primary btn-sm ml-1" type="Add to cart" value="" name="Add to Cart" onClick={() => actions.addProductToCart(product.id,this.state.quantity)}>Add to cart</button>                                            
                                             </li>
                                             
                                         </ul>

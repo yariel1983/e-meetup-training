@@ -7,6 +7,7 @@ import {withSession} from '../stores/AppContext.jsx';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faUser from '@fortawesome/fontawesome-free-regular/faUser';
 
+
 class Login extends React.Component {
     constructor(props){
         super(props);
@@ -27,40 +28,53 @@ class Login extends React.Component {
                             session && typeof(session.user_nicename) !== 'undefined' ?
                                 <fieldset>
                                     <div className="form-group has-error">
+                                        <button className="btn btn-dark rounded-circle mb-3">
+                                            <span><FontAwesomeIcon className="fas fa-search text-light fa-5x" icon={faUser} /></span>
+                                        </button>
+                                        <h3>Profile</h3>
                                         <input className="form-control input-lg" value={session.user_nicename} placeholder="E-mail Address" name="email" type="text" />
+                                        <div className="col-lg-12 text-left"><small><strong>E-mail Address:</strong></small></div>
                                     </div>
                                     
                                     <div className="form-group has-success">
                                         <input className="form-control input-lg" value={session.user_nicename} placeholder="Password" name="password" type="password" />
+                                        <div className="col-lg-12 text-left"><small><strong>Password:</strong></small></div>
                                     </div>
                                     
                                     <div className="form-group has-success">
                                         <input className="form-control input-lg" value={session.user_nicename} placeholder="Confirm Password" name="password" type="password" />
+                                        <div className="col-lg-12 text-left"><small><strong>Confirm Password:</strong></small></div>
                                     </div>
                                     
                                     <div className="form-group has-error">
                                         <input className="form-control input-lg" value={session.user_nicename} placeholder="First Name" name="First Name" type="text" />
+                                        <div className="col-lg-12 text-left"><small><strong>First Name:</strong></small></div>
                                     </div>
                                     
                                     <div className="form-group has-error">
                                         <input className="form-control input-lg" value={session.user_nicename} placeholder="Last Name" name="Last Name" type="text" />
+                                        <div className="col-lg-12 text-left"><small><strong>Last Name:</strong></small></div>
                                     </div>
                                     
                                     <div className="form-group has-error">
                                         <input className="form-control input-lg" value={session.user_nicename} placeholder="Address Line 1" name="Address" type="text" />
+                                        <div className="col-lg-12 text-left"><small><strong>Address line 1:</strong></small></div>
                                     </div>
                                     
                                     <div className="form-group has-error">
                                         <input className="form-control input-lg" value={session.user_nicename} placeholder="Address Line 2" name="Address" type="text" />
+                                        <div className="col-lg-12 text-left"><small><strong>Address Line 2:</strong></small></div>
                                     </div>
                                         
                                         
                                     <div className="form-group has-error">
                                         <input className="form-control input-lg" value={session.user_nicename} placeholder="City" name="City" type="text" />
+                                        <div className="col-lg-12 text-left"><small><strong>City:</strong></small></div>
                                     </div>
                                             
                                     <div className="form-group has-error">
                                         <input type="text" className="form-control" value={session.user_nicename} id="validationTooltip04" placeholder="State" required />
+                                        <div className="col-lg-12 text-left"><small><strong>State:</strong></small></div>
                                         <div className="invalid-tooltip">
                                             Please provide a valid state.
                                         </div>
@@ -68,6 +82,7 @@ class Login extends React.Component {
                                             
                                     <div className="form-group has-error">
                                         <input type="text" className="form-control" value={session.user_nicename} id="validationTooltip05" placeholder="Zip" required />
+                                        <div className="col-lg-12 text-left"><small><strong>Zip:</strong></small></div>
                                         <div className="invalid-tooltip">
                                             Please provide a valid zip.
                                         </div>
@@ -134,12 +149,62 @@ class Login extends React.Component {
                                     </div>
                                             
                                     <div className="form-group has-error">
-                                        <input type="text" className="form-control" id="validationTooltip04" placeholder="State" required />
+                                        <select id="State" name="State" className="form-control">
+                                            <option value="AL">Alabama</option>
+                                            <option value="AK">Alaska</option>
+                                            <option value="AZ">Arizona</option>
+                                            <option value="AR">Arkansas</option>
+                                            <option value="CA">California</option>
+                                            <option value="CO">Colorado</option>
+                                            <option value="CT">Connecticut</option>
+                                            <option value="DE">Delaware</option>
+                                            <option value="DC">District Of Columbia</option>
+                                            <option value="FL">Florida</option>
+                                            <option value="GA">Georgia</option>
+                                            <option value="HI">Hawaii</option>
+                                            <option value="ID">Idaho</option>
+                                            <option value="IL">Illinois</option>
+                                            <option value="IN">Indiana</option>
+                                            <option value="IA">Iowa</option>
+                                            <option value="KS">Kansas</option>
+                                            <option value="KY">Kentucky</option>
+                                            <option value="LA">Louisiana</option>
+                                            <option value="ME">Maine</option>
+                                            <option value="MD">Maryland</option>
+                                            <option value="MA">Massachusetts</option>
+                                            <option value="MI">Michigan</option>
+                                            <option value="MN">Minnesota</option>
+                                            <option value="MS">Mississippi</option>
+                                            <option value="MO">Missouri</option>
+                                            <option value="MT">Montana</option>
+                                            <option value="NE">Nebraska</option>
+                                            <option value="NV">Nevada</option>
+                                            <option value="NH">New Hampshire</option>
+                                            <option value="NJ">New Jersey</option>
+                                            <option value="NM">New Mexico</option>
+                                            <option value="NY">New York</option>
+                                            <option value="NC">North Carolina</option>
+                                            <option value="ND">North Dakota</option>
+                                            <option value="OH">Ohio</option>
+                                            <option value="OK">Oklahoma</option>
+                                            <option value="OR">Oregon</option>
+                                            <option value="PA">Pennsylvania</option>
+                                            <option value="RI">Rhode Island</option>
+                                            <option value="SC">South Carolina</option>
+                                            <option value="SD">South Dakota</option>
+                                            <option value="TN">Tennessee</option>
+                                            <option value="TX">Texas</option>
+                                            <option value="UT">Utah</option>
+                                            <option value="VT">Vermont</option>
+                                            <option value="VA">Virginia</option>
+                                            <option value="WA">Washington</option>
+                                            <option value="WV">West Virginia</option>
+                                            <option value="WI">Wisconsin</option>
+                                            <option value="WY">Wyoming</option>
+                                        </select>
                                         <div className="col-lg-12 text-left"><small><strong>State:</strong></small></div>
-                                        <div className="invalid-tooltip">
-                                            Please provide a valid state.
-                                        </div>
                                     </div>
+                                        
                                             
                                     <div className="form-group has-error">
                                         <input type="text" className="form-control" id="validationTooltip05" placeholder="Zip" required />
@@ -151,27 +216,28 @@ class Login extends React.Component {
                                     </div>
                                     <div className="form-group">
                                         <div className="col-lg-12 text-center mb-2"><strong>Credit Card Info:</strong></div>
-                                        <div className="form-control input-lg mb-3 bg-dark pb-4">
-                                            <div className="col-lg-12 text-white"><strong>Card Type:</strong></div>
+                                        <div className="form-control input-lg mb-3 pb-4">
+                                            <div className="col-lg-12"><strong>Card Type:</strong></div>
                                             <div className="col-lg-12">
                                                 <select id="CreditCardType" name="CreditCardType" className="form-control">
                                                     <option value="5">Visa</option>
                                                     <option value="6">MasterCard</option>
                                                     <option value="7">American Express</option>
                                                     <option value="8">Discover</option>
+                                                    <option value="9">PayPal</option>
                                                 </select>
                                             </div>
                                         </div>
-                                        <div className="form-group form-control input-lg bg-dark pb-4">
-                                            <div className="col-lg-12 text-white"><strong>Credit Card Number:</strong></div>
+                                        <div className="form-group form-control input-lg pb-4">
+                                            <div className="col-lg-12"><strong>Credit Card Number:</strong></div>
                                             <div className="col-lg-12"><input type="text" className="form-control" name="car_number" value={session.user_nicename} /></div>
                                         </div>
-                                        <div className="form-group form-control input-lg mb-3 bg-dark pb-4">
-                                            <div className="col-lg-12 text-white"><strong>Card CVV:</strong></div>
+                                        <div className="form-group form-control input-lg mb-3 pb-4">
+                                            <div className="col-lg-12"><strong>Card CVV:</strong></div>
                                             <div className="col-lg-12"><input type="text" className="form-control" name="car_code" value={session.user_nicename} /></div>
                                         </div>
-                                        <div className="form-group form-control input-lg bg-dark pb-4">
-                                            <div className="col-lg-12 mb-3 text-white">
+                                        <div className="form-group form-control input-lg pb-4">
+                                            <div className="col-lg-12 mb-3">
                                                 <strong>Expiration Date</strong>
                                             </div>
                                             <div className="col-lg-12">
@@ -236,3 +302,5 @@ Login.propTypes = {
 export default withSession(Login);
  
                                                     
+                                        
+                                        

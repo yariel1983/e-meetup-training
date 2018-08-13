@@ -23,7 +23,7 @@ class ProductCard extends React.Component {
         return (
             
             <div className="container mt-5" >
-                <div className="row align-center feature">
+                <div className="row align-center" id="aboutfeature">
                     <Consumer>
                         {
                         ({ state }) => 

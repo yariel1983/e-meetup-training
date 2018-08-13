@@ -8,8 +8,8 @@ function PageAbout(props){
                 <div className="container-fluid mt-5">&nbsp;
                     <img className="card-img-top" src="https://image.winudf.com/v2/image/Y29tLk1hZ2ljSWRlYS5HeW0xODFfc2NyZWVuXzBfOGFtNXNyZW0/screen-0.jpg?h=800&fakeurl=1&type=.jpg" alt="Responsive image"/>
                     <h1 className="display-4"></h1>
-                    <div className="container-fluid mt-5" id="cnt1">
-                        <div className="row feature">
+                    <div className="container-fluid mt-5" id="aboutid">
+                        <div className="row" id="aboutfeature">
                             <div className="col-md-4">
                                 <div>
                                     <img src="https://ae01.alicdn.com/kf/HTB1h0DtQVXXXXaRXpXXq6xXFXXXu/beibehang-Custom-photo-wallpaper-wall-murals-wall-stickers-3D-fitness-place-gym-fitness-fitness-beauty-tooling.jpg_640x640.jpg" alt="Texto Alternativo" className="img-circle img-thumbnail"/>

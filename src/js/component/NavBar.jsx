@@ -96,10 +96,10 @@ class Navbar extends React.Component{
                             </div>
                         </div>
                     </nav>
-                    <div className="modal fade-sm" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div className="modal fade-md" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div className="modal-dialog" role="document">
                             <div className="modal-content">
-                                <div className="modal-header">
+                                <div className="modal-header bg-secondary">
                                     <button className="btn btn-dark rounded-circle mb-3">
                                         <span><FontAwesomeIcon className="fas fa-search text-light fa-2x" icon={faUser} /></span>
                                     </button>
@@ -108,17 +108,23 @@ class Navbar extends React.Component{
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <div className="modal-body">
+                                <div className="modal-body pb-5 pt-5">
                                     <form role="form" onSubmit={(e) => {
                                                                     e.preventDefault();
                                                                     actions.loadSession(this.state.username, this.state.password);
                                     }}>
-                                        <div className="form-group">
-                                            <input type="text" name="user" value={this.state.username} placeholder="Username" onChange={(e) => this.setState({username: e.target.value})} />&nbsp;&nbsp;
-                                            <input type="password" name="password" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})} />
+                                        <div className="form-group text-center">
+                                            <small><input className="border border-secondary" type="text" name="user" value={this.state.username} placeholder="Username" onChange={(e) => this.setState({username: e.target.value})} /></small>
+                                        </div>    
+                                        <div className="form-group text-center">   
+                                            <small><input className="border border-secondary" type="password" name="password" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})} /></small>
+                                        </div>     
+                                        <div className="modal-footer border-0">
+                                            <input className="btn-sm btn-dark text-white" type="submit" value="Login" id="submitbotton"/> 
                                         </div>
-                                        <input className="btn btn-primary text-white" type="submit" value="Login" id="submitbotton"/>
+                                        
                                     </form>
+                                       
                                 </div>
                             </div>
                         </div>
@@ -127,6 +133,7 @@ class Navbar extends React.Component{
             );
         }
 }
+                                        
 
 
 export default withSession(Navbar);
