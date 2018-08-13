@@ -107,12 +107,16 @@ export default class Layout extends React.Component {
                     .then( (response) => response.json())
                     .then( (data) => {
                         
-                        if (typeof(data.token) === "undefined" ) throw new Error(data.message);
-                        this.setState({session: data});
+                        if (typeof(data.token) === "undefined" ) 
+                            throw new Error(data.message);
+                            this.setState({session: data});
                         
                         //ReactGA.set({ userId: data.user_nicename });
                     })
-                    .catch(error => console.log(error));
+                    .catch(error => console.log(error)); 
+                    if (this.session.token === "undefined") {
+                        return false;
+                        }
                   
                     //Simulating user ID
                     /*

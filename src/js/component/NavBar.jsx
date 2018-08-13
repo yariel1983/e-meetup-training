@@ -121,18 +121,20 @@ class Navbar extends React.Component{
                             <button className="btn btn-dark rounded-circle mb-3">
                                 <span><FontAwesomeIcon className="fas fa-search text-light fa-2x" icon={faUser} /></span>
                             </button>
-                            <form role="form" onSubmit={(e) => {
-                                        e.preventDefault();
-                                        actions.loadSession(this.state.username, this.state.password);
-                                        this.handleSubmit();
-                                        }}>
+                            <form role="form" onSubmit={(e) => {e.preventDefault();
+                                                                var success = actions.loadSession(this.state.username, this.state.password);
+                                                                { success ?
+                                                                    this.handleSubmit()
+                                                                :
+                                                                    alert('User or password is incorrect');  
+                                                                }}}>
                                 <div className="form-group row">
                                     <div className=" col-7 col-sm-10 m-0 ">
-                                        <input className="inputUserModal form-control-sm" type="text" name="user" value={this.state.username} placeholder="Username" onChange={(e) => this.setState({username: e.target.value})} />&nbsp;&nbsp;
+                                        <input className="inputUserModal form-control is-valid form-control-sm" type="text" name="user" value={this.state.username} placeholder="Username" onChange={(e) => this.setState({username: e.target.value})} required/>&nbsp;&nbsp;
                                         <style>{'.inputUserModal {width: 334px;}'}</style>
                                     </div>
                                     <div className="col-7 col-sm-10 m-0">
-                                        <input className="inputPasswordModal form-control-sm" type="password" name="password" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})} />
+                                        <input className="inputPasswordModal form-control is-valid form-control-sm" type="password" name="password" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})} required/>
                                         <style>{'.inputPasswordModal {width: 334px;}'}</style>
                                     </div>
                                     <div className="d-flex float-right" id="buttonModal" >
