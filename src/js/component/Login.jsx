@@ -32,6 +32,7 @@ class Login extends React.Component {
                                             <span><FontAwesomeIcon className="fas fa-search text-light fa-5x" icon={faUser} /></span>
                                         </button>
                                         <h3>Profile</h3>
+                                        <a href="#" className="btn btn-xs btn-default"><span className="glyphicon glyphicon-edit"></span>Edit</a>
                                         <input className="form-control input-lg" value={session.user_nicename} placeholder="E-mail Address" name="email" type="text" />
                                         <div className="col-lg-12 text-left"><small><strong>E-mail Address:</strong></small></div>
                                     </div>

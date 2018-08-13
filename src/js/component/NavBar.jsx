@@ -37,8 +37,8 @@ class Navbar extends React.Component{
     
                 <div>
                     <nav className="navbar navbar-expand-lg navbar-toggler-sm navbar-light fixed-top shadow-lg bg-white" id="mynavbar">
-                        <Link to={"/"} className="nav-item d-flex mr-3">
-                            <img src="http://www.hertsmereleisure.co.uk/centre_uploads/1/images/HM%20-%20Training%20Academy%20logo.jpg" id="imglogo" width="100 px" height="40 px"/>
+                        <Link to={"/"} className="nav-item d-flex ml-0">
+                            <img src="http://www.hertsmereleisure.co.uk/centre_uploads/1/images/HM%20-%20Training%20Academy%20logo.jpg" id="imglogo" width="85 px" height="35 px"/>
                         </Link>
                         
                         <button className="navbar-toggler float-sm-md-lg-right border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -120,7 +120,7 @@ class Navbar extends React.Component{
                                             <small><input className="border border-secondary" type="password" name="password" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})} /></small>
                                         </div>     
                                         <div className="modal-footer border-0">
-                                            <input className="btn-sm btn-dark text-white" type="submit" value="Login" id="submitbotton"/> 
+                                            <input className="btn-sm btn-secondary text-white" type="submit" value="Login" id="submitbotton"/> 
                                         </div>
                                         
                                     </form>

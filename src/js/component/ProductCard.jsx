@@ -9,7 +9,7 @@ class ProductCard extends React.Component {
         
     getSmailImage (array) {
         const smallimg = array.map((array, index) => (
-            <div className="card border-light col-lg-4 col-md-6" key={index}>
+            <div className="card border-light col-lg-4 col-md-6" key={index}>&nbsp;
                 <div className="card-img-overlay" >
                     <img className="card-img" id="smallImg" src={array.src} alt="Card image cap" />
                     <style>{'#smallImg {max-width: 8rem;}'}</style>
@@ -21,38 +21,41 @@ class ProductCard extends React.Component {
     render () {
         const smallimg = [];
         return (
-            
-            <div className="container mt-5" >
-                <div className="row align-center" id="aboutfeature">
-                    <Consumer>
-                        {
-                        ({ state }) => 
-                                    (state.article.map((article, index) => {
-    
-                                    return (
-                                        
-                                        <div className="card border-light col-lg-4 col-md-6 ml-5 mt-5 mb-5" key={index} >
-                                            <Link to={"/DetailsProduct/"+article.id}>
-                                                <style>{'.card{max-width: 18rem;}'}</style>
-                                                <img className="card-img" src={article.images[0].src} alt="Card image cap"/>
-                                                <div className="card-img-overlay">
-                                                    
+            <div>    
+                <div className="container text-center mt-5" >&nbsp;
+                    <div className="row align-center">
+                        <Consumer>
+                            {
+                            ({ state }) => 
+                                        (state.article.map((article, index) => {
+        
+                                        return (
+                                            
+                                            <div className="card text-center border-light col-lg-12 col-md-6 col-sm-8  mt-5 mb-5 mr-5 " key={index} >&nbsp;
+                                                <Link to={"/DetailsProduct/"+article.id}>
+                                                    <style>{'.card{max-width: 15rem;}'}</style>
+                                                    <img className="card-img" src={article.images[0].src} alt="Card image cap"/>
+                                                    <div className="card-img-overlay">
+                                                        <style>{'.card{max-width: 15rem;}'}</style>   
+                                                    </div>
+                                                </Link>
+                                                <div className="card-footer border-light mb-5">
+                                                    <div className="card-text">
+                                                        <p className="card-text border-light m-0 p-0">
+                                                            <small className="text-muted border-light">{article.name}</small>
+                                                        </p>
+                                                    </div>
+                                                                                                       
                                                 </div>
-                                            </Link>
-                                            <div className="card-footer border-light">
-                                                <div className="card-text">
-                                                    <p className="card-text border-light m-0 p-0">
-                                                        <small className="text-muted border-light">{article.name}</small>
-                                                    </p>
-                                                </div>
-                                                {this.getSmailImage(article.images)}                                                    
+                                                {/*<div className="card-img">{this.getSmailImage(article.images)}</div>*/}     
                                             </div>
                                             
-                                        </div>
-                                         
-                                            
-                                    );}))}
-                    </Consumer>
+                                           
+                                           
+                                                
+                                        );}))}
+                        </Consumer>
+                    </div>
                 </div>
             </div>);
         }

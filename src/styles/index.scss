@@ -19,14 +19,6 @@
     width: 40px;
 }/*product quantity select style end*/
 
-.imglogo{
-    margin-bottom: 5px;
-}
-#regjumb{
-    font-size: 12px;
-}
-
-
 #pb-video-container {/*Training Videos Glow style start*/
     padding-top: 20px;
     font-family: Lato;
@@ -71,7 +63,7 @@
     text-transform: uppercase;
 }
 
-#flipsection .card{
+#flipsection, .card{
 
     border: none;
     background: #ffffff;
@@ -181,12 +173,13 @@
 }/*flip gallery Flipping Cards end*/
 
 
-#proquant{
-    width: 60px;
+#proquant{/*product quantity input start*/
+    width: 40px;
     border-radius: 5px;
-}
+    margin-right: 3px;
+}/*product quantity input end*/
 
-#cartnoti{
+#cartnoti{/*shopping cart notification badge start*/
     position: relative;
     top: -7px;
     left: -4px;
@@ -201,15 +194,10 @@
     white-space: nowrap;
     vertical-align: baseline;
     border-radius: 10px;
-}
+}/*shopping cart notification badge end*/
 
-#aboutid {            
-    
-    width: 90%;
-    margin-bottom: 70px;
- }
-  
- #aboutfeature{
+
+ #aboutfeature{/* about page image borders glow start*/
     padding: 20px 0;
     text-align: center;
  }
@@ -229,13 +217,27 @@
 .about .body{
     opacity: 0.5;
     background-image: url(http://getwallpapers.com/wallpaper/full/8/2/c/200229.jpg)
-}
+}/* about page image borders glow end*/
+
+#submitbotton{/*modal submit button start*/
+    float: right;
+}/*modal submit button end*/
+    
+
+
+
+
+
+
+
+
+
 
 
 
 /*contact*/
 
-ody{
+/*ody{
 
    
     background-image: linear-gradient(#79a06d, #79a06d); 
@@ -247,19 +249,7 @@ ody{
     background: rgba(200, 200, 200, 0.1);
     border-radius: 4px;
     top:50px;
-}
-
-#submitbotton{
-    float: right;
-    
-}
-
-
-
-
-
-
-
+}*/
 
 
 /*h2{
@@ -452,3 +442,18 @@ div.modal-body{
     float: right;
     color: blue;
 }*/
+/*#imglogo{
+    margin-bottom: 5px;
+}*/
+
+/*#regjumb{
+    font-size: 12px;
+}*/
+
+/*#aboutid {            
+    
+    width: 90%;
+    margin-bottom: 70px;
+ }*/
+  
+

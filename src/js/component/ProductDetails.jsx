@@ -40,7 +40,8 @@ class ProductDetails extends React.Component {
                             } else {
 
                             return (
-                                <div className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3 ">
+                                <div className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3 ml-3">
+                                    <style>{'.card{max-width: 15rem;}'}</style>
                                     <div className="containerleftProduct mr-5 p-2">
                                         <img className="card-img-top" src={product.images[0].src} />
                                     </div>
