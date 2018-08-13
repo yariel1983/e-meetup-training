@@ -28,42 +28,6 @@ class ProductDetails extends React.Component {
     } 
         
     render () {
-<<<<<<< HEAD
-    return (
-        <div className="container mt-5 mb-5">
-            <div className="row">
-                <Consumer>
-                    {
-                        ({ state, actions }) => {   const product = state.article.find( product => product.id === parseInt(this.props.artId) );
-                            if (!product) {
-                                return <div>Erros, Contact to Administrator</div>;
-                            } else {
-
-                            return (
-                                <div className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3 ml-3">
-                                    <style>{'.card{max-width: 15rem;}'}</style>
-                                    <div className="containerleftProduct mr-5 p-2">
-                                        <img className="card-img-top" src={product.images[0].src} />
-                                    </div>
-                                    <div className="containerRigthProduct mr-5 p-2">
-                                        <h1 className="mb-4">{product.name}</h1>
-                                        <div className="d-flex align-items-center justify-content-between mb-4">
-                                            <ul className="list-inline mb-0">
-                                                <li className="list-inline-item h4 font-weight-light mb-0">${product.sale_price}</li>
-                                                <li className="list-inline-item text-muted font-weight-light"> 
-                                                    <del>${product.regular_price}</del>
-                                                </li>
-                                            </ul>
-                                            <div className="d-flex align-items-center">
-                                                <ul className="list-inline mr-2 mb-0">
-                                                    <span><FontAwesomeIcon className="fas fa-star text-dark" icon={faStar} /></span>
-                                                    <span><FontAwesomeIcon className="fas fa-star text-dark" icon={faStar} /></span>
-                                                    <span><FontAwesomeIcon className="fas fa-star text-dark" icon={faStar} /></span>
-                                                    <span><FontAwesomeIcon className="fas fa-star text-dark" icon={faStar} /></span>
-                                                    <span><FontAwesomeIcon className="fas fa-star text-dark" icon={faStar} /></span>
-                                                </ul><span className="text-muted text-sm mt-1">REVIEWS</span>
-                                                
-=======
         return (
             <div className="container mt-5 mb-5">
                 <div className="row">
@@ -111,29 +75,11 @@ class ProductDetails extends React.Component {
                                                     </label>
                                                     <button className="btn btn-primary" type="submit" value="Add to Cart" onClick={() => actions.addProductToCart(product.id,this.state.quantity)}></button>
                                                 </form>
->>>>>>> 5478948ae637f326e4cb6400629929f9b57682a1
                                             </div>
                                                 
                                         </div>
-<<<<<<< HEAD
-                                        <span className="align-items-center">
-                                            <p className="mb-4 text-muted">{product.description}</p>
-                                        </span>
-                                        
-                                        <ul className="list-inline">
-                                            <label className="font-weight-bold">Items <span> (required) </span></label>&nbsp;&nbsp;
-                                            <input type="number" min="1" max="10" value={this.state.quantity} onChange={this.handleChange} id="proquant"/>
-                                            <li className="list-inline-item">
-                                                <button className="btn btn-primary btn-sm ml-1" type="Add to cart" value="" name="Add to Cart" onClick={() => actions.addProductToCart(product.id,this.state.quantity)}>Add to cart</button>                                            
-                                            </li>
-                                            
-                                        </ul>
-                                    </div>
-                                </div>);
-=======
                                     </div>);
                                 }
->>>>>>> 5478948ae637f326e4cb6400629929f9b57682a1
                             }
                         }
                     </Consumer>

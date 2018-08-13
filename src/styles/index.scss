@@ -1,11 +1,8 @@
 @import '~bootstrap/scss/bootstrap.scss';
-<<<<<<< HEAD
-=======
 @import './custom-animation.css';
 body{
     background: none !important;
 }
->>>>>>> 5478948ae637f326e4cb6400629929f9b57682a1
 
 #logbackimag{/*Register page Background start*/
     background-size: cover;
@@ -230,7 +227,9 @@ body{
     float: right;
 }/*modal submit button end*/
     
-
+/*#login-modal{
+    display: none;
+}*/
 
 
 
