@@ -124,9 +124,11 @@ class Navbar extends React.Component{
                             <form role="form" onSubmit={(e) => {e.preventDefault();
                                                                 var success = actions.loadSession(this.state.username, this.state.password);
                                                                 { success ?
+                                                                
                                                                     this.handleSubmit()
                                                                 :
-                                                                    alert('User or password is incorrect');  
+                                                                    alert('User or password is incorrect'); 
+                                                                    
                                                                 }}}>
                                 <div className="form-group row">
                                     <div className=" col-7 col-sm-10 m-0 ">
