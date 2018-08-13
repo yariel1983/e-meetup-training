@@ -13,10 +13,7 @@ export function withProduct(Component) {
     // Notice that we pass through any additional props as well
     return (
         <Consumer>
-            {({state, actions}) => <Component {...props}  Article={state.Article} 
-                                                          cartNumItem={state.cartNumItem} 
-                                                          cart={state.cart} 
-                                                          actions={actions} />}
+            {({actions}) => <Component {...props}  actions={actions} />}
         </Consumer>
     );
   };

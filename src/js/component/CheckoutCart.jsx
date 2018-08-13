@@ -16,7 +16,7 @@ class CheckoutCart extends React.Component{
     }
     
     render(){
-        const { cart, actions } = this.props;
+        const { cart, article, actions } = this.props;
     
 
         if (cart.length <= 0) {
@@ -35,7 +35,7 @@ class CheckoutCart extends React.Component{
                     <div className="row">
                         <div className="d-md-flex flex-md-6">
                             <div className="containerleft ml-5">
-                                <img className="card-img-top" src={item.imgurl} />
+                                <img className="card-img-top" src={actions.getInfoArticle(item.articleId).images[0].src} />
                                 <style>{'.ShoppingCard .containerleft .card-img-top {max-width: 20rem;}'}</style>
                             </div>
                             <div className="containerRight mr-5">
@@ -43,10 +43,10 @@ class CheckoutCart extends React.Component{
                                     <ul className="list-group mb-3">
                                         <li key={item.articleid} className="list-group-item d-flex justify-content-between lh-condensed">
                                             <div>
-                                                <h6 className="my-0">{item.name}</h6>
+                                                <h6 className="my-0">{actions.getInfoArticle(item.articleId).name}</h6>
                                                 <small className="text-muted">{item.desc}</small>
                                             </div>
-                                            <span className="text-muted">${item.price}</span>
+                                            <span className="text-muted">${actions.getInfoArticle(item.articleId).price}</span>
                                         </li>
                                         <li className="list-group-item d-flex justify-content-between bg-light">
                                             <div className="text-success">
@@ -56,7 +56,7 @@ class CheckoutCart extends React.Component{
                                             <span className="text-success">-${(this.state.discount/100 * this.state.totalPrice).toFixed(2)}</span>
                                         </li>
                                         <li className="list-group-item d-flex justify-content-between">
-                                            <span className="text-muted">{this.state.quantity} Quantity</span>
+                                            <span className="text-muted">{item.quantity} Quantity</span>
                                         </li>        
                                         <li className="list-group-item d-flex justify-content-between">
                                             <span>Total (USD)</span>
@@ -124,7 +124,7 @@ class CheckoutCart extends React.Component{
                                     <div className="input-group">
                                         <input type="text" className="form-control" placeholder="Promo code"></input>&nbsp;
                                         <div className="input-group-append">
-                                            <button type="submit" className="btn btn-danger" onClick={() => actions.delProductToCart(index, item.articleId,item.quantity )}>Delete item</button>&nbsp;
+                                            <button type="submit" className="btn btn-danger" onClick={() => actions.delProductToCart(index, item.articleId, item.quantity )}>Delete item</button>&nbsp;
                                             <button className="btn btn-success text-white" href="#">Buy it Now</button>
                                         </div>
                                     </div>
@@ -143,7 +143,8 @@ export default withSession(CheckoutCart);
 
 CheckoutCart.propTypes = {
     cart: PropTypes.array,
-    actions: PropTypes.object
+    actions: PropTypes.object,
+    article: PropTypes.array
     };
                         
                         

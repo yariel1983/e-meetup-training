@@ -137,8 +137,8 @@ export default class Layout extends React.Component {
                   
               },
               
-            addProductToCart: (productId, qty) => {
-                if ( qty > 0 ) {
+            "addProductToCart": (productId, qtytoput) => {
+                if ( qtytoput > 0 ) {
                     let tempCart = this.state.cart;
                     let arrayWithTheProduct = this.state.article.find( (article) => {
                         return article.id === productId;});
@@ -146,11 +146,11 @@ export default class Layout extends React.Component {
                         alert('The article no exit');
                     }
                     else {
-                        let arrayWithTheCart = this.state.cart.find( (article, qty) => {
-                            if(article.articleId === productId){
-                                article.quantity++;
+                        let arrayWithTheCart = this.state.cart.find( (article) => {
+                            if (article.articleId === productId) {
+                                article.quantity = article.quantity + +qtytoput;
                                 let tempNumItemCart = +this.state.cartNumItem;
-                                tempNumItemCart = tempNumItemCart + +qty;
+                                tempNumItemCart = tempNumItemCart + +qtytoput;
                                 this.setState( { cartNumItem: tempNumItemCart, cart: tempCart  } );
                                 return true;
                             }
@@ -159,11 +159,11 @@ export default class Layout extends React.Component {
                             if (!arrayWithTheCart) { //Is it a new product?
                                 arrayWithTheCart = {// Create product in the cart
                                         articleId: arrayWithTheProduct.id,
-                                        quantity: qty
+                                        quantity: qtytoput
                                         };
                                 tempCart.push(arrayWithTheCart);
                                 let tempNumItemCart = +this.state.cartNumItem;
-                                tempNumItemCart = +qty;
+                                tempNumItemCart = tempNumItemCart + +qtytoput;
                                 this.setState( { cartNumItem: tempNumItemCart, cart: tempCart  } );
                             }
                         }
@@ -173,13 +173,19 @@ export default class Layout extends React.Component {
                 }
             },
             
-            delProductToCart: (index,id, qty) => {
-                let arrayWithTheCart = this.state.cart.filter( (cart) => {
-                    return cart.articleId !== id;});
-                        /*this.setState( { cart: arrayWithTheCart } ); */
-                let tempNumItemCart = +this.state.cartNumItem - +qty;
-                        this.setState( { cartNumItem: tempNumItemCart } );
-                        arrayWithTheCart = [];
+            "getInfoArticle": (productId) => {
+                let param = this.state.article.find( (article) => {return article.id === productId;});
+                return param;  
+            }
+            ,
+            
+            
+            "delProductToCart": (index, Id, qtytakeout) => {
+                
+                let arrayWithTheCart = this.state.cart.filter( (article) => {return article.articleId !== Id;});
+                let tempNumItemCart = +this.state.cartNumItem;
+                tempNumItemCart = tempNumItemCart - +qtytakeout;
+                this.setState( { cartNumItem: tempNumItemCart,  cart: arrayWithTheCart } );
                 },
             
             "logout": () => this.setState(  {session: {}}   ),
@@ -219,7 +225,6 @@ export default class Layout extends React.Component {
                         <Route exact path="/products" component={Products} />
                         <Route exact path="/DetailsProduct/:artId" component={DetailsProduct} />
                         <Route exact path="/training" component={Training} />
-                        {/* Eliminar para presentacion <Route exact path="/events" component={Events} /> */}
                         <Route exact path="/contact" component={Contact} />
                         <Route exact path="/cart" component={Cart} />
                         <Route exact path="/register" component={Register} />
