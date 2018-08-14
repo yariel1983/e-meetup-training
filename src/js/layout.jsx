@@ -99,7 +99,7 @@ export default class Layout extends React.Component {
                       };
                     this.setState({ isLoading: true }); 
                     
-                    fetch('https://wordpress-breathecode-cli-nachovz.c9users.io/wp-json/jwt-auth/v1/token',
+                    fetch('https://first-wordpress-jcabezas.c9users.io/wp-json/jwt-auth/v1/token',
                     {
                       method: 'POST',
                       body: JSON.stringify(data),
@@ -112,7 +112,7 @@ export default class Layout extends React.Component {
                         
                         if (typeof(data.token) === "undefined" ) 
                             throw new Error(data.message);
-                            this.setState({ catcherrorserver: data.message, session: data, isLoading: false });
+                            this.setState({ session: data, isLoading: false });
                             
                         //ReactGA.set({ userId: data.user_nicename });
                     })
@@ -133,9 +133,40 @@ export default class Layout extends React.Component {
                     
                   },
                   
+            "createUserloadSession": (receivedUsername, receivedPassword, receivedUsersNice, receivedEmail) => {
+
+                    var data = {
+                        "user_login": receivedUsername, //"prueba",
+                        "user_pass": receivedPassword, //"1234",
+                        "user_nicename": receivedUsersNice, //"users",
+                        "user_email": receivedEmail //"email@prueba.com"
+                      };
+                      
+                    this.setState({ isLoading: true }); 
+                    
+                    fetch('https://first-wordpress-jcabezas.c9users.io/wp-json/sample_api/v1/cuser',
+                    {
+                      method: 'PUT',
+                      body: JSON.stringify(data),
+                      headers: new Headers({
+                        'Content-Type': 'application/json'
+                        })
+                    })
+                    .then( (response) => response.json())
+                    .then( (data) => {
+                        
+                        if (typeof(data.token) === "undefined" ) 
+                            throw new Error(data.message);
+                            //this.setState({ catcherrorserver: data.message, session: data, isLoading: false });
+                            
+                        //ReactGA.set({ userId: data.user_nicename });
+                    })
+                    .catch(error => console.log(error));                
+                  
+                  },                  
+                  
             "loadInitialData": () => {
 
-                //fetch('https://first-wordpress-jcabezas.c9users.io/wp-json/wc/v2/products?consumer_key=ck_b25db0a141ce216901302c872657ce6ce22488b6&consumer_secret=cs_ffe5a1cda6d785b35a19e7b1ef345c3aa224e4ea')
                 fetch('https://first-wordpress-jcabezas.c9users.io/wp-json/sample_api/v1/products')
                   .then(response => response.json())
                   .then(data => this.setState({ article: data }))

@@ -102,12 +102,19 @@ class Navbar extends React.Component{
                                         </div>
                                     :
                                         
-                                        <div className="d-flex">
-                                            <button type="button" 
-                                                    className="btn btn-outline-light text-dark" 
-                                                    onClick={this.onOpenModal}>
-                                                <span><FontAwesomeIcon className="fas fa-search text-dark" icon={faUser} /> Login</span>
-                                            </button>
+                                        <div className="d-sm-inline-flex align-items-sm-center">
+                                            <div className="linkRegister m-0 p-0">
+                                                <Link className="nav-item nav-link m-0 p-0" to={"/Register"}>
+                                                    Sign-up
+                                                </Link>
+                                            </div>
+                                            <div className="bittonLogin m-0 p-0">
+                                                <button type="button" 
+                                                        className="btn btn-outline-light text-dark" 
+                                                        onClick={this.onOpenModal}>
+                                                    <span><FontAwesomeIcon className="fas fa-search text-dark" icon={faUser} /> Login</span>
+                                                </button>
+                                            </div>
                                         </div>
                                 }
                                 
