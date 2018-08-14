@@ -121,30 +121,43 @@ class Navbar extends React.Component{
                             <button className="btn btn-dark rounded-circle mb-3">
                                 <span><FontAwesomeIcon className="fas fa-search text-light fa-2x" icon={faUser} /></span>
                             </button>
-                            <form role="form" onSubmit={(e) => {e.preventDefault();
-                                                                var success = actions.loadSession(this.state.username, this.state.password);
-                                                                { success ?
-                                                                
-                                                                    this.handleSubmit()
-                                                                :
-                                                                    alert('User or password is incorrect'); 
+                            <div className="formModal">
+                                <form role="form" onSubmit={(e) => {e.preventDefault();
+                                                                    var success = actions.loadSession(this.state.username, this.state.password);
+                                                                    { success ?
                                                                     
-                                                                }}}>
-                                <div className="form-group row">
-                                    <div className=" col-7 col-sm-10 m-0 ">
-                                        <input className="inputUserModal form-control is-valid form-control-sm" type="text" name="user" value={this.state.username} placeholder="Username" onChange={(e) => this.setState({username: e.target.value})} required/>&nbsp;&nbsp;
-                                        <style>{'.inputUserModal {width: 334px;}'}</style>
+                                                                        this.handleSubmit()
+                                                                    :
+                                                                        alert('User or password is incorrect'); 
+                                                                        
+                                                                    }}} className="col-sm-12 p-0">
+                                    <div className="containerUserModal">
+                                        <div className="form-group row m-0">
+                                            <div className="col-12 col-sm-12 align-content-center  p-0">
+                                                <div className="col-10 col-sm-10 ml-4 mb-0 mr-0 mt-0 p-0">
+                                                    <style>{'.col-10 {line-height: 0.5 !important}'}</style>
+                                                    <input className="inputUserModal form-control is-valid form-control-sm" type="text" name="user" value={this.state.username} placeholder="Username" onChange={(e) => this.setState({username: e.target.value})} required/>&nbsp;&nbsp;
+                                                    <style>{'.inputUserModal {border-color: #343a40 !important }'}</style>
+                                                </div>
+                                                <div className="col-10 col-sm-10 ml-4 mb-1 p-0">
+                                                    <input className="inputPasswordModal form-control is-valid form-control-sm" type="password" name="password" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})} required/>
+                                                    <style>{'.inputPasswordModal {border-color: #343a40 !important}'}</style>
+                                                </div>
+                                            </div>
+                                            <div className="col-12 m-0 p-0">
+                                                <div className="d-flex flex-row-reverse p-2 ">    
+                                                    <div className="firstButtonModal order-1  ">
+                                                        <small><button className="btn btn-outline-dark btn-sm ml-auto" type="submit" id="submitbotton">Login</button></small>
+                                                    </div>
+                                                    <div className="SecondButtonModal order-0 ml-2 ">
+                                                        <button className="btn btn-outline-dark btn-sm ml-auto" type="button" onClick={this.onCloseModal}>Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="col-7 col-sm-10 m-0">
-                                        <input className="inputPasswordModal form-control is-valid form-control-sm" type="password" name="password" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})} required/>
-                                        <style>{'.inputPasswordModal {width: 334px;}'}</style>
-                                    </div>
-                                    <div className="d-flex float-right" id="buttonModal" >
-                                        <input className="btn btn-primary text-white" type="submit" value="Login" id="submitbotton"/>
-                                        <button type="button" className="btn btn-default" onClick={this.onCloseModal}>Close</button>
-                                    </div>
-                                </div>
-                            </form>    
+                                </form>
+                            </div>
                         </Modal>
                     </div>
                 </div>
