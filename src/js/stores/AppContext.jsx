@@ -13,7 +13,7 @@ export function withSession(Component) {
     // Notice that we pass through any additional props as well
     return (
         <Consumer>
-            {({state, actions}) => <Component {...props} session={state.session} cartNumItem={state.cartNumItem} cart={state.cart} actions={actions} article={state.article} />}
+            {({state, actions}) => <Component {...props} session={state.session} cartNumItem={state.cartNumItem} cart={state.cart} actions={actions} article={state.article} boundary={state.catcherrorserver} />}
         </Consumer>
     );
   };

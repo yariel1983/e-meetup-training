@@ -35,7 +35,7 @@ class CheckoutCart extends React.Component{
                     <div className="row">
                         <div className="d-md-flex flex-md-6">
                             <div className="containerleft ml-5">
-                                <img className="card-img-top" src={actions.getInfoArticle(item.articleId).images[0].src} />
+                                <img className="card-img-top" src={actions.getInfoArticle(item.articleId).img_src} />
                                 <style>{'.ShoppingCard .containerleft .card-img-top {max-width: 20rem;}'}</style>
                             </div>
                             <div className="containerRight mr-5">

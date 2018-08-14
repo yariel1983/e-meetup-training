@@ -76,7 +76,9 @@ export default class Layout extends React.Component {
                 
             ],
             "cartNumItem":  0,
-            "isLoading": true
+            "isLoading": false,
+            "catcherrorserver": [{  error: null, 
+                                    errorInfo: null }]
     };
 
     this.actions = {"loadSession": (receivedUsername, receivedPassword) => {
@@ -95,7 +97,8 @@ export default class Layout extends React.Component {
                         "username":receivedUsername, 
                         "password":receivedPassword
                       };
-                      
+                    this.setState({ isLoading: true }); 
+                    
                     fetch('https://wordpress-breathecode-cli-nachovz.c9users.io/wp-json/jwt-auth/v1/token',
                     {
                       method: 'POST',
@@ -109,15 +112,13 @@ export default class Layout extends React.Component {
                         
                         if (typeof(data.token) === "undefined" ) 
                             throw new Error(data.message);
-                            this.setState({session: data});
-                        
+                            this.setState({ catcherrorserver: data.message, session: data, isLoading: false });
+                            
                         //ReactGA.set({ userId: data.user_nicename });
                     })
                     .catch(error => console.log(error)); 
-                    if (this.session.token === "undefined") {
-                        return false;
-                        }
-                  
+                    
+                                       
                     //Simulating user ID
                     /*
                     fetch('https://randomuser.me/api/?inc=id,name,picture')
@@ -134,7 +135,8 @@ export default class Layout extends React.Component {
                   
             "loadInitialData": () => {
 
-                fetch('https://first-wordpress-jcabezas.c9users.io/wp-json/wc/v2/products?consumer_key=ck_b25db0a141ce216901302c872657ce6ce22488b6&consumer_secret=cs_ffe5a1cda6d785b35a19e7b1ef345c3aa224e4ea')
+                //fetch('https://first-wordpress-jcabezas.c9users.io/wp-json/wc/v2/products?consumer_key=ck_b25db0a141ce216901302c872657ce6ce22488b6&consumer_secret=cs_ffe5a1cda6d785b35a19e7b1ef345c3aa224e4ea')
+                fetch('https://first-wordpress-jcabezas.c9users.io/wp-json/sample_api/v1/products')
                   .then(response => response.json())
                   .then(data => this.setState({ article: data }))
                   .catch(error => console.log(error));  
@@ -195,8 +197,9 @@ export default class Layout extends React.Component {
             "logout": () => this.setState(  {session: {}}   ),
             
             "fetchLoadAllDataProduct": () => {
-
-                fetch('https://first-wordpress-jcabezas.c9users.io/wp-json/wc/v2/products?consumer_key=ck_b25db0a141ce216901302c872657ce6ce22488b6&consumer_secret=cs_ffe5a1cda6d785b35a19e7b1ef345c3aa224e4ea')
+                
+                fetch('https://first-wordpress-jcabezas.c9users.io/wp-json/sample_api/v1/products')
+                //fetch('https://first-wordpress-jcabezas.c9users.io/wp-json/wc/v2/products?consumer_key=ck_b25db0a141ce216901302c872657ce6ce22488b6&consumer_secret=cs_ffe5a1cda6d785b35a19e7b1ef345c3aa224e4ea')
                   .then(response => response.json())
                   .then(data => this.setState({ article: data }))
                   .catch(error => console.log(error));  
@@ -217,6 +220,14 @@ export default class Layout extends React.Component {
     componentDidMount() {
         this.actions.loadInitialData();
       }
+      
+    componentDidCatch(error, info) {
+    // Display fallback UI
+    console.log(error,info);
+    //this.setState({ error: true, berror: error, eInfo: info});
+    // You can also log the error to an error reporting service
+    //logErrorToMyService(error, info);
+  }      
 
   render() {
     return (

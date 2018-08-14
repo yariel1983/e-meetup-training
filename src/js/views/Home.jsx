@@ -11,17 +11,20 @@ import Footer from '../component/Footer.jsx';
 import Login from '../component/Login.jsx';
 import TrainingVideo from '../component/TrainingVideo.jsx';
 import FlipGallery from '../component/FlipGallery.jsx';
+import ErrorBoundary from "../component/ErrorBoundary.jsx";
 
 export default class Home extends React.Component{
     
     render(){
         return (
             <React.Fragment>
-                <NavBar />
-                <HomeSlide />
-                <Banner />
-                <FlipGallery />
-                <Footer />
+                <ErrorBoundary>
+                    <NavBar />
+                    <HomeSlide />
+                    <Banner />
+                    <FlipGallery />
+                    <Footer />
+                </ErrorBoundary>    
                 
             </React.Fragment>
         );

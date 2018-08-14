@@ -40,11 +40,6 @@ class Navbar extends React.Component{
         this.setState({ open: false });
     }
     
-    handleSubmit () {
-        this.setState({ open: false });
-        }
-        
-        
     /*componentDidUpdate(prevProps, prevState) {
         // Previous ThemeContext value is prevProps.theme
         // New ThemeContext value is this.props.theme
@@ -58,8 +53,8 @@ class Navbar extends React.Component{
         
             return(
     
-                <div>
-                    <nav className="navbar navbar-expand-lg navbar-toggler-sm navbar-light fixed-top shadow-lg bg-white" id="mynavbar">
+                <div className="containerNavbar">
+                    <nav className="navbar navbar-expand-lg navbar-toggler-sm navbar-light fixed-top shadow-lg bg-white align-items-center" id="mynavbar">
                         <Link to={"/"} className="nav-item d-flex mr-3">
                             <img src="http://www.hertsmereleisure.co.uk/centre_uploads/1/images/HM%20-%20Training%20Academy%20logo.jpg" id="imglogo" width="100 px" height="40 px"/>
                         </Link>
@@ -92,14 +87,18 @@ class Navbar extends React.Component{
                                 {
                                     session && typeof(session.user_nicename) !== 'undefined' ?
                                         
-                                        <div className="d-flex" id="dropmenu">
-                                            <Link className="nav-item nav-link " to={"/Register"}>
-                                            Hello, {session.user_nicename}
-                                                {/*.charAt(0).toUpperCase()+session.user_display_name.substring(1)}*/}
-                                            </Link>
-                                            <Link to={"/"} className="nav-item text-left">
-                                                <span className="nav-item nav-link" href="#" onClick={() => actions.logout()}>&nbsp;  Logout </span>
-                                            </Link>
+                                        <div className="d-sm-inline-flex align-items-sm-center" id="dropmenu">
+                                            <div className="linkRegister m-0 p-0">
+                                                <Link className="nav-item nav-link m-0 p-0" to={"/Register"}>
+                                                    Hello, {session.user_nicename}
+                                                    {/*.charAt(0).toUpperCase()+session.user_display_name.substring(1)}*/}
+                                                </Link>
+                                            </div>
+                                            <div className="linkRegister m-0 p-0">
+                                                <Link  className="nav-item nav-link " to={"/"} >
+                                                    <span className="nav-item nav-link m-0 p-0" href="#" onClick={() => actions.logout()}>&nbsp;  Logout </span>
+                                                </Link>
+                                            </div>
                                         </div>
                                     :
                                         
@@ -112,54 +111,60 @@ class Navbar extends React.Component{
                                         </div>
                                 }
                                 
+                                <div className="containerModalNavbar">
+                                    <div ref={this.myRef} />
+                                    <Modal open={open} onClose={this.onCloseModal} center container={this.myRef.current}>
+                                        <button className="btn btn-dark rounded-circle mb-3">
+                                            <span><FontAwesomeIcon className="fas fa-search text-light fa-2x" icon={faUser} /></span>
+                                        </button>
+                                        <div className="formModal">
+                                            <form role="form" onSubmit={(e) => {e.preventDefault();
+                                                                                actions.loadSession(this.state.username, this.state.password);
+                                                                                this.onCloseModal();
+                                                                                {/* actions.loadSession(this.state.username, this.state.password) ?
+                                                                                    
+                                                                                    this.onCloseModal()
+                                                                                    
+                                                                                :
+                                                                                    alert('Error, contact to administrator');
+                                                                                    
+                                                                                */}
+                                                                                }} className="col-sm-12 p-0">
+                                                <div className="containerUserFormModal">
+                                                    <div className="form-group row m-0">
+                                                        <div className="col-12 col-sm-12 align-content-center  p-0">
+                                                            <div className="col-10 col-sm-10 ml-4 mb-0 mr-0 mt-0 p-0">
+                                                                <style>{'.col-10 {line-height: 0.5 !important}'}</style>
+                                                                <input className="inputUserModal form-control is-valid form-control-sm" type="text" name="user" value={this.state.username} placeholder="Username" onChange={(e) => this.setState({username: e.target.value})} required/>&nbsp;&nbsp;
+                                                                <style>{'.inputUserModal {border-color: #343a40 !important }'}</style>
+                                                            </div>
+                                                            <div className="col-10 col-sm-10 ml-4 mb-1 p-0">
+                                                                <input className="inputPasswordModal form-control is-valid form-control-sm" type="password" name="password" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})} required/>
+                                                                <style>{'.inputPasswordModal {border-color: #343a40 !important}'}</style>
+                                                            </div>
+                                                        </div>
+                                                        <div className="col-12 m-0 p-0">
+                                                            <div className="d-flex flex-row-reverse p-2 ">    
+                                                                <div className="firstButtonModal order-1  ">
+                                                                    <small><button className="btn btn-outline-dark btn-sm ml-auto" type="submit" id="submitbotton">Login</button></small>
+                                                                </div>
+                                                                <div className="SecondButtonModal order-0 ml-2 ">
+                                                                    <button className="btn btn-outline-dark btn-sm ml-auto" type="button" onClick={this.onCloseModal}>Close</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </Modal>
+                                </div>
+                                
                             </div>
                         </div>
+                    
                     </nav>
-                    <div className="example">
-                        <div ref={this.myRef} />
-                        <Modal open={open} onClose={this.onCloseModal} center container={this.myRef.current}>
-                            <button className="btn btn-dark rounded-circle mb-3">
-                                <span><FontAwesomeIcon className="fas fa-search text-light fa-2x" icon={faUser} /></span>
-                            </button>
-                            <div className="formModal">
-                                <form role="form" onSubmit={(e) => {e.preventDefault();
-                                                                    var success = actions.loadSession(this.state.username, this.state.password);
-                                                                    { success ?
-                                                                    
-                                                                        this.handleSubmit()
-                                                                    :
-                                                                        alert('User or password is incorrect'); 
-                                                                        
-                                                                    }}} className="col-sm-12 p-0">
-                                    <div className="containerUserModal">
-                                        <div className="form-group row m-0">
-                                            <div className="col-12 col-sm-12 align-content-center  p-0">
-                                                <div className="col-10 col-sm-10 ml-4 mb-0 mr-0 mt-0 p-0">
-                                                    <style>{'.col-10 {line-height: 0.5 !important}'}</style>
-                                                    <input className="inputUserModal form-control is-valid form-control-sm" type="text" name="user" value={this.state.username} placeholder="Username" onChange={(e) => this.setState({username: e.target.value})} required/>&nbsp;&nbsp;
-                                                    <style>{'.inputUserModal {border-color: #343a40 !important }'}</style>
-                                                </div>
-                                                <div className="col-10 col-sm-10 ml-4 mb-1 p-0">
-                                                    <input className="inputPasswordModal form-control is-valid form-control-sm" type="password" name="password" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})} required/>
-                                                    <style>{'.inputPasswordModal {border-color: #343a40 !important}'}</style>
-                                                </div>
-                                            </div>
-                                            <div className="col-12 m-0 p-0">
-                                                <div className="d-flex flex-row-reverse p-2 ">    
-                                                    <div className="firstButtonModal order-1  ">
-                                                        <small><button className="btn btn-outline-dark btn-sm ml-auto" type="submit" id="submitbotton">Login</button></small>
-                                                    </div>
-                                                    <div className="SecondButtonModal order-0 ml-2 ">
-                                                        <button className="btn btn-outline-dark btn-sm ml-auto" type="button" onClick={this.onCloseModal}>Close</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </Modal>
-                    </div>
+                    
                 </div>
             );
         }
