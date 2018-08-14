@@ -27,15 +27,15 @@ function info(props) {
             </div>
             <div className="textwidget mb-3 text-center">
                 <a href="[full link to your Twitter]"/>
-                <img title="Twitter" src="https://socialmediawidgets.files.wordpress.com/2014/03/01_twitter.png" alt="Twitter" width="35" height="35" />
+                <img title="Twitter" src="https://socialmediawidgets.files.wordpress.com/2014/03/01_twitter.png" alt="Twitter" width="20" height="20" />
                 <a href="[full link to your Pinterest]"/> 
-                <img title="Pinterest" src="https://socialmediawidgets.files.wordpress.com/2014/03/13_pinterest.png" alt="Pinterest" width="35" height="35"/>
+                <img title="Pinterest" src="https://socialmediawidgets.files.wordpress.com/2014/03/13_pinterest.png" alt="Pinterest" width="20" height="20"/>
                 <a href="[full link to your Facebook page]"/>
-                <img title="Facebook" src="https://socialmediawidgets.files.wordpress.com/2014/03/02_facebook.png" alt="Facebook" width="35" height="35"/>
+                <img title="Facebook" src="https://socialmediawidgets.files.wordpress.com/2014/03/02_facebook.png" alt="Facebook" width="20" height="20"/>
                 <a href="linkedinaddress"/>
-                <img title="LinkedIn" src="https://socialmediawidgets.files.wordpress.com/2014/03/07_linkedin.png" alt="LinkedIn" width="35" height="35"/>
+                <img title="LinkedIn" src="https://socialmediawidgets.files.wordpress.com/2014/03/07_linkedin.png" alt="LinkedIn" width="20" height="20"/>
                 <a href="instagramaddress"/>
-                <img title="Instagram" src="https://socialmediawidgets.files.wordpress.com/2014/03/10_instagram.png" alt="RSS" width="35" height="35"/>
+                <img title="Instagram" src="https://socialmediawidgets.files.wordpress.com/2014/03/10_instagram.png" alt="RSS" width="20" height="20"/>
             </div>                    
         </div>
                 
