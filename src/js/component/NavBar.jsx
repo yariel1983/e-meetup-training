@@ -108,7 +108,7 @@ class Navbar extends React.Component{
                                                     Sign-up
                                                 </Link>
                                             </div>
-                                            <div className="bittonLogin m-0 p-0">
+                                            <div className="buttonLogin m-0 p-0">
                                                 <button type="button" 
                                                         className="btn btn-outline-light text-dark" 
                                                         onClick={this.onOpenModal}>
