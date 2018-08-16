@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import NavBar from '../component/NavBar.jsx';
 import PageAbout from '../component/PageAbout.jsx';
-import CheckoutCart from '../component/CheckoutCart.jsx';
+import CheckoutCart1 from '../component/CheckoutCart1.jsx';
 import Footer from '../component/Footer.jsx';
 
 
