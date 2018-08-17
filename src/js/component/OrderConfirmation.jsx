@@ -33,7 +33,7 @@ function OrderConfirmation(props){
                             <div className="tab-content">
                                 <div className="tab-pane active" role="tabpanel" id="step1">
                                     <div className="step1">
-                                        <div className="row" style="">
+                                        <div className="row" >
                                             <div className="checkout_details">
                                                 <div className="col-sm-6 col-sm-offset-3">
                                                     <dl className="dl-horizontal">

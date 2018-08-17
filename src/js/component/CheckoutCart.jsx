@@ -125,7 +125,10 @@ class CheckoutCart extends React.Component{
                                         <input type="text" className="form-control" placeholder="Promo code"></input>&nbsp;
                                         <div className="input-group-append">
                                             <button type="submit" className="btn btn-danger" onClick={() => actions.delProductToCart(index, item.articleId, item.quantity )}>Delete item</button>&nbsp;
-                                            <button className="btn btn-success text-white" href="#">Buy it Now</button>
+                                            <Link className="nav-item nav-link m-0 p-0" to={"/ProccessCheckCart"}>
+                                                    buy
+                                            </Link>
+                                            {/*<button className="btn btn-success text-white" href="#">Buy it Now</button>*/}
                                         </div>
                                     </div>
                                     

@@ -57,7 +57,7 @@ class ProductDetails extends React.Component {
                                         <div className="imageCardProduct">
                                             <div className="icpLeft">
                                                 <img className="card-img-top" src={product.img_src} />
-                                                <style>{'.card-img-top{max-width: 30rem}'}</style>
+                                                <style>{'.card-img-top{max-width: 18rem}'}</style>
                                             </div>
                                             <div className="iGProduct">
                                                 {this.getSmailImage(product.gallery)}
