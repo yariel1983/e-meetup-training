@@ -9,7 +9,6 @@ import Events from "./views/Events.jsx";
 import Contact from "./views/Contact.jsx";
 import Register from "./views/Register.jsx";
 import Cart from "./views/Cart.jsx";
-import ProccessCheckCart from "./views/ProccessCheckCart.jsx";
 import {Provider} from './stores/AppContext.jsx';
 
 
@@ -188,6 +187,7 @@ export default class Layout extends React.Component {
                         let arrayWithTheCart = this.state.cart.find( (article) => {
                             if (article.articleId === productId) {
                                 article.quantity = article.quantity + +qtytoput;
+                                article.totalPrice = article.totalPrice * qtytoput;
                                 let tempNumItemCart = +this.state.cartNumItem;
                                 tempNumItemCart = tempNumItemCart + +qtytoput;
                                 this.setState( { cartNumItem: tempNumItemCart, cart: tempCart  } );
@@ -198,7 +198,9 @@ export default class Layout extends React.Component {
                             if (!arrayWithTheCart) { //Is it a new product?
                                 arrayWithTheCart = {// Create product in the cart
                                         articleId: arrayWithTheProduct.id,
-                                        quantity: qtytoput
+                                        quantity: qtytoput,
+                                        price: arrayWithTheProduct.price,
+                                        totalPrice: arrayWithTheProduct.price * qtytoput
                                         };
                                 tempCart.push(arrayWithTheCart);
                                 let tempNumItemCart = +this.state.cartNumItem;
@@ -276,7 +278,6 @@ export default class Layout extends React.Component {
                         <Route exact path="/contact" component={Contact} />
                         <Route exact path="/cart" component={Cart} />
                         <Route exact path="/register" component={Register} />
-                        <Route exact path="/ProccessCheckCart" component={ProccessCheckCart} />
                     </Provider>
                     <Route render={() => <h1>Not found!</h1>} />
                 </Switch>

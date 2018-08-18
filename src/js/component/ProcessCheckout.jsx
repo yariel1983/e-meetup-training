@@ -8,15 +8,31 @@ import {withSession} from '../stores/AppContext.jsx';
 class ProcessCheckout extends React.Component{
     constructor() {
     super();
-        this.state = {
-                        discount: 25,
+        this.state = {  promocode: '',
+                        discount: 15,
                         totalItems: 0,
-                        totalPrice: 0   };
+                        totalPrice: 0,
+                        rendem: false};
     }
+    
+    hanleChangeStatus () {
+        if (this.state.promocode) {
+            this.setState({ rendem: true});
+        }
+    }
+    
+    sumPriceTotal (p_array) {
+        let totalPrice = p_array.reduce( ( sum, { totalPrice } ) => sum + totalPrice , 0);
+        return parseFloat(totalPrice).toFixed(2);
+        }
+        
+    gettotalPrice (p_price) {
+        this.setState({totalPrice: p_price});
+        }
 
     render(){
-        const { cart, article, actions } = this.props;
-
+        const { cart, cartNumItem, article, actions } = this.props;
+        let total = 0;
 
         if (cart.length <= 0) {
             const showpingCart = 
@@ -36,7 +52,7 @@ class ProcessCheckout extends React.Component{
                         <div className="col-md-4 order-md-2 mb-4">
                             <h4 className="d-flex justify-content-between align-items-center mb-3">
                                 <span className="text-muted">Your cart</span>
-                                <span className="badge badge-secondary badge-pill">3</span>
+                                <span className="badge badge-secondary badge-pill">{cartNumItem}</span>
                             </h4>
                             
                             <ul className="list-group mb-3">
@@ -52,8 +68,10 @@ class ProcessCheckout extends React.Component{
                                                                 <img className="card-img-top" src={actions.getInfoArticle(cartItem.articleId).img_src} />
                                                                 <style>{'.ShoppingCard .containerleft .card-img-top {max-width: 20rem;}'}</style>
                                                             </div>
-                                                            <div className="col-sm-6">
-                                                                <span className="text-muted">Price ${actions.getInfoArticle(cartItem.articleId).price}</span>
+                                                            <div className="col-sm-6 ">
+                                                                <div className="row justify-content-end ">
+                                                                    <div className="col-12 text-right" >Price $ <strong>{Number(cartItem.price).toFixed(2)}</strong></div>    
+                                                                </div>
                                                             </div>
                                                             <div className="itemName">
                                                                 <h6 className="my-0">{actions.getInfoArticle(cartItem.articleId).name}</h6>
@@ -61,42 +79,56 @@ class ProcessCheckout extends React.Component{
                                                             <div className="itemDescription">
                                                                 <small className="text-muted ml-1">{actions.getInfoArticle(cartItem.articleId).description}</small> 
                                                             </div>
-                                                            <div className="col-12 m-0 p-0">
-                                                                <div className="d-flex flex-row-reverse p-2">
-                                                                    <div className="text-success order-0 mr-5">
-                                                                        <h6 className="quantity my-0 ml-auto ">Quantity {cartItem.quantity}</h6>
-                                                                        <style>{'.quantity{line-height: 0.5 !important}'}</style>
-                                                                    </div>
-                                                                    <div className="buttonDeleteItem order-1">
-                                                                        <button type="submit" className="btn btn-secondary btn-sm " onClick={() => actions.delProductToCart(index, cartItem.articleId, cartItem.quantity )}>Delete item</button>&nbsp;
-                                                                    </div>
+                                                            
+                                                            
+                                                            <div className="input-group">
+                                                                {/*<input type="text-success ml-5 disabled" className="form-control form-control-sm" value={'Quantity '+cartItem.quantity} placeholder="" />*/}
+                                                                <span className="label form-control form-control-sm alert-dark"><strong>Quantity {cartItem.quantity}</strong></span>
+                                                                <div className="input-group-append">
+                                                                    <button type="submit" className="btn btn-secondary btn-sm " onClick={() => actions.delProductToCart(index, cartItem.articleId, cartItem.quantity )}>Delete item</button>&nbsp;
                                                                 </div>
                                                             </div>
+                                                            
                                                         </div>
                                                         
                                                     </li>
                                                                         
                                     );}))}
                                 </Consumer>
-                                <li className="list-group-item d-flex justify-content-between bg-light">
-                                    <div className="text-success">
-                                        <h6 className="my-0">Promo code</h6>
-                                        <small>EXAMPLECODE</small>
-                                    </div>
-                                    <span className="text-success">-$5</span>
-                                </li>
+                                
+                                { this.state.rendem !== false ?
+                                    
+                                    <li className="list-group-item d-flex justify-content-between bg-light">
+                                        <div className="text-success">
+                                            <h6 className="my-0">Promo code</h6>
+                                            <small>{this.state.promocode}</small>
+                                        </div>
+                                        <span className="text-success">- {this.state.discount}</span>
+                                    </li>
+                                :
+                                
+                                    <li className="list-group-item d-flex justify-content-between bg-light">
+                                        <div className="text-success">
+                                            <h6 className="my-0">Promo code</h6>
+                                            <small>PROMO CODE NUMBER</small>
+                                        </div>
+                                        <span className="text-success">$0</span>
+                                    </li>
+                                
+                                }
                                 <li className="list-group-item d-flex justify-content-between">
                                     <span>Total (USD)</span>
-                                    <strong>$20</strong>
+                                    <strong>{this.sumPriceTotal(cart)}</strong>
                                 </li>
                             </ul>
                                 
                             
-                            <form className="card p-2">
+                            <form className="card p-2" onSubmit={(e) => {e.preventDefault();
+                                                                         this.hanleChangeStatus();}}>
                                 <div className="input-group">
-                                    <input type="text" className="form-control form-control-sm" placeholder="Promo code" />
+                                    <input type="text" className="form-control form-control-sm" placeholder="Promo code" value={this.state.promocode} onChange={(e) => this.setState({promocode: e.target.value})} />
                                     <div className="input-group-append">
-                                        <button type="submit" className="btn btn-secondary">Redeem</button>
+                                        <button type="submit" className="btn btn-secondary" >Redeem</button>
                                     </div>
                                 </div>
                             </form>
@@ -144,7 +176,7 @@ class ProcessCheckout extends React.Component{
                                 </div>
                             
                                 <div className="mb-3">
-                                    <label htmlFor="address" className="col-sm-2 col-form-label col-form-label-sm">Address</label>
+                                    <small><label htmlFor="address" className="col-sm-2 col-form-label col-form-label">Address</label></small>
                                     <input type="text" className="form-control form-control-sm" id="address" placeholder="1234 Main St" required="" />
                                     <div className="invalid-feedback">
                                         Please enter your shipping address.
@@ -152,7 +184,7 @@ class ProcessCheckout extends React.Component{
                                 </div>
                             
                                 <div className="mb-3">
-                                    <label htmlFor="address2" className="col-sm-2 col-form-label col-form-label-sm">Address 2 
+                                    <label htmlFor="address2" className="col-sm-12 col-form-label col-form-label-sm">Address 2 
                                         <span className="text-muted">(Optional)</span>
                                     </label>
                                     <input type="text" className="form-control form-control-sm" id="address2" placeholder="Apartment or suite" />
@@ -190,11 +222,11 @@ class ProcessCheckout extends React.Component{
                                 {/*<div className="mb-4">*/}
                                 <div className="custom-control custom-checkbox">
                                     <input type="checkbox" className="custom-control-input" id="same-address" />
-                                    <label className="custom-control-label" htmlFor="same-address">Shipping address is the same as my billing address</label>
+                                    <label className="custom-control-label col-sm-12 col-form-label col-form-label-sm" htmlFor="same-address">Shipping address is the same as my billing address</label>
                                 </div>
                                 <div className="custom-control custom-checkbox">
                                     <input type="checkbox" className="custom-control-input" id="save-info" />
-                                    <label className="custom-control-label" htmlFor="save-info">Save this information for next time</label>
+                                    <label className="custom-control-label col-sm-12 col-form-label col-form-label-sm" htmlFor="save-info">Save this information for next time</label>
                                 </div>
                                 {/*<div className="mb-4">*/}
                             
@@ -202,21 +234,21 @@ class ProcessCheckout extends React.Component{
                 
                                 <div className="d-block my-3">
                                     <div className="custom-control custom-radio">
-                                        <input id="credit" name="paymentMethod" type="radio" className="custom-control-input" checked="" required="" />
-                                        <label className="custom-control-label" htmlFor="credit">Credit card</label>
+                                        <input id="credit" name="paymentMethod" type="radio" className="custom-control-input form-control form-control-sm  " checked="" required="" />
+                                        <label className="custom-control-label col-sm-12 col-form-label col-form-label-sm" htmlFor="credit">Credit card</label>
                                     </div>
                                     <div className="custom-control custom-radio">
-                                        <input id="debit" name="paymentMethod" type="radio" className="custom-control-input" required="" />
-                                        <label className="custom-control-label" htmlFor="debit">Debit card</label>
+                                        <input id="debit" name="paymentMethod" type="radio" className="custom-control-input form-control form-control-sm" required="" />
+                                        <label className="custom-control-label col-sm-12 col-form-label col-form-label-sm" htmlFor="debit">Debit card</label>
                                     </div>
                                     <div className="custom-control custom-radio">
-                                        <input id="paypal" name="paymentMethod" type="radio" className="custom-control-input" required="" />
-                                        <label className="custom-control-label" htmlFor="paypal">Paypal</label>
+                                        <input id="paypal" name="paymentMethod" type="radio" className="custom-control-input form-control form-control-sm" required="" />
+                                        <label className="custom-control-label col-sm-12 col-form-label col-form-label-sm" htmlFor="paypal">Paypal</label>
                                     </div>
                                 </div>
                                 <div className="row">
                                     <div className="col-md-6 mb-3">
-                                        <label htmlFor="cc-name">Name on card</label>
+                                        <label htmlFor="cc-name" className="col-sm-12 col-form-label col-form-label-sm">Name on card</label>
                                         <input type="text" className="form-control form-control-sm" id="cc-name" placeholder="" required="" />
                                         <small className="text-muted">Full name as displayed on card</small>
                                         <div className="invalid-feedback">
@@ -224,7 +256,7 @@ class ProcessCheckout extends React.Component{
                                         </div>
                                     </div>
                                     <div className="col-md-6 mb-3">
-                                        <label htmlFor="cc-number" className="col-sm-2 col-form-label col-form-label-sm">Credit card number</label>
+                                        <label htmlFor="cc-number" className="col-sm-12 col-form-label col-form-label-sm">Credit card number</label>
                                         <input type="text" className="form-control form-control-sm" id="cc-number" placeholder="" required="" />
                                         <div className="invalid-feedback">
                                             Credit card number is required
@@ -232,14 +264,14 @@ class ProcessCheckout extends React.Component{
                                     </div>
                                     <div className="row">
                                         <div className="col-md-3 mb-3">
-                                            <label htmlFor="cc-expiration" className="col-sm-2 col-form-label col-form-label-sm">Expiration</label>
+                                            <label htmlFor="cc-expiration" className="col-sm-12 col-form-label col-form-label-sm">Expiration</label>
                                             <input type="text" className="form-control form-control-sm" id="cc-expiration" placeholder="" required="" />
                                             <div className="invalid-feedback">
                                                 Expiration date required
                                             </div>
                                         </div>
                                         <div className="col-md-3 mb-3">
-                                            <label htmlFor="cc-expiration" className="col-sm-2 col-form-label col-form-label-sm">CVV</label>
+                                            <label htmlFor="cc-expiration" className="col-sm-12 col-form-label col-form-label-sm">CVV</label>
                                             <input type="text" className="form-control form-control-sm" id="cc-cvv" placeholder="" required="" />
                                             <div className="invalid-feedback">
                                                 Security code required
@@ -262,7 +294,8 @@ export default withSession(ProcessCheckout);
 ProcessCheckout.propTypes = {
     cart: PropTypes.array,
     actions: PropTypes.object,
-    article: PropTypes.array
+    article: PropTypes.array,
+    cartNumItem: PropTypes.number
 };      
 
 
