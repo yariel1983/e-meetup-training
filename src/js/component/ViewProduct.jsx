@@ -8,7 +8,6 @@ class ViewProduct extends React.Component {
         }
     
     render () {
-        const smallimg = [];
         return (
             <div className="container  mt-5" >
                 <div className="row justify-content-center ">

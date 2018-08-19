@@ -10,9 +10,6 @@ import Contact from "./views/Contact.jsx";
 import Register from "./views/Register.jsx";
 import Cart from "./views/Cart.jsx";
 import {Provider} from './stores/AppContext.jsx';
-
-
-
 import DetailsProduct from "./views/DetailsProduct.jsx";
 
 export default class Layout extends React.Component {
@@ -21,50 +18,7 @@ export default class Layout extends React.Component {
         super(props);
     
     this.state = {
-            "article": [/**
-            {   articleId:1,
-                name: "Marcy Gym System",
-                desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                price: 65.00,
-                oldprice: 90.00,
-                imgurl: "https://assets.academy.com/mgen/81/10213981.jpg?is=500,500"
-                },
-            {   articleId:2,
-                name: "Sunny Belt-driven Indoor Cycling Bike",
-                desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                price: 80.00,
-                oldprice: 120.20,
-                imgurl: "https://i5.walmartimages.com/asr/dc270a79-6d10-42e0-b8b5-b9a213a2b7d4_2.821440dd285eff4d0fcb2515ed028300.jpeg?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff"
-                },
-            {   articleId:3,
-                name: "Body Champ Power Rack System",
-                desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                price: 45.50,
-                oldprice: 50.84,
-                imgurl: "https://assets.academy.com/mgen/24/10711924.jpg"
-                },           
-            {   articleId:4,
-                name: "Lifespan Electric Folding Tread Mill",
-                desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                price: 76.00,
-                oldprice: 80.00,
-                imgurl: "https://media.lifespanfitness.com/media/catalog/product/cache/1/small_image/500x/9df78eab33525d08d6e5fb8d27136e95/t/r/tr2000e-electric-folding-treadmill-female-running.jpg"
-                },            
-            {   articleId:5,
-                name: "Lifespan Recumbent Bike",
-                desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                price: 65.00,
-                oldprice: 70.00,
-                imgurl: "https://media.lifespanfitness.com/media/catalog/product/cache/1/small_image/500x/9df78eab33525d08d6e5fb8d27136e95/l/i/lifespan-r7000i-commercial-recumbent-exercise-bike.jpg"
-                },           
-            {   articleId:6,
-                name: "Bowflex home gym",
-                desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                price: 10.00,
-                oldprice: 15.00,
-                imgurl: "https://www.bestwomensworkoutreviews.com/wp-content/uploads/2014/06/Bowflex-PR1000-Home-Gym-1-1024x1024.jpg"
-                } **/           
-            ],
+            "article": [],
             "meetups": [],
             "session":{
                 /*ID: 2,
@@ -73,9 +27,7 @@ export default class Layout extends React.Component {
                 password: "1234",
                 token: "qwerty12345asdfgzxcv"*/
             },
-            "cart":[
-                
-            ],
+            "cart":[],
             "cartNumItem":  0,
             "isLoading": false,
             "catcherrorserver": [{  error: null, 
@@ -256,13 +208,13 @@ export default class Layout extends React.Component {
         this.actions.loadInitialData();
       }
       
-    componentDidCatch(error, info) {
+    /*componentDidCatch(error, info) {
     // Display fallback UI
     console.log(error,info);
     //this.setState({ error: true, berror: error, eInfo: info});
     // You can also log the error to an error reporting service
     //logErrorToMyService(error, info);
-  }      
+  }   */   
 
   render() {
     return (
