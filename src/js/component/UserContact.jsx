@@ -13,7 +13,8 @@ import Info from '../component/Info.jsx';
 function UserContact(props) {
     return (
             
-        <div className="container-fluid text-center mt-5 mb-5" id="contbackimag">
+        <div className="container-fluid text-center mt-5 mb-5" id="contbackimag">&nbsp;
+            <Info />
             <div className="container-fluid py-3">
                
                 <div className="row" id="loginpt">
@@ -38,10 +39,10 @@ function UserContact(props) {
                             <input className="btn btn-lg btn-primary btn-block mt-4" value="Send" type="submit" />
                         </div> 
                     </div>
-                </div>&nbsp;
-                <Info />
+                </div>
             </div>
         </div>
+               
                                 
                           
 
