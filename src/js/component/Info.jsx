@@ -16,14 +16,14 @@ function info(props) {
                     <br/>
                     {/*66 W Flagler St #900,
                     <br/>
-                    Miami, FL 33130 &nbsp;*/}
+                    Miami, FL 33130 &nbsp;
                     <abbr title="Phone">
                     </abbr>
                     Phone: +1 (786) 808-5655
                 </address>
                 <address>
                     <strong>Email Address</strong><br/>
-                    <a href="mailto:#">support@xtremetraining.com</a>
+                    <a href="mailto:#">support@xtremetraining.com</a>*/}
                 </address>
             </form>
         </div>
