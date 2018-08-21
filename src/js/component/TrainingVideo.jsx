@@ -22,7 +22,7 @@ function TrainingVideo(props){
                         </div>
                         <div className="carousel-caption">
                             <div className="animated fadeInDown">
-                                <h3 className="h3-responsive text-dark">Welcome to Training Academy</h3>
+                                <h3 className="h3-responsive text-dark">Welcome to Xtreme Training Academy</h3>
                             </div>
                         </div>
                     </div>
@@ -35,7 +35,7 @@ function TrainingVideo(props){
                         </div>
                         <div className="carousel-caption">
                             <div className="animated fadeInDown">
-                                <h3 className="h3-responsive">Welcome to Training Academy</h3>
+                                <h3 className="h3-responsive">Welcome to Xtreme Training Academy</h3>
                             </div>
                         </div>
                     </div>
@@ -52,37 +52,37 @@ function TrainingVideo(props){
                     <div className="row pb-row" id="trainingvideosrow">
                         <div className="col-md-3" id="trainingvideosid">
                             <iframe className="pb-video-frame" id="trainingvideosframe" width="100%" height="230" src="https://www.youtube.com/embed/Tx3W6XAO7Yo" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
-                            <label className="form-control label-warning text-center">Epic Girls Training</label>
+                            <label className="form-control label-warning text-center btn-primary">Epic Girls Training</label>
                         </div>
                         <div className="col-md-3" id="trainingvideosid">
                             <iframe className="pb-video-frame" id="trainingvideosframe" width="100%" height="230" src="https://www.youtube.com/embed/plVyo39og3I" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
-                            <label className="form-control label-warning text-center">Female Fitness Motivation</label>
+                            <label className="form-control label-warning text-center btn-primary">Female Fitness Motivation</label>
                         </div>
                         <div className="col-md-3" id="trainingvideosid">
                             <iframe className="pb-video-frame" id="trainingvideosframe" width="100%" height="230" src="https://www.youtube.com/embed/P84ktN7w-EM" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
-                            <label className="form-control label-warning text-center">Full Body Cable Workout</label>
+                            <label className="form-control label-warning text-center btn-primary">Full Body Cable Workout</label>
                         </div>
                         <div className="col-md-3" id="trainingvideosid">
                             <iframe className="pb-video-frame" id="trainingvideosframe" width="100%" height="230" src="https://www.youtube.com/embed/Y1_VsyLAGuk?list=RDzuAcaBkcYGE?ecver=1" frameBorder="0" allowFullScreen></iframe>
-                            <label className="form-control label-warning text-center">Full Body Workout In The Gym (Training for Women)</label>
+                            <label className="form-control label-warning text-center btn-primary">Full Body Workout In The Gym (Training for Women)</label>
                         </div>
                     </div>
                     <div className="row pb-row" id="trainingvideosrow">
                         <div className="col-md-3" id="trainingvideosid">
                             <iframe className="pb-video-frame" id="trainingvideosframe" width="100%" height="230" src="https://www.youtube.com/embed/24fdcMw0Bj0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
-                            <label className="form-control label-warning text-center">The Rock Working out</label>
+                            <label className="form-control label-warning text-center btn-primary">The Rock Working out</label>
                         </div>
                         <div className="col-md-3" id="trainingvideosid">
                             <iframe className="pb-video-frame" id="trainingvideosframe" width="100%" height="230" src="https://www.youtube.com/embed/wyNPbHOX_EI" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
-                            <label className="form-control label-warning text-center">Jhon Cena Working out</label>
+                            <label className="form-control label-warning text-center btn-primary">Jhon Cena Working out</label>
                         </div>
                         <div className="col-md-3" id="trainingvideosid">
                             <iframe className="pb-video-frame" id="trainingvideosframe" width="100%" height="230" src="https://www.youtube.com/embed/zMPMJo5kdVc" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
-                            <label className="form-control label-warning text-center">Ryback Working out</label>
+                            <label className="form-control label-warning text-center btn-primary">Ryback Working out</label>
                         </div>
                         <div className="col-md-3" id="trainingvideosid">
                             <iframe className="pb-video-frame" id="trainingvideosframe" width="100%" height="230" src="https://www.youtube.com/embed/BWyN0bngHQs" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
-                            <label className="form-control label-warning text-center">Batista Working out</label>
+                            <label className="form-control label-warning text-center btn-primary">Batista Working out</label>
                         </div>
                     </div>
                 </div>
