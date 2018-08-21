@@ -12,7 +12,7 @@ function PageAbout(props){
                         <div className="row" id="aboutfeature">
                             <div className="col-md-4">
                                 <div>
-                                    <img src="https://ae01.alicdn.com/kf/HTB1h0DtQVXXXXaRXpXXq6xXFXXXu/beibehang-Custom-photo-wallpaper-wall-murals-wall-stickers-3D-fitness-place-gym-fitness-fitness-beauty-tooling.jpg_640x640.jpg" alt="Texto Alternativo" className="img-circle img-thumbnail"/>
+                                    <img src="https://ae01.alicdn.com/kf/HTB1h0DtQVXXXXaRXpXXq6xXFXXXu/beibehang-Custom-photo-wallpaper-wall-murals-wall-stickers-3D-fitness-place-gym-fitness-fitness-beauty-tooling.jpg_640x640.jpg" alt="Texto Alternativo" className="img-circle img-thumbnail"/>&nbsp;
                                     <h2>Weight Training</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat, urna id vestibulum viverra, 
                                         tellus felis rutrum erat, sit amet ultrices orci urna sit amet nunc. 
@@ -26,7 +26,7 @@ function PageAbout(props){
                                         
                             <div className="col-md-4">
                                 <div>
-                                    <img src="https://ae01.alicdn.com/kf/HTB12Q.USXXXXXataFXXq6xXFXXXb/zel-Foto-raf-Duvar-Ka-d-3D-Boks-Spor-Salonu-Arka-Plan-Afi-Resimleri-Papel.jpg_640x640q90.jpg" alt="Texto Alternativo" className="img-circle img-thumbnail"/>
+                                    <img src="https://ae01.alicdn.com/kf/HTB12Q.USXXXXXataFXXq6xXFXXXb/zel-Foto-raf-Duvar-Ka-d-3D-Boks-Spor-Salonu-Arka-Plan-Afi-Resimleri-Papel.jpg_640x640q90.jpg" alt="Texto Alternativo" className="img-circle img-thumbnail"/>&nbsp;
                                     <h2>Boxing and Cardio</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat, urna id vestibulum viverra, 
                                         tellus felis rutrum erat, sit amet ultrices orci urna sit amet nunc. 
@@ -40,7 +40,7 @@ function PageAbout(props){
                                         
                             <div className="col-md-4">
                                 <div>
-                                    <img src="https://ae01.alicdn.com/kf/HTB1K..qPXXXXXctXXXXq6xXFXXXt/3D-photo-wallpaper-Bodybuilding-Sexy-Beauty-Gym-Photo-Wall-Bar-Backdrop-home-decoration-custom-mural-high.jpg_640x640.jpg" alt="Texto Alternativo" className="img-circle img-thumbnail"/>
+                                    <img src="https://ae01.alicdn.com/kf/HTB1K..qPXXXXXctXXXXq6xXFXXXt/3D-photo-wallpaper-Bodybuilding-Sexy-Beauty-Gym-Photo-Wall-Bar-Backdrop-home-decoration-custom-mural-high.jpg_640x640.jpg" alt="Texto Alternativo" className="img-circle img-thumbnail"/>&nbsp;
                                     <h2>Nutrition and Supplements</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat, urna id vestibulum viverra, 
                                         tellus felis rutrum erat, sit amet ultrices orci urna sit amet nunc. 
