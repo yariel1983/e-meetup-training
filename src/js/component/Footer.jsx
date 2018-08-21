@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap';
 import { Link } from "react-router-dom";
+import Info from '../component/Info.jsx';
 
 function Footer(props){
     return (
@@ -35,6 +36,7 @@ function Footer(props){
                     </div>
                 </div>
             </div>
+                
             
             
         </footer>
