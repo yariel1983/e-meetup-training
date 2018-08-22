@@ -103,7 +103,7 @@ class Navbar extends React.Component{
                                     :
                                         
                                         <div className="d-sm-inline-flex align-items-sm-center">
-                                            <div className="linkRegister m-0 p-0">
+                                            <div className="linkRegister ml-2 mr-2 p-0">
                                                 <Link className="nav-item nav-link m-0 p-0" to={"/Register"}>
                                                     Sign-up
                                                 </Link>

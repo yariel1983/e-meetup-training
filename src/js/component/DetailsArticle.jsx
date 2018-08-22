@@ -7,6 +7,8 @@ import {Consumer} from "../stores/AppContext.jsx";
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faStar from '@fortawesome/fontawesome-free-regular/faStar';
 import {withSession} from '../stores/AppContext.jsx';
+import Appstore from '../component/Appstore.jsx';
+
 
 class DetailsArticle extends React.Component {
     constructor(props) {
@@ -35,11 +37,11 @@ class DetailsArticle extends React.Component {
     
     getSmailImage (array) {
         const smallimg = array.map((array, index) => (
-            <div className="card border-light " key={index}>
+            <div className="card border-light mt-5" key={index}>
                 <img className="card-img" id="smallImg" src={array.src} alt="Card image" />
                 <style>{'.card-img-overlay {position: unset}'}</style>
                 <div className="card-img-overlay" >
-                    <style>{'.card-img {max-width: 4rem;}'}</style>
+                    <style>{'.card-img {max-width: 3rem;}'}</style>
                 </div>
             </div>));
             return <div className="card-deck flex-row col-sm-12 ">
@@ -51,7 +53,7 @@ class DetailsArticle extends React.Component {
     render () {
         return (
             <div className="containerDetailsArticle mt-5 mb-5">
-                <style>{'.containerDetailsArticle{margin-top: 100px; max-width: 960px; width: 100%; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto;}'}</style>   
+                <style>{'.containerDetailsArticle{max-width: 960px; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto;}'}</style>   
                 <Consumer>
                     {
                         ({ state, actions }) => {   const product = state.article.find( product => product.id === parseInt(this.props.artId) );
@@ -66,7 +68,7 @@ class DetailsArticle extends React.Component {
                                             <div className="imageCardProduct col-sm-12">
                                                 <div className="icpLeft col">
                                                     <img className="card-img-top" src={product.img_src} />
-                                                    <style>{'.card-img-top{max-width: 18rem}'}</style>
+                                                    <style>{'.card-img-top{max-width: 15rem}'}</style>
                                                 </div>
                                                 <div className="iGProduct col-sm-12">
                                                     {this.getSmailImage(product.gallery)}
@@ -80,7 +82,7 @@ class DetailsArticle extends React.Component {
                                                 <h1 className="mb-4">{product.name}</h1>
                                             </div>
                                             <div className="col-sm-6 ">
-                                                <div className="list-inline-item h4 font-weight-light mb-0">${product.sale_price}</div>
+                                                <div className="list-inline-item h4 font-weight-light mb-5">${product.sale_price}</div>
                                                 <div className="list-inline-item text-muted font-weight-light"> 
                                                     <div>${product.regular_price}</div>
                                                 </div>
@@ -147,6 +149,7 @@ class DetailsArticle extends React.Component {
                         }
                     }
                 </Consumer>
+                <Appstore />
             </div>);
     }
 }
