@@ -52,11 +52,11 @@ function TrainingVideo(props){
                     <div className="row pb-row" id="trainingvideosrow">
                         <div className="col-md-3" id="trainingvideosid">
                             <iframe className="pb-video-frame" id="trainingvideosframe" width="100%" height="230" src="https://www.youtube.com/embed/Tx3W6XAO7Yo" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
-                            <label className="form-control label-warning text-center btn-primary">Epic Girls Training</label>
+                            <label className="form-control label-warning text-center btn-primary">Calorie Blasting Cardio Training</label>
                         </div>
                         <div className="col-md-3" id="trainingvideosid">
                             <iframe className="pb-video-frame" id="trainingvideosframe" width="100%" height="230" src="https://www.youtube.com/embed/plVyo39og3I" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
-                            <label className="form-control label-warning text-center btn-primary">Female Fitness Motivation</label>
+                            <label className="form-control label-warning text-center btn-primary">Sarah Pardue Fitness Guide</label>
                         </div>
                         <div className="col-md-3" id="trainingvideosid">
                             <iframe className="pb-video-frame" id="trainingvideosframe" width="100%" height="230" src="https://www.youtube.com/embed/P84ktN7w-EM" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
@@ -64,25 +64,25 @@ function TrainingVideo(props){
                         </div>
                         <div className="col-md-3" id="trainingvideosid">
                             <iframe className="pb-video-frame" id="trainingvideosframe" width="100%" height="230" src="https://www.youtube.com/embed/Y1_VsyLAGuk?list=RDzuAcaBkcYGE?ecver=1" frameBorder="0" allowFullScreen></iframe>
-                            <label className="form-control label-warning text-center btn-primary">Full Body Workout In The Gym (Training for Women)</label>
+                            <label className="form-control label-warning text-center btn-primary">Full Body Workout</label>
                         </div>
                     </div>
                     <div className="row pb-row" id="trainingvideosrow">
                         <div className="col-md-3" id="trainingvideosid">
                             <iframe className="pb-video-frame" id="trainingvideosframe" width="100%" height="230" src="https://www.youtube.com/embed/24fdcMw0Bj0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
-                            <label className="form-control label-warning text-center btn-primary">The Rock Working out</label>
+                            <label className="form-control label-warning text-center btn-primary">The Rock Workout</label>
                         </div>
                         <div className="col-md-3" id="trainingvideosid">
                             <iframe className="pb-video-frame" id="trainingvideosframe" width="100%" height="230" src="https://www.youtube.com/embed/wyNPbHOX_EI" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
-                            <label className="form-control label-warning text-center btn-primary">Jhon Cena Working out</label>
+                            <label className="form-control label-warning text-center btn-primary">Jhon Cena Workout</label>
                         </div>
                         <div className="col-md-3" id="trainingvideosid">
                             <iframe className="pb-video-frame" id="trainingvideosframe" width="100%" height="230" src="https://www.youtube.com/embed/zMPMJo5kdVc" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
-                            <label className="form-control label-warning text-center btn-primary">Ryback Working out</label>
+                            <label className="form-control label-warning text-center btn-primary">Ryback Workout</label>
                         </div>
                         <div className="col-md-3" id="trainingvideosid">
                             <iframe className="pb-video-frame" id="trainingvideosframe" width="100%" height="230" src="https://www.youtube.com/embed/BWyN0bngHQs" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
-                            <label className="form-control label-warning text-center btn-primary">Batista Working out</label>
+                            <label className="form-control label-warning text-center btn-primary">Dave Batista Workout</label>
                         </div>
                     </div>
                 </div>
