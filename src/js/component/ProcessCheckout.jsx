@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import {withSession} from '../stores/AppContext.jsx';
 
 
+
 class ProcessCheckout extends React.Component{
     constructor() {
     super();
@@ -40,6 +41,7 @@ class ProcessCheckout extends React.Component{
                     <style>{'.ShoppingCard{with: 300px; height:400px;}'}</style>
                     <div className="row">
                         <img className="card-img-top h-50" src="https://www.mwave.com/mwave/images/emptycarticon.png" alt="Card image cap"/>
+                        
                     </div>
                 </div>;
                 return (<div className="container mt-5 mb-5">{showpingCart}</div>);

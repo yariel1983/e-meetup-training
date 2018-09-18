@@ -53,7 +53,7 @@ class DetailsArticle extends React.Component {
     render () {
         return (
             <div className="containerDetailsArticle mt-5 mb-5">
-                <style>{'.containerDetailsArticle{max-width: 960px; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto;}'}</style>   
+                <style>{'.containerDetailsArticle{margin-top: 100px; max-width: 960px; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto;}'}</style>   
                 <Consumer>
                     {
                         ({ state, actions }) => {   const product = state.article.find( product => product.id === parseInt(this.props.artId) );
@@ -68,7 +68,7 @@ class DetailsArticle extends React.Component {
                                             <div className="imageCardProduct col-sm-12">
                                                 <div className="icpLeft col">
                                                     <img className="card-img-top" src={product.img_src} />
-                                                    <style>{'.card-img-top{max-width: 15rem}'}</style>
+                                                    <style>{'.card-img-top{max-width: 8rem}'}</style>
                                                 </div>
                                                 <div className="iGProduct col-sm-12">
                                                     {this.getSmailImage(product.gallery)}
