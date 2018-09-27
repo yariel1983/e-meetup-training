@@ -69,7 +69,7 @@
 #flipsection, .card{
 
     border: none;
-    background: none;
+    
 }
 
 .image-flip:hover .backside,
@@ -348,7 +348,7 @@ margin-right: 20px;
         -webkit-perspective: 1000;
         perspective: 1000;
         position: relative;
-        background-color: transparent !important;
+        
     }
 
     .popup

@@ -37,9 +37,9 @@ class ProcessCheckout extends React.Component{
 
         if (cart.length <= 0) {
             const showpingCart = 
-                <div className="ShoppingCard mt-5">
-                    <style>{'.ShoppingCard{with: 300px; height:400px;}'}</style>
-                    <div className="row">
+                <div className="ShoppingCard mt-5">&nbsp;
+                   
+                    <div className="container-fluid mt-5 text-center">
                         <img className="card-img-top h-50" src="https://www.mwave.com/mwave/images/emptycarticon.png" alt="Card image cap"/>
                         
                     </div>

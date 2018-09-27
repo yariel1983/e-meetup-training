@@ -15,7 +15,7 @@ export default class Cart extends React.Component{
                 <NavBar />
                 {/*<UserCart />*/}
                 <ProcessCheckout />
-                <Footer />
+               
                 
             </React.Fragment>
         );

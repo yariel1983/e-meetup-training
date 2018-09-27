@@ -15,7 +15,7 @@ export default class DetailsProduct extends React.Component{
             <React.Fragment>
                 <NavBar />
                 <DetailsArticle artId={this.props.match.params.artId}/>
-                <Footer />
+                
                 
             </React.Fragment>
         );

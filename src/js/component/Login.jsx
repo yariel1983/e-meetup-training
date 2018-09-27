@@ -25,7 +25,7 @@ class Login extends React.Component {
     
     return (
         <div className="container-fluid text-center mt-5 mb-5" id="logbackimag">
-            <div className="container-fluid py-3">
+            <div className="container-fluid py-5">
                 <div className="row" id="loginpt">
                     <div className="col-md-6 mx-auto">
                         <div className="card card-body" id="signopacid">

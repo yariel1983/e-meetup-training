@@ -6,9 +6,9 @@ import Info from '../component/Info.jsx';
 function Footer(props){
     return (
        
-        <footer className="page-footer font-small unique-color-dark bg-dark text-white mt-5">
+        <footer className="footer bg-dark text-white">
             <div className="container-footer">
-                <ul className="list-unstyled list-inline text-center">
+                <ul className="text-center">
                     <li className="list-inline-item">
                         <small className="mb-1">Register for free</small>
                     </li>
