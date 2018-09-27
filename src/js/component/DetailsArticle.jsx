@@ -68,7 +68,7 @@ class DetailsArticle extends React.Component {
                                             <div className="imageCardProduct col-sm-12">
                                                 <div className="icpLeft col">
                                                     <img className="card-img-top" src={product.img_src} />
-                                                    <style>{'.card-img-top{max-width: 8rem}'}</style>
+                                                    <style>{'.card-img-top{max-width: 16rem}'}</style>
                                                 </div>
                                                 <div className="iGProduct col-sm-12">
                                                     {this.getSmailImage(product.gallery)}
