@@ -73,7 +73,7 @@ function FlipGallery(props){
                                     <div className="card">
                                         <div className="card-body text-center">
                                             <p>
-                                                <img className=" img-fluid" alt="Team Cards Flipper" src="https://media.licdn.com/dms/image/C4E03AQGx5uRhMaDXgA/profile-displayphoto-shrink_800_800/0?e=1547078400&v=beta&t=RLm6S00slBLqaTu5IReWsF_rlAWB4KQdr-M1Piz7pcs" /></p>
+                                                <img className=" img-fluid" alt="Team Cards Flipper" src="https://media.licdn.com/dms/image/C4E03AQHa5H4SRQ3hGA/profile-displayphoto-shrink_800_800/0?e=1549497600&v=beta&t=bXEpCupFw0YhBQ-x7mQy35JBdi-0NU27r8vOojfvJf4" /></p>
                                             <h4 className="card-title">Wordpress Developer</h4>
                                             <div className="list-inline mr-2 mb-0">
                                                 <span><FontAwesomeIcon className="fas fa-star text-dark" icon={faStar} /></span>
