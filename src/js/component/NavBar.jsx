@@ -8,6 +8,7 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faUser from '@fortawesome/fontawesome-free-regular/faUser';
 import faSearch from '@fortawesome/fontawesome-free-solid/faSearch';
 import faShoppingCart from '@fortawesome/fontawesome-free-solid/faShoppingCart';
+import faDumbbell from '@fortawesome/fontawesome-free-solid/faDumbbell';
 
 
 import Modal from 'react-responsive-modal';
@@ -53,10 +54,10 @@ class Navbar extends React.Component{
         
             return(
                 <div>   
-                    <div className="containerNavbar">
-                        <nav className="navbar navbar-expand-lg navbar-toggler-sm navbar-light fixed-top shadow-lg bg-white align-items-center" id="mynavbar">
+                    <div className="container-fluid Navbar">
+                        <nav className="navbar navbar-expand-lg navbar-toggler-sm navbar-dark fixed-top shadow-lg bg-dark align-items-center" id="mynavbar">
                             <Link to={"/"} className="nav-item d-flex mr-3">
-                                <img src="http://www.hertsmereleisure.co.uk/centre_uploads/1/images/HM%20-%20Training%20Academy%20logo.jpg" id="imglogo" width="100 px" height="40 px"/>
+                                <span>&nbsp;<FontAwesomeIcon className="fa Dumbbell text-warning fa-3x" icon={faDumbbell} /></span>
                             </Link>
                             
                             <button className="navbar-toggler float-sm-md-lg-right border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,20 +68,20 @@ class Navbar extends React.Component{
                                 <Link to={"/"} className="nav-item nav-link active" >Home <span className="sr-only">(current)</span></Link>
                                 <Link to={"/products"} className="nav-item nav-link" >Products</Link>
                                 {/*<Link to={"/DetailsProduct"} className="nav-item nav-link" >DetailsProduct</Link>*/}
-                                <Link to={"/training"} className="nav-item nav-link" >Trainings</Link>
+                                <Link to={"/training"} className="nav-item nav-link" >Trainings Videos</Link>
                                 {/*<Link to={"/events"} className="nav-item nav-link" >Events</Link>*/}
-                                <Link to={"/contact"} className="nav-item nav-link" >Contacts</Link>
+                                <Link to={"/contact"} className="nav-item nav-link" >Contact</Link>
                                 <Link to={"/about"} className="nav-item nav-link" >About</Link>
                                 <Link to={"/cart"} className="nav-item nav-link">
-                                    <span>&nbsp;<FontAwesomeIcon className="fa ShoppingCart text-dark" icon={faShoppingCart} /></span>
+                                    <span>&nbsp;<FontAwesomeIcon className="fa ShoppingCart text-warning" icon={faShoppingCart} /></span>
                                     <span className="badge badge-pill badge-danger" id="cartnoti">{cartNumItem}</span>
                                 </Link>
-                                <div className="navbar-nav mr-auto">
+                                <div className="navbar-nav mr-auto ">
                                     <div className="d-flex">
                                         <form className="form-inline my-2 my-lg-0">
                                             <input className="form-control btn-sm mr-sm-0" type="search" placeholder="Search" aria-label="Search" id="navsearch"/>
-                                            <button className="btn btn-dark btn-sm text-white my-2 my-sm-0 mr-0" type="submit" id="navsearchbutton">
-                                                <span><FontAwesomeIcon className="fas fa-search text-white" icon={faSearch} /></span>  
+                                            <button className="btn btn-primary btn-sm text-white my-2 my-sm-0 mr-0" type="submit" id="navsearchbutton">
+                                                <span><FontAwesomeIcon className="fas fa-search text-dark" icon={faSearch} /></span>  
                                             </button>
                                         </form>
                                     </div>           

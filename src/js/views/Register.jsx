@@ -14,7 +14,7 @@ export default class Register extends React.Component{
             <React.Fragment>
                 <NavBar />
                 <Login  />
-                <Footer />
+               
             </React.Fragment>
         );
     }
