@@ -68,7 +68,7 @@ class Navbar extends React.Component{
                                 <Link to={"/"} className="nav-item nav-link active" >Home <span className="sr-only">(current)</span></Link>
                                 <Link to={"/products"} className="nav-item nav-link" >Products</Link>
                                 {/*<Link to={"/DetailsProduct"} className="nav-item nav-link" >DetailsProduct</Link>*/}
-                                <Link to={"/training"} className="nav-item nav-link" >Trainings Videos</Link>
+                                <Link to={"/training"} className="nav-item nav-link" >Training Videos</Link>
                                 {/*<Link to={"/events"} className="nav-item nav-link" >Events</Link>*/}
                                 <Link to={"/contact"} className="nav-item nav-link" >Contact</Link>
                                 <Link to={"/about"} className="nav-item nav-link" >About</Link>

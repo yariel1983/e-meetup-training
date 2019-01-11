@@ -13,7 +13,7 @@ import Info from '../component/Info.jsx';
 function UserContact(props) {
     return (
             
-        <div className="container-fluid text-center mt-5 mb-5" id="contbackimag">&nbsp;
+        <div className="container-fluid text-center mt-5" id="contbackimag">&nbsp;
             <Info />
             <div className="container-fluid py-3">
                

@@ -17,7 +17,7 @@ class ViewProduct extends React.Component {
                                     (state.article.map((article, index) => {
     
                                     return (
-                                        <div className="card border-0 col-lg-4 col-md-6 col-sm-12 ml-5 mt-5 mb-5"  key={index}>
+                                        <div className="card bordercol-lg-4 col-md-6 col-sm-12 ml-5 mt-5 mb-5"  key={index}>
                                             <style>{'.card{max-width: 18rem;}'}</style>
                                             <Link to={"/DetailsProduct/"+article.id}>
                                                 <img className="card-article" src={article.img_src} alt="Card image cap"/>
