@@ -37,14 +37,14 @@ class ProcessCheckout extends React.Component{
 
         if (cart.length <= 0) {
             const showpingCart = 
-                <div className="ShoppingCard mt-5">&nbsp;
+                <div className="ShoppingCard mt-0">
                    
-                    <div className="container-fluid mt-5 text-center">
+                    <div className="container-fluid mt-0 text-center">
                         <img className="card-img-top h-50" src="https://www.mwave.com/mwave/images/emptycarticon.png" alt="Card image cap"/>
                         
                     </div>
                 </div>;
-                return (<div className="container mt-5 mb-5">{showpingCart}</div>);
+                return (<div className="container mt-0 mb-5">{showpingCart}</div>);
             } 
         else {
             return (    

@@ -21,17 +21,17 @@ class CheckoutCart extends React.Component{
 
         if (cart.length <= 0) {
             const showpingCart = 
-                <div className="ShoppingCard mt-5">
+                <div className="ShoppingCard">
                     <style>{'.ShoppingCard{with: 300px; height:400px;}'}</style>
                     <div className="row">
                         <img className="card-img-top h-50" src="https://www.mwave.com/mwave/images/emptycarticon.png" alt="Card image cap"/>
                     </div>
                 </div>;
-            return (<div className="container mt-5 mb-5">{showpingCart}</div>);
+            return (<div className="container">{showpingCart}</div>);
             } 
         else {
             const showpingCart = cart.map((item, index) => (
-                <div className="ShoppingCard p-5 mt-5" key={index}>
+                <div className="ShoppingCard p-5" key={index}>
                     <div className="row">
                         <div className="d-md-flex flex-md-6">
                             <div className="containerleft ml-5">

@@ -7,7 +7,7 @@ import faPlayCircle from '@fortawesome/fontawesome-free-solid/faPlayCircle';
 function TrainingVideo(props){
     return (
         <div>    
-            <div id="video-carousel-example2" className="carousel slide carousel-fade" data-ride="carousel" >
+            {/*<div id="video-carousel-example2" className="carousel slide carousel-fade" data-ride="carousel" >
                 <ol className="carousel-indicators">
                     <li data-target="#video-carousel-example2" data-slide-to="0" className="active"></li>
                     <li data-target="#video-carousel-example2" data-slide-to="1"></li>
@@ -41,7 +41,7 @@ function TrainingVideo(props){
                         </div>
                     </div>
                 </div>    
-            </div>
+            </div>*/}
             <div className="container-fluid mt-5" id="pb-video-container">
                 <div className="col-md-12 col-md-offset-1 text-center">
                     

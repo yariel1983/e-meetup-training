@@ -37,7 +37,7 @@ class DetailsArticle extends React.Component {
     
     getSmailImage (array) {
         const smallimg = array.map((array, index) => (
-            <div className="card border-light mt-5" key={index}>
+            <div className="card border-light mt-0" key={index}>
                 <img className="card-img" id="smallImg" src={array.src} alt="Card image" />
                 <style>{'.card-img-overlay {position: unset}'}</style>
                 <div className="card-img-overlay" >
@@ -52,7 +52,7 @@ class DetailsArticle extends React.Component {
         
     render () {
         return (
-            <div className="containerDetailsArticle mt-5 mb-5">
+            <div className="containerDetailsArticle mt-0 mb-5">
                 <style>{'.containerDetailsArticle{margin-top: 100px; max-width: 960px; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto;}'}</style>   
                 <Consumer>
                     {
@@ -62,7 +62,7 @@ class DetailsArticle extends React.Component {
                             } else {
                    
                             return (
-                                <div className="row mt-5 mb-5">
+                                <div className="row mt-0 mb-5">
                                     <div className="containerleftProduct col-sm-6 p-2">
                                         <div className="row mt-5 mb-5">
                                             <div className="imageCardProduct col-sm-12">

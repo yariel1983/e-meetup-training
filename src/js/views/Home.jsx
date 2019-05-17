@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import NavBar from '../component/NavBar.jsx';
-import HomeSlide2 from '../component/HomeSlide2.jsx';
+import HomeSlide from '../component/HomeSlide.jsx';
 import Banner from '../component/Banner.jsx';
 //import BannerProduct from '../component/BannerProduct.jsx';
 import Footer from '../component/Footer.jsx';
@@ -18,9 +18,8 @@ export default class Home extends React.Component{
             <React.Fragment>
                 <ErrorBoundary>
                     <NavBar />
-                    <HomeSlide2 />
+                    <HomeSlide />
                     <Banner />
-                    <FlipGallery />
                     <Footer />
                 </ErrorBoundary>    
                 
